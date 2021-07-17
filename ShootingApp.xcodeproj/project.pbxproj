@@ -1,0 +1,986 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3101DE1E26964A9C000C9A95 /* FormShootingClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3101DE1D26964A9C000C9A95 /* FormShootingClassifier.mlmodel */; };
+		31191B5926A1322D00B8791F /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31191B5526A1322D00B8791F /* VideoCapture.swift */; };
+		31191B5A26A1322D00B8791F /* AVCaptureDeviceInput+Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31191B5626A1322D00B8791F /* AVCaptureDeviceInput+Camera.swift */; };
+		31191B5B26A1322D00B8791F /* AVCaptureDevice+FrameRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31191B5726A1322D00B8791F /* AVCaptureDevice+FrameRate.swift */; };
+		31191B5C26A1322D00B8791F /* AVCaptureVideoDataOutput+PixelFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31191B5826A1322D00B8791F /* AVCaptureVideoDataOutput+PixelFormat.swift */; };
+		31191B5F26A1323300B8791F /* VideoProcessingChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31191B5E26A1323300B8791F /* VideoProcessingChain.swift */; };
+		31191B6526A1323B00B8791F /* Pose+Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31191B6126A1323B00B8791F /* Pose+Landmark.swift */; };
+		31191B6626A1323B00B8791F /* Pose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31191B6226A1323B00B8791F /* Pose.swift */; };
+		31191B6726A1323B00B8791F /* Pose+Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31191B6326A1323B00B8791F /* Pose+Connection.swift */; };
+		31191B6826A1323B00B8791F /* Pose+Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31191B6426A1323B00B8791F /* Pose+Empty.swift */; };
+		31191B7126A1324900B8791F /* ExerciseClassifier+FrameRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31191B6A26A1324900B8791F /* ExerciseClassifier+FrameRate.swift */; };
+		31191B7226A1324900B8791F /* ExerciseClassifier+LabelCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31191B6B26A1324900B8791F /* ExerciseClassifier+LabelCheck.swift */; };
+		31191B7326A1324900B8791F /* ActionPrediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31191B6C26A1324900B8791F /* ActionPrediction.swift */; };
+		31191B7426A1324900B8791F /* ExerciseClassifier+Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31191B6D26A1324900B8791F /* ExerciseClassifier+Label.swift */; };
+		31191B7526A1324900B8791F /* ExerciseClassifier+PredictAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31191B6E26A1324900B8791F /* ExerciseClassifier+PredictAction.swift */; };
+		31191B7626A1324900B8791F /* ExerciseClassifier+Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31191B6F26A1324900B8791F /* ExerciseClassifier+Singleton.swift */; };
+		31191B7726A1324900B8791F /* ExerciseClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 31191B7026A1324900B8791F /* ExerciseClassifier.mlmodel */; };
+		31191B7926A1325600B8791F /* PerformanceReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31191B7826A1325600B8791F /* PerformanceReporter.swift */; };
+		312B8842266AA31C00745B76 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312B8841266AA31C00745B76 /* User.swift */; };
+		312D8582268A8022008A54F9 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D8581268A8022008A54F9 /* CameraView.swift */; };
+		3143D4832665872B0052064E /* GroupDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3143D4822665872B0052064E /* GroupDetailView.swift */; };
+		31479F9A262F2F5900F8EA26 /* ShootingAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31479F99262F2F5900F8EA26 /* ShootingAppApp.swift */; };
+		31479F9C262F2F5900F8EA26 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31479F9B262F2F5900F8EA26 /* ContentView.swift */; };
+		31479F9E262F2F5B00F8EA26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31479F9D262F2F5B00F8EA26 /* Assets.xcassets */; };
+		31479FA1262F2F5B00F8EA26 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31479FA0262F2F5B00F8EA26 /* Preview Assets.xcassets */; };
+		31479FAC262F2F5B00F8EA26 /* ShootingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31479FAB262F2F5B00F8EA26 /* ShootingAppTests.swift */; };
+		31479FB7262F2F5B00F8EA26 /* ShootingAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31479FB6262F2F5B00F8EA26 /* ShootingAppUITests.swift */; };
+		31479FC8262F2FE100F8EA26 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 31479FC7262F2FE100F8EA26 /* GoogleService-Info.plist */; };
+		31479FF3262F78A800F8EA26 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31479FF2262F78A800F8EA26 /* MainScreen.swift */; };
+		31479FF9262F85CB00F8EA26 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 31479FF8262F85CB00F8EA26 /* SwiftUICharts */; };
+		315534B92662D52100276732 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315534B82662D52000276732 /* HomeScreen.swift */; };
+		315534BB2662DDF000276732 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315534BA2662DDF000276732 /* UserInfo.swift */; };
+		315534BD2662EFF800276732 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315534BC2662EFF800276732 /* Group.swift */; };
+		315534BF2662F19400276732 /* GroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315534BE2662F19400276732 /* GroupView.swift */; };
+		3179C954267E2EBA00431DA4 /* FindGroupsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3179C953267E2EBA00431DA4 /* FindGroupsView.swift */; };
+		3179C956267E421200431DA4 /* BasicInformationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3179C955267E421200431DA4 /* BasicInformationRepository.swift */; };
+		317AB631266EC6DB003ABA6D /* GroupRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317AB630266EC6DB003ABA6D /* GroupRepository.swift */; };
+		317AB633266ECA99003ABA6D /* GroupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317AB632266ECA99003ABA6D /* GroupViewModel.swift */; };
+		3190AEA62697DFC30072F0AE /* CameraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3190AEA52697DFC30072F0AE /* CameraModel.swift */; };
+		3190AEA82697E0220072F0AE /* Predictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3190AEA72697E0220072F0AE /* Predictor.swift */; };
+		31AB3DB22666D4ED00F3E47A /* EditGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AB3DB12666D4ED00F3E47A /* EditGroupView.swift */; };
+		31D77000269E40B0009B252C /* BodyPredictionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D76FFF269E40B0009B252C /* BodyPredictionScreen.swift */; };
+		31D77028269E937B009B252C /* ActionPredictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D77027269E937B009B252C /* ActionPredictor.swift */; };
+		31E2B1DD269AA0F300822BCE /* PlayerActionClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 31E2B1DC269AA0F300822BCE /* PlayerActionClassifier.mlmodel */; };
+		31E65FBE267112D2008DC24D /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E65FBD267112D2008DC24D /* UserRepository.swift */; };
+		31E65FC1267114B9008DC24D /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E65FC0267114B9008DC24D /* UserViewModel.swift */; };
+		3FD3E4E2D1D2E1C745C83FD7 /* Pods_ShootingApp_ShootingAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D81B9931FADD2BA46C2FB61 /* Pods_ShootingApp_ShootingAppUITests.framework */; };
+		CCAA72340BF947FD32E7A703 /* Pods_ShootingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CD9ABC271F7C7FA50B9E1A0 /* Pods_ShootingApp.framework */; };
+		EBA395B08571D86B8B79415E /* Pods_ShootingAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6802AA8A588C1E7B004D45E1 /* Pods_ShootingAppTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		31479FA8262F2F5B00F8EA26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 31479F8E262F2F5900F8EA26 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 31479F95262F2F5900F8EA26;
+			remoteInfo = ShootingApp;
+		};
+		31479FB3262F2F5B00F8EA26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 31479F8E262F2F5900F8EA26 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 31479F95262F2F5900F8EA26;
+			remoteInfo = ShootingApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0FF5F714AA11035F9CB41568 /* Pods-ShootingAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShootingAppTests.debug.xcconfig"; path = "Target Support Files/Pods-ShootingAppTests/Pods-ShootingAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3101DE1D26964A9C000C9A95 /* FormShootingClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = FormShootingClassifier.mlmodel; path = ShootingApp/FormShootingClassifier.mlmodel; sourceTree = SOURCE_ROOT; };
+		31191B5526A1322D00B8791F /* VideoCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
+		31191B5626A1322D00B8791F /* AVCaptureDeviceInput+Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVCaptureDeviceInput+Camera.swift"; sourceTree = "<group>"; };
+		31191B5726A1322D00B8791F /* AVCaptureDevice+FrameRate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVCaptureDevice+FrameRate.swift"; sourceTree = "<group>"; };
+		31191B5826A1322D00B8791F /* AVCaptureVideoDataOutput+PixelFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVCaptureVideoDataOutput+PixelFormat.swift"; sourceTree = "<group>"; };
+		31191B5E26A1323300B8791F /* VideoProcessingChain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoProcessingChain.swift; sourceTree = "<group>"; };
+		31191B6126A1323B00B8791F /* Pose+Landmark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Pose+Landmark.swift"; sourceTree = "<group>"; };
+		31191B6226A1323B00B8791F /* Pose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pose.swift; sourceTree = "<group>"; };
+		31191B6326A1323B00B8791F /* Pose+Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Pose+Connection.swift"; sourceTree = "<group>"; };
+		31191B6426A1323B00B8791F /* Pose+Empty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Pose+Empty.swift"; sourceTree = "<group>"; };
+		31191B6A26A1324900B8791F /* ExerciseClassifier+FrameRate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ExerciseClassifier+FrameRate.swift"; sourceTree = "<group>"; };
+		31191B6B26A1324900B8791F /* ExerciseClassifier+LabelCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ExerciseClassifier+LabelCheck.swift"; sourceTree = "<group>"; };
+		31191B6C26A1324900B8791F /* ActionPrediction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionPrediction.swift; sourceTree = "<group>"; };
+		31191B6D26A1324900B8791F /* ExerciseClassifier+Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ExerciseClassifier+Label.swift"; sourceTree = "<group>"; };
+		31191B6E26A1324900B8791F /* ExerciseClassifier+PredictAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ExerciseClassifier+PredictAction.swift"; sourceTree = "<group>"; };
+		31191B6F26A1324900B8791F /* ExerciseClassifier+Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ExerciseClassifier+Singleton.swift"; sourceTree = "<group>"; };
+		31191B7026A1324900B8791F /* ExerciseClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ExerciseClassifier.mlmodel; sourceTree = "<group>"; };
+		31191B7826A1325600B8791F /* PerformanceReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformanceReporter.swift; sourceTree = "<group>"; };
+		312B8841266AA31C00745B76 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		312D8581268A8022008A54F9 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		3143D4822665872B0052064E /* GroupDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailView.swift; sourceTree = "<group>"; };
+		31479F96262F2F5900F8EA26 /* ShootingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShootingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		31479F99262F2F5900F8EA26 /* ShootingAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShootingAppApp.swift; sourceTree = "<group>"; };
+		31479F9B262F2F5900F8EA26 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		31479F9D262F2F5B00F8EA26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		31479FA0262F2F5B00F8EA26 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		31479FA2262F2F5B00F8EA26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31479FA7262F2F5B00F8EA26 /* ShootingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShootingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		31479FAB262F2F5B00F8EA26 /* ShootingAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShootingAppTests.swift; sourceTree = "<group>"; };
+		31479FAD262F2F5B00F8EA26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31479FB2262F2F5B00F8EA26 /* ShootingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShootingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		31479FB6262F2F5B00F8EA26 /* ShootingAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShootingAppUITests.swift; sourceTree = "<group>"; };
+		31479FB8262F2F5B00F8EA26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31479FC7262F2FE100F8EA26 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		31479FF2262F78A800F8EA26 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		315534B82662D52000276732 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		315534BA2662DDF000276732 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		315534BC2662EFF800276732 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		315534BE2662F19400276732 /* GroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupView.swift; sourceTree = "<group>"; };
+		3179C953267E2EBA00431DA4 /* FindGroupsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindGroupsView.swift; sourceTree = "<group>"; };
+		3179C955267E421200431DA4 /* BasicInformationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicInformationRepository.swift; sourceTree = "<group>"; };
+		317AB630266EC6DB003ABA6D /* GroupRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupRepository.swift; sourceTree = "<group>"; };
+		317AB632266ECA99003ABA6D /* GroupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewModel.swift; sourceTree = "<group>"; };
+		3190AEA52697DFC30072F0AE /* CameraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraModel.swift; sourceTree = "<group>"; };
+		3190AEA72697E0220072F0AE /* Predictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predictor.swift; sourceTree = "<group>"; };
+		31AB3DB12666D4ED00F3E47A /* EditGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGroupView.swift; sourceTree = "<group>"; };
+		31D76FFF269E40B0009B252C /* BodyPredictionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyPredictionScreen.swift; sourceTree = "<group>"; };
+		31D77027269E937B009B252C /* ActionPredictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionPredictor.swift; sourceTree = "<group>"; };
+		31E2B1DC269AA0F300822BCE /* PlayerActionClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = PlayerActionClassifier.mlmodel; sourceTree = "<group>"; };
+		31E65FBD267112D2008DC24D /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		31E65FC0267114B9008DC24D /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		4C043489A2C28564CC8BA73B /* Pods-ShootingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShootingApp.debug.xcconfig"; path = "Target Support Files/Pods-ShootingApp/Pods-ShootingApp.debug.xcconfig"; sourceTree = "<group>"; };
+		4D81B9931FADD2BA46C2FB61 /* Pods_ShootingApp_ShootingAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShootingApp_ShootingAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6802AA8A588C1E7B004D45E1 /* Pods_ShootingAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShootingAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CD9ABC271F7C7FA50B9E1A0 /* Pods_ShootingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShootingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		959345918F01501C0D2DE200 /* Pods-ShootingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShootingApp.release.xcconfig"; path = "Target Support Files/Pods-ShootingApp/Pods-ShootingApp.release.xcconfig"; sourceTree = "<group>"; };
+		A64870B55A6D31A06E724282 /* Pods-ShootingAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShootingAppTests.release.xcconfig"; path = "Target Support Files/Pods-ShootingAppTests/Pods-ShootingAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		F0BBBC340396DCA6ADB4CB71 /* Pods-ShootingApp-ShootingAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShootingApp-ShootingAppUITests.release.xcconfig"; path = "Target Support Files/Pods-ShootingApp-ShootingAppUITests/Pods-ShootingApp-ShootingAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F9E258FF23E3E865745516E9 /* Pods-ShootingApp-ShootingAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShootingApp-ShootingAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-ShootingApp-ShootingAppUITests/Pods-ShootingApp-ShootingAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		31479F93262F2F5900F8EA26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31479FF9262F85CB00F8EA26 /* SwiftUICharts in Frameworks */,
+				CCAA72340BF947FD32E7A703 /* Pods_ShootingApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31479FA4262F2F5B00F8EA26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBA395B08571D86B8B79415E /* Pods_ShootingAppTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31479FAF262F2F5B00F8EA26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FD3E4E2D1D2E1C745C83FD7 /* Pods_ShootingApp_ShootingAppUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1FF0BEA380CE44C877198630 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4C043489A2C28564CC8BA73B /* Pods-ShootingApp.debug.xcconfig */,
+				959345918F01501C0D2DE200 /* Pods-ShootingApp.release.xcconfig */,
+				F9E258FF23E3E865745516E9 /* Pods-ShootingApp-ShootingAppUITests.debug.xcconfig */,
+				F0BBBC340396DCA6ADB4CB71 /* Pods-ShootingApp-ShootingAppUITests.release.xcconfig */,
+				0FF5F714AA11035F9CB41568 /* Pods-ShootingAppTests.debug.xcconfig */,
+				A64870B55A6D31A06E724282 /* Pods-ShootingAppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		31191B5426A1322D00B8791F /* Video Capture */ = {
+			isa = PBXGroup;
+			children = (
+				31191B5526A1322D00B8791F /* VideoCapture.swift */,
+				31191B5626A1322D00B8791F /* AVCaptureDeviceInput+Camera.swift */,
+				31191B5726A1322D00B8791F /* AVCaptureDevice+FrameRate.swift */,
+				31191B5826A1322D00B8791F /* AVCaptureVideoDataOutput+PixelFormat.swift */,
+				31191B5D26A1323300B8791F /* Video Processing Chain */,
+			);
+			path = "Video Capture";
+			sourceTree = "<group>";
+		};
+		31191B5D26A1323300B8791F /* Video Processing Chain */ = {
+			isa = PBXGroup;
+			children = (
+				31191B5E26A1323300B8791F /* VideoProcessingChain.swift */,
+			);
+			path = "Video Processing Chain";
+			sourceTree = "<group>";
+		};
+		31191B6026A1323B00B8791F /* Pose */ = {
+			isa = PBXGroup;
+			children = (
+				31191B6126A1323B00B8791F /* Pose+Landmark.swift */,
+				31191B6226A1323B00B8791F /* Pose.swift */,
+				31191B6326A1323B00B8791F /* Pose+Connection.swift */,
+				31191B6426A1323B00B8791F /* Pose+Empty.swift */,
+			);
+			path = Pose;
+			sourceTree = "<group>";
+		};
+		31191B6926A1324900B8791F /* Action Classifier */ = {
+			isa = PBXGroup;
+			children = (
+				31191B6A26A1324900B8791F /* ExerciseClassifier+FrameRate.swift */,
+				31191B6B26A1324900B8791F /* ExerciseClassifier+LabelCheck.swift */,
+				31191B6C26A1324900B8791F /* ActionPrediction.swift */,
+				31191B6D26A1324900B8791F /* ExerciseClassifier+Label.swift */,
+				31191B6E26A1324900B8791F /* ExerciseClassifier+PredictAction.swift */,
+				31191B6F26A1324900B8791F /* ExerciseClassifier+Singleton.swift */,
+				31191B7026A1324900B8791F /* ExerciseClassifier.mlmodel */,
+			);
+			path = "Action Classifier";
+			sourceTree = "<group>";
+		};
+		31479F8D262F2F5900F8EA26 = {
+			isa = PBXGroup;
+			children = (
+				31479F98262F2F5900F8EA26 /* ShootingApp */,
+				31479FAA262F2F5B00F8EA26 /* ShootingAppTests */,
+				31479FB5262F2F5B00F8EA26 /* ShootingAppUITests */,
+				31479F97262F2F5900F8EA26 /* Products */,
+				1FF0BEA380CE44C877198630 /* Pods */,
+				E7807B3084CD39EA65C4C4B2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		31479F97262F2F5900F8EA26 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				31479F96262F2F5900F8EA26 /* ShootingApp.app */,
+				31479FA7262F2F5B00F8EA26 /* ShootingAppTests.xctest */,
+				31479FB2262F2F5B00F8EA26 /* ShootingAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		31479F98262F2F5900F8EA26 /* ShootingApp */ = {
+			isa = PBXGroup;
+			children = (
+				31191B5426A1322D00B8791F /* Video Capture */,
+				31191B6026A1323B00B8791F /* Pose */,
+				31191B6926A1324900B8791F /* Action Classifier */,
+				3101DE1D26964A9C000C9A95 /* FormShootingClassifier.mlmodel */,
+				31E2B1DC269AA0F300822BCE /* PlayerActionClassifier.mlmodel */,
+				31E65FBF26711302008DC24D /* Objects */,
+				317AB634266ECAA7003ABA6D /* ViewModels */,
+				317AB62F266EC6BB003ABA6D /* Repositories */,
+				317AB62D266EC66B003ABA6D /* Views */,
+				31479F99262F2F5900F8EA26 /* ShootingAppApp.swift */,
+				31191B7826A1325600B8791F /* PerformanceReporter.swift */,
+				31479F9D262F2F5B00F8EA26 /* Assets.xcassets */,
+				31479FA2262F2F5B00F8EA26 /* Info.plist */,
+				31479FC7262F2FE100F8EA26 /* GoogleService-Info.plist */,
+				31479F9F262F2F5B00F8EA26 /* Preview Content */,
+			);
+			path = ShootingApp;
+			sourceTree = "<group>";
+		};
+		31479F9F262F2F5B00F8EA26 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				31479FA0262F2F5B00F8EA26 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		31479FAA262F2F5B00F8EA26 /* ShootingAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				31479FAB262F2F5B00F8EA26 /* ShootingAppTests.swift */,
+				31479FAD262F2F5B00F8EA26 /* Info.plist */,
+			);
+			path = ShootingAppTests;
+			sourceTree = "<group>";
+		};
+		31479FB5262F2F5B00F8EA26 /* ShootingAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				31479FB6262F2F5B00F8EA26 /* ShootingAppUITests.swift */,
+				31479FB8262F2F5B00F8EA26 /* Info.plist */,
+			);
+			path = ShootingAppUITests;
+			sourceTree = "<group>";
+		};
+		317AB62D266EC66B003ABA6D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				31479F9B262F2F5900F8EA26 /* ContentView.swift */,
+				315534B82662D52000276732 /* HomeScreen.swift */,
+				315534BA2662DDF000276732 /* UserInfo.swift */,
+				31AB3DB12666D4ED00F3E47A /* EditGroupView.swift */,
+				3143D4822665872B0052064E /* GroupDetailView.swift */,
+				315534BE2662F19400276732 /* GroupView.swift */,
+				31479FF2262F78A800F8EA26 /* MainScreen.swift */,
+				3179C953267E2EBA00431DA4 /* FindGroupsView.swift */,
+				312D8581268A8022008A54F9 /* CameraView.swift */,
+				31D76FFF269E40B0009B252C /* BodyPredictionScreen.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		317AB62F266EC6BB003ABA6D /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				317AB630266EC6DB003ABA6D /* GroupRepository.swift */,
+				31E65FBD267112D2008DC24D /* UserRepository.swift */,
+				3179C955267E421200431DA4 /* BasicInformationRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		317AB634266ECAA7003ABA6D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				317AB632266ECA99003ABA6D /* GroupViewModel.swift */,
+				31E65FC0267114B9008DC24D /* UserViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		31E65FBF26711302008DC24D /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				315534BC2662EFF800276732 /* Group.swift */,
+				312B8841266AA31C00745B76 /* User.swift */,
+				3190AEA52697DFC30072F0AE /* CameraModel.swift */,
+				3190AEA72697E0220072F0AE /* Predictor.swift */,
+				31D77027269E937B009B252C /* ActionPredictor.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		E7807B3084CD39EA65C4C4B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7CD9ABC271F7C7FA50B9E1A0 /* Pods_ShootingApp.framework */,
+				4D81B9931FADD2BA46C2FB61 /* Pods_ShootingApp_ShootingAppUITests.framework */,
+				6802AA8A588C1E7B004D45E1 /* Pods_ShootingAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		31479F95262F2F5900F8EA26 /* ShootingApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 31479FBB262F2F5B00F8EA26 /* Build configuration list for PBXNativeTarget "ShootingApp" */;
+			buildPhases = (
+				4C91B1B255DB7473B47EF052 /* [CP] Check Pods Manifest.lock */,
+				31479F92262F2F5900F8EA26 /* Sources */,
+				31479F93262F2F5900F8EA26 /* Frameworks */,
+				31479F94262F2F5900F8EA26 /* Resources */,
+				9BB7EED9AF23264F28CF83DB /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShootingApp;
+			packageProductDependencies = (
+				31479FF8262F85CB00F8EA26 /* SwiftUICharts */,
+			);
+			productName = ShootingApp;
+			productReference = 31479F96262F2F5900F8EA26 /* ShootingApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		31479FA6262F2F5B00F8EA26 /* ShootingAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 31479FBE262F2F5B00F8EA26 /* Build configuration list for PBXNativeTarget "ShootingAppTests" */;
+			buildPhases = (
+				AF2D196D9B2F3D15E10F0566 /* [CP] Check Pods Manifest.lock */,
+				31479FA3262F2F5B00F8EA26 /* Sources */,
+				31479FA4262F2F5B00F8EA26 /* Frameworks */,
+				31479FA5262F2F5B00F8EA26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				31479FA9262F2F5B00F8EA26 /* PBXTargetDependency */,
+			);
+			name = ShootingAppTests;
+			productName = ShootingAppTests;
+			productReference = 31479FA7262F2F5B00F8EA26 /* ShootingAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		31479FB1262F2F5B00F8EA26 /* ShootingAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 31479FC1262F2F5B00F8EA26 /* Build configuration list for PBXNativeTarget "ShootingAppUITests" */;
+			buildPhases = (
+				64FC8F308F22B65A18C17ABE /* [CP] Check Pods Manifest.lock */,
+				31479FAE262F2F5B00F8EA26 /* Sources */,
+				31479FAF262F2F5B00F8EA26 /* Frameworks */,
+				31479FB0262F2F5B00F8EA26 /* Resources */,
+				A330B043DB2F6F48A4BACF4E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				31479FB4262F2F5B00F8EA26 /* PBXTargetDependency */,
+			);
+			name = ShootingAppUITests;
+			productName = ShootingAppUITests;
+			productReference = 31479FB2262F2F5B00F8EA26 /* ShootingAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		31479F8E262F2F5900F8EA26 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					31479F95262F2F5900F8EA26 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					31479FA6262F2F5B00F8EA26 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 31479F95262F2F5900F8EA26;
+					};
+					31479FB1262F2F5B00F8EA26 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 31479F95262F2F5900F8EA26;
+					};
+				};
+			};
+			buildConfigurationList = 31479F91262F2F5900F8EA26 /* Build configuration list for PBXProject "ShootingApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 31479F8D262F2F5900F8EA26;
+			packageReferences = (
+				31479FF7262F85CB00F8EA26 /* XCRemoteSwiftPackageReference "ChartView" */,
+			);
+			productRefGroup = 31479F97262F2F5900F8EA26 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				31479F95262F2F5900F8EA26 /* ShootingApp */,
+				31479FA6262F2F5B00F8EA26 /* ShootingAppTests */,
+				31479FB1262F2F5B00F8EA26 /* ShootingAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		31479F94262F2F5900F8EA26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31479FA1262F2F5B00F8EA26 /* Preview Assets.xcassets in Resources */,
+				31479F9E262F2F5B00F8EA26 /* Assets.xcassets in Resources */,
+				31479FC8262F2FE100F8EA26 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31479FA5262F2F5B00F8EA26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31479FB0262F2F5B00F8EA26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4C91B1B255DB7473B47EF052 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShootingApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		64FC8F308F22B65A18C17ABE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShootingApp-ShootingAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9BB7EED9AF23264F28CF83DB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShootingApp/Pods-ShootingApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShootingApp/Pods-ShootingApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShootingApp/Pods-ShootingApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A330B043DB2F6F48A4BACF4E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShootingApp-ShootingAppUITests/Pods-ShootingApp-ShootingAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShootingApp-ShootingAppUITests/Pods-ShootingApp-ShootingAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShootingApp-ShootingAppUITests/Pods-ShootingApp-ShootingAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF2D196D9B2F3D15E10F0566 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShootingAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		31479F92262F2F5900F8EA26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31E65FBE267112D2008DC24D /* UserRepository.swift in Sources */,
+				31191B6726A1323B00B8791F /* Pose+Connection.swift in Sources */,
+				31D77028269E937B009B252C /* ActionPredictor.swift in Sources */,
+				315534B92662D52100276732 /* HomeScreen.swift in Sources */,
+				3190AEA62697DFC30072F0AE /* CameraModel.swift in Sources */,
+				31479FF3262F78A800F8EA26 /* MainScreen.swift in Sources */,
+				31191B7626A1324900B8791F /* ExerciseClassifier+Singleton.swift in Sources */,
+				31191B7126A1324900B8791F /* ExerciseClassifier+FrameRate.swift in Sources */,
+				31191B5B26A1322D00B8791F /* AVCaptureDevice+FrameRate.swift in Sources */,
+				315534BF2662F19400276732 /* GroupView.swift in Sources */,
+				31AB3DB22666D4ED00F3E47A /* EditGroupView.swift in Sources */,
+				31E65FC1267114B9008DC24D /* UserViewModel.swift in Sources */,
+				3179C956267E421200431DA4 /* BasicInformationRepository.swift in Sources */,
+				31191B7726A1324900B8791F /* ExerciseClassifier.mlmodel in Sources */,
+				3179C954267E2EBA00431DA4 /* FindGroupsView.swift in Sources */,
+				31191B5C26A1322D00B8791F /* AVCaptureVideoDataOutput+PixelFormat.swift in Sources */,
+				31E2B1DD269AA0F300822BCE /* PlayerActionClassifier.mlmodel in Sources */,
+				31191B7926A1325600B8791F /* PerformanceReporter.swift in Sources */,
+				3143D4832665872B0052064E /* GroupDetailView.swift in Sources */,
+				31479F9C262F2F5900F8EA26 /* ContentView.swift in Sources */,
+				31191B7426A1324900B8791F /* ExerciseClassifier+Label.swift in Sources */,
+				3101DE1E26964A9C000C9A95 /* FormShootingClassifier.mlmodel in Sources */,
+				31191B6526A1323B00B8791F /* Pose+Landmark.swift in Sources */,
+				31191B5F26A1323300B8791F /* VideoProcessingChain.swift in Sources */,
+				31191B7226A1324900B8791F /* ExerciseClassifier+LabelCheck.swift in Sources */,
+				31D77000269E40B0009B252C /* BodyPredictionScreen.swift in Sources */,
+				315534BD2662EFF800276732 /* Group.swift in Sources */,
+				31191B5926A1322D00B8791F /* VideoCapture.swift in Sources */,
+				31191B7326A1324900B8791F /* ActionPrediction.swift in Sources */,
+				317AB631266EC6DB003ABA6D /* GroupRepository.swift in Sources */,
+				3190AEA82697E0220072F0AE /* Predictor.swift in Sources */,
+				312D8582268A8022008A54F9 /* CameraView.swift in Sources */,
+				31191B6626A1323B00B8791F /* Pose.swift in Sources */,
+				31191B7526A1324900B8791F /* ExerciseClassifier+PredictAction.swift in Sources */,
+				317AB633266ECA99003ABA6D /* GroupViewModel.swift in Sources */,
+				31191B5A26A1322D00B8791F /* AVCaptureDeviceInput+Camera.swift in Sources */,
+				31191B6826A1323B00B8791F /* Pose+Empty.swift in Sources */,
+				315534BB2662DDF000276732 /* UserInfo.swift in Sources */,
+				31479F9A262F2F5900F8EA26 /* ShootingAppApp.swift in Sources */,
+				312B8842266AA31C00745B76 /* User.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31479FA3262F2F5B00F8EA26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31479FAC262F2F5B00F8EA26 /* ShootingAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31479FAE262F2F5B00F8EA26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31479FB7262F2F5B00F8EA26 /* ShootingAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		31479FA9262F2F5B00F8EA26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 31479F95262F2F5900F8EA26 /* ShootingApp */;
+			targetProxy = 31479FA8262F2F5B00F8EA26 /* PBXContainerItemProxy */;
+		};
+		31479FB4262F2F5B00F8EA26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 31479F95262F2F5900F8EA26 /* ShootingApp */;
+			targetProxy = 31479FB3262F2F5B00F8EA26 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		31479FB9262F2F5B00F8EA26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		31479FBA262F2F5B00F8EA26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		31479FBC262F2F5B00F8EA26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C043489A2C28564CC8BA73B /* Pods-ShootingApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"ShootingApp/Preview Content\"";
+				DEVELOPMENT_TEAM = U554ZH8R56;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = ShootingApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Soham-Gupta.ShootingApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		31479FBD262F2F5B00F8EA26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 959345918F01501C0D2DE200 /* Pods-ShootingApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"ShootingApp/Preview Content\"";
+				DEVELOPMENT_TEAM = U554ZH8R56;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = ShootingApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Soham-Gupta.ShootingApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		31479FBF262F2F5B00F8EA26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FF5F714AA11035F9CB41568 /* Pods-ShootingAppTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U554ZH8R56;
+				INFOPLIST_FILE = ShootingAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Soham-Gupta.ShootingAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShootingApp.app/ShootingApp";
+			};
+			name = Debug;
+		};
+		31479FC0262F2F5B00F8EA26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A64870B55A6D31A06E724282 /* Pods-ShootingAppTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U554ZH8R56;
+				INFOPLIST_FILE = ShootingAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Soham-Gupta.ShootingAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShootingApp.app/ShootingApp";
+			};
+			name = Release;
+		};
+		31479FC2262F2F5B00F8EA26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9E258FF23E3E865745516E9 /* Pods-ShootingApp-ShootingAppUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U554ZH8R56;
+				INFOPLIST_FILE = ShootingAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Soham-Gupta.ShootingAppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ShootingApp;
+			};
+			name = Debug;
+		};
+		31479FC3262F2F5B00F8EA26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0BBBC340396DCA6ADB4CB71 /* Pods-ShootingApp-ShootingAppUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U554ZH8R56;
+				INFOPLIST_FILE = ShootingAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Soham-Gupta.ShootingAppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ShootingApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		31479F91262F2F5900F8EA26 /* Build configuration list for PBXProject "ShootingApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31479FB9262F2F5B00F8EA26 /* Debug */,
+				31479FBA262F2F5B00F8EA26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		31479FBB262F2F5B00F8EA26 /* Build configuration list for PBXNativeTarget "ShootingApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31479FBC262F2F5B00F8EA26 /* Debug */,
+				31479FBD262F2F5B00F8EA26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		31479FBE262F2F5B00F8EA26 /* Build configuration list for PBXNativeTarget "ShootingAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31479FBF262F2F5B00F8EA26 /* Debug */,
+				31479FC0262F2F5B00F8EA26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		31479FC1262F2F5B00F8EA26 /* Build configuration list for PBXNativeTarget "ShootingAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31479FC2262F2F5B00F8EA26 /* Debug */,
+				31479FC3262F2F5B00F8EA26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		31479FF7262F85CB00F8EA26 /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		31479FF8262F85CB00F8EA26 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 31479FF7262F85CB00F8EA26 /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 31479F8E262F2F5900F8EA26 /* Project object */;
+}

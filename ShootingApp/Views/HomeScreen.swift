@@ -15,6 +15,7 @@ struct HomeScreen: View {
     @State private var isPresented = false
     @State private var newGroupData = Group.Data()
     @ObservedObject var groupViewModel:GroupViewModel
+    @ObservedObject var userViewModel: UserViewModel
     let db = Firestore.firestore()
     var body: some View {
         VStack{
@@ -37,12 +38,19 @@ struct HomeScreen: View {
                     }
                 }.padding()
             }
+            // link that takes the users to page where they can search for more groups
+            HStack{
+                NavigationLink(destination: FindGroupsView(groupViewModel: groupViewModel)){
+                    Text("Search for groups")
+                        .font(.title3)
+                    Spacer()
+                }
+            }
+            .padding()
         }
         .navigationTitle("Analyze")
         .navigationBarItems(trailing:
-            NavigationLink(
-            destination: UserInfo(),
-            label: {
+            VStack{
                 Button(action: {
                     print("Log out")
                     try! Auth.auth().signOut()
@@ -55,7 +63,7 @@ struct HomeScreen: View {
                 Spacer()
                 Image(systemName: "gearshape.fill")
             }
-        ))
+        )
         .sheet(isPresented: $isPresented, content: {
             NavigationView{
                 EditGroupView(groupData: $newGroupData)
@@ -65,6 +73,7 @@ struct HomeScreen: View {
                             let newGroup = Group(name: newGroupData.name, coach: newGroupData.coach, players:newGroupData.players, workouts: newGroupData.workouts , color:newGroupData.color)
                             groups.append(newGroup)
                             groupViewModel.add(newGroup)
+                            userViewModel.addGroup(newGroup)
                             isPresented = false
                         })
             }
@@ -72,7 +81,7 @@ struct HomeScreen: View {
     }
     private func binding(for group: Group) -> Binding<Group> {
         guard let groupIndex = groups.firstIndex(where: { $0.name == group.name }) else {
-            fatalError("Can't find scrum in array")
+            fatalError("Can't find group in array")
         }
         return $groups[groupIndex]
     }
@@ -82,7 +91,7 @@ struct HomeScreen: View {
 struct HomeScreen_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView{
-            HomeScreen(groups: .constant(Group.data),groupViewModel: GroupViewModel())
+            HomeScreen(groups: .constant(Group.data),groupViewModel: GroupViewModel(), userViewModel: UserViewModel())
         }
     }
 }

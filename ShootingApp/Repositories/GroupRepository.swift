@@ -17,14 +17,14 @@ class GroupRepository: ObservableObject {
     
     func add(_ group: Group) {
         do {
-            _ = try store.collection(path).addDocument(data: ["name": group.name, "creator": Auth.auth().currentUser?.uid])
+            _ = try store.collection(path).addDocument(data: ["name": group.name, "creator": Auth.auth().currentUser?.uid ?? "Coach", "coaches": [Auth.auth().currentUser?.uid]])
         } catch {
           fatalError("Unable to add group: \(error.localizedDescription).")
         }
     }
     
     func get() -> [Group] {
-        var groups : [Group] = []
+        let groups : [Group] = []
         //gets the groups from the database
         return groups
     }
