@@ -9,7 +9,7 @@ Defines the Exercise Classifier's frame rate.
 
 import CoreML
 
-extension ExerciseClassifier {
+extension FormShootingClassifier {
     /// The value of the Frame Rate training parameter the action
     /// classifier's creator used in the Create ML developer tool.
     ///
@@ -21,7 +21,7 @@ extension ExerciseClassifier {
     /// classifier model, set this value to match the Frame Rate training
     /// parameter you used in the Create ML developer tool.
     /// - Tag: frameRate
-    static let frameRate = 30.0
+    static let frameRate = 48.0
 
     /// Returns number of input data samples the model expects in its `poses`
     /// multiarray input to make a prediction. See ExerciseClassifier.mlmodel >
@@ -57,7 +57,7 @@ extension ExerciseClassifier {
         }
 
         let windowSize = Int(truncating: dimensions.first!)
-        let frameRate = ExerciseClassifier.frameRate
+        let frameRate = FormShootingClassifier.frameRate
 
         let timeSpan = Double(windowSize) / frameRate
         let timeString = String(format: "%0.2f second(s)", timeSpan)

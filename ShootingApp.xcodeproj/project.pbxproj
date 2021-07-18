@@ -23,10 +23,8 @@
 		31191B7426A1324900B8791F /* ExerciseClassifier+Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31191B6D26A1324900B8791F /* ExerciseClassifier+Label.swift */; };
 		31191B7526A1324900B8791F /* ExerciseClassifier+PredictAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31191B6E26A1324900B8791F /* ExerciseClassifier+PredictAction.swift */; };
 		31191B7626A1324900B8791F /* ExerciseClassifier+Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31191B6F26A1324900B8791F /* ExerciseClassifier+Singleton.swift */; };
-		31191B7726A1324900B8791F /* ExerciseClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 31191B7026A1324900B8791F /* ExerciseClassifier.mlmodel */; };
 		31191B7926A1325600B8791F /* PerformanceReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31191B7826A1325600B8791F /* PerformanceReporter.swift */; };
 		312B8842266AA31C00745B76 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312B8841266AA31C00745B76 /* User.swift */; };
-		312D8582268A8022008A54F9 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D8581268A8022008A54F9 /* CameraView.swift */; };
 		3143D4832665872B0052064E /* GroupDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3143D4822665872B0052064E /* GroupDetailView.swift */; };
 		31479F9A262F2F5900F8EA26 /* ShootingAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31479F99262F2F5900F8EA26 /* ShootingAppApp.swift */; };
 		31479F9C262F2F5900F8EA26 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31479F9B262F2F5900F8EA26 /* ContentView.swift */; };
@@ -77,7 +75,7 @@
 
 /* Begin PBXFileReference section */
 		0FF5F714AA11035F9CB41568 /* Pods-ShootingAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShootingAppTests.debug.xcconfig"; path = "Target Support Files/Pods-ShootingAppTests/Pods-ShootingAppTests.debug.xcconfig"; sourceTree = "<group>"; };
-		3101DE1D26964A9C000C9A95 /* FormShootingClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = FormShootingClassifier.mlmodel; path = ShootingApp/FormShootingClassifier.mlmodel; sourceTree = SOURCE_ROOT; };
+		3101DE1D26964A9C000C9A95 /* FormShootingClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = FormShootingClassifier.mlmodel; path = "ShootingApp/Action Classifier/FormShootingClassifier.mlmodel"; sourceTree = SOURCE_ROOT; };
 		31191B5526A1322D00B8791F /* VideoCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
 		31191B5626A1322D00B8791F /* AVCaptureDeviceInput+Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVCaptureDeviceInput+Camera.swift"; sourceTree = "<group>"; };
 		31191B5726A1322D00B8791F /* AVCaptureDevice+FrameRate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVCaptureDevice+FrameRate.swift"; sourceTree = "<group>"; };
@@ -93,10 +91,8 @@
 		31191B6D26A1324900B8791F /* ExerciseClassifier+Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ExerciseClassifier+Label.swift"; sourceTree = "<group>"; };
 		31191B6E26A1324900B8791F /* ExerciseClassifier+PredictAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ExerciseClassifier+PredictAction.swift"; sourceTree = "<group>"; };
 		31191B6F26A1324900B8791F /* ExerciseClassifier+Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ExerciseClassifier+Singleton.swift"; sourceTree = "<group>"; };
-		31191B7026A1324900B8791F /* ExerciseClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ExerciseClassifier.mlmodel; sourceTree = "<group>"; };
 		31191B7826A1325600B8791F /* PerformanceReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformanceReporter.swift; sourceTree = "<group>"; };
 		312B8841266AA31C00745B76 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		312D8581268A8022008A54F9 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		3143D4822665872B0052064E /* GroupDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailView.swift; sourceTree = "<group>"; };
 		31479F96262F2F5900F8EA26 /* ShootingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShootingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31479F99262F2F5900F8EA26 /* ShootingAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShootingAppApp.swift; sourceTree = "<group>"; };
@@ -214,13 +210,13 @@
 		31191B6926A1324900B8791F /* Action Classifier */ = {
 			isa = PBXGroup;
 			children = (
+				3101DE1D26964A9C000C9A95 /* FormShootingClassifier.mlmodel */,
 				31191B6A26A1324900B8791F /* ExerciseClassifier+FrameRate.swift */,
 				31191B6B26A1324900B8791F /* ExerciseClassifier+LabelCheck.swift */,
 				31191B6C26A1324900B8791F /* ActionPrediction.swift */,
 				31191B6D26A1324900B8791F /* ExerciseClassifier+Label.swift */,
 				31191B6E26A1324900B8791F /* ExerciseClassifier+PredictAction.swift */,
 				31191B6F26A1324900B8791F /* ExerciseClassifier+Singleton.swift */,
-				31191B7026A1324900B8791F /* ExerciseClassifier.mlmodel */,
 			);
 			path = "Action Classifier";
 			sourceTree = "<group>";
@@ -253,7 +249,6 @@
 				31191B5426A1322D00B8791F /* Video Capture */,
 				31191B6026A1323B00B8791F /* Pose */,
 				31191B6926A1324900B8791F /* Action Classifier */,
-				3101DE1D26964A9C000C9A95 /* FormShootingClassifier.mlmodel */,
 				31E2B1DC269AA0F300822BCE /* PlayerActionClassifier.mlmodel */,
 				31E65FBF26711302008DC24D /* Objects */,
 				317AB634266ECAA7003ABA6D /* ViewModels */,
@@ -306,7 +301,6 @@
 				315534BE2662F19400276732 /* GroupView.swift */,
 				31479FF2262F78A800F8EA26 /* MainScreen.swift */,
 				3179C953267E2EBA00431DA4 /* FindGroupsView.swift */,
-				312D8581268A8022008A54F9 /* CameraView.swift */,
 				31D76FFF269E40B0009B252C /* BodyPredictionScreen.swift */,
 			);
 			path = Views;
@@ -610,7 +604,6 @@
 				31AB3DB22666D4ED00F3E47A /* EditGroupView.swift in Sources */,
 				31E65FC1267114B9008DC24D /* UserViewModel.swift in Sources */,
 				3179C956267E421200431DA4 /* BasicInformationRepository.swift in Sources */,
-				31191B7726A1324900B8791F /* ExerciseClassifier.mlmodel in Sources */,
 				3179C954267E2EBA00431DA4 /* FindGroupsView.swift in Sources */,
 				31191B5C26A1322D00B8791F /* AVCaptureVideoDataOutput+PixelFormat.swift in Sources */,
 				31E2B1DD269AA0F300822BCE /* PlayerActionClassifier.mlmodel in Sources */,
@@ -628,7 +621,6 @@
 				31191B7326A1324900B8791F /* ActionPrediction.swift in Sources */,
 				317AB631266EC6DB003ABA6D /* GroupRepository.swift in Sources */,
 				3190AEA82697E0220072F0AE /* Predictor.swift in Sources */,
-				312D8582268A8022008A54F9 /* CameraView.swift in Sources */,
 				31191B6626A1323B00B8791F /* Pose.swift in Sources */,
 				31191B7526A1324900B8791F /* ExerciseClassifier+PredictAction.swift in Sources */,
 				317AB633266ECA99003ABA6D /* GroupViewModel.swift in Sources */,

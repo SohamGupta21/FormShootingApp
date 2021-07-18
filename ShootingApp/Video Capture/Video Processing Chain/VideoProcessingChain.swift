@@ -62,7 +62,7 @@ struct VideoProcessingChain {
     private let humanBodyPoseRequest = VNDetectHumanBodyPoseRequest()
 
     /// The action classifier that recognizes exercise activities.
-    private let actionClassifier = ExerciseClassifier.shared
+    private let actionClassifier = FormShootingClassifier.shared
 
     /// The number of pose data instances the action classifier needs
     /// to make a prediction.
@@ -81,7 +81,7 @@ struct VideoProcessingChain {
     ///
     /// The reporter prints the prediction and frame counts to the console
     /// every second.
-    private var performanceReporter = PerformanceReporter()
+    // private var performanceReporter = PerformanceReporter()
 
     init() {
         predictionWindowSize = actionClassifier.calculatePredictionWindowSize()
@@ -161,8 +161,9 @@ extension VideoProcessingChain {
     /// - Tag: imageFromFrame
     private func imageFromFrame(_ buffer: Frame) -> CGImage? {
         // Inform the performance reporter to log the frame in its count.
-        performanceReporter?.incrementFrameCount()
-
+        
+        // performanceReporter?.incrementFrameCount()
+        
         guard let imageBuffer = buffer.imageBuffer else {
             print("The frame doesn't have an underlying image buffer.")
             return nil
@@ -328,6 +329,6 @@ extension VideoProcessingChain {
         }
 
         // Inform the performance reporter to log the prediction in its count.
-        performanceReporter?.incrementPrediction()
+        // performanceReporter?.incrementPrediction()
     }
 }

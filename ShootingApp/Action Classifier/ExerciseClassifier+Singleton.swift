@@ -9,14 +9,14 @@ Creates a common instance of the Exercise Classifier.
 
 import CoreML
 
-extension ExerciseClassifier {
+extension FormShootingClassifier {
     /// Creates a shared Exercise Classifier instance for the app at launch.
-    static let shared: ExerciseClassifier = {
+    static let shared: FormShootingClassifier = {
         // Use a default model configuration.
         let defaultConfig = MLModelConfiguration()
 
         // Create an Exercise Classifier instance.
-        guard let exerciseClassifier = try? ExerciseClassifier(configuration: defaultConfig) else {
+        guard let exerciseClassifier = try? FormShootingClassifier(configuration: defaultConfig) else {
             // The app requires the action classifier to function.
             fatalError("Exercise Classifier failed to initialize.")
         }

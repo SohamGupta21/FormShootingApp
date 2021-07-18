@@ -7,7 +7,7 @@ Provides a convenience method that makes a prediction from a multiarray window.
 
 import CoreML
 
-extension ExerciseClassifier {
+extension FormShootingClassifier {
     /// Predicts an action from a series of landmarks' positions over time.
     /// - Parameter window: An `MLMultiarray` that contains the locations of a
     /// person's body landmarks for multiple points in time.

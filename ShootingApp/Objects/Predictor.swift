@@ -54,7 +54,7 @@ class Predictor{
     }
     
     func labelActionType(){
-        guard let throwingClassifier = try? ExerciseClassifier(configuration: MLModelConfiguration()),
+        guard let throwingClassifier = try? FormShootingClassifier(configuration: MLModelConfiguration()),
             let poseMultiArray = prepareInputWithObservations(posesWindow),
             let predictions = try? throwingClassifier.prediction(poses: poseMultiArray) else {
             print("returning")

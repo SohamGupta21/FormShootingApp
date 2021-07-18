@@ -71,7 +71,6 @@ struct ImageView: UIViewRepresentable {
         Coordinator(dM: dataModel)
     }
     
-
     @ObservedObject var dataModel : DataModel
     
     init(dM: DataModel){
