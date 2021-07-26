@@ -9,15 +9,18 @@ import SwiftUI
 import Firebase
 import FirebaseAuth
 import FirebaseFirestore
-
+import AVKit
 struct HomeScreen: View {
     @Binding var groups: [Group]
     @State private var isPresented = false
     @State private var newGroupData = Group.Data()
-    @ObservedObject var groupViewModel:GroupViewModel
-    @ObservedObject var userViewModel: UserViewModel
+    @ObservedObject var groupViewModel : GroupViewModel
+    @ObservedObject var userViewModel
+        
+        : UserViewModel
     let db = Firestore.firestore()
     var body: some View {
+
         VStack{
             VStack{
                 HStack{

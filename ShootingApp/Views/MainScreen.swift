@@ -9,23 +9,29 @@ import SwiftUI
 import FirebaseFirestore
 
 struct MainScreen: View {
+    @Binding var groups: [Group]
+    @State private var isPresented = false
+    @State private var newGroupData = Group.Data()
+    @ObservedObject var groupViewModel:GroupViewModel
+    @ObservedObject var userViewModel: UserViewModel
     var body: some View {
-        VStack(alignment: .center, spacing: /*@START_MENU_TOKEN@*/nil/*@END_MENU_TOKEN@*/, content: {
-            Text("Welcome User")
-                .font(.title)
-                .fontWeight(.bold)
-            Text("hi")
-            ZStack(alignment: .top, content: {
-                RoundedRectangle(cornerRadius: 25, style: .continuous)
-                    .fill(Color.gray.opacity(0.2))
-                    .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height/4)
-            })
-        })
+        TabView {
+            HomeScreen(groups: .constant(Group.data),groupViewModel: GroupViewModel(), userViewModel: UserViewModel())
+             .tabItem {
+                Image(systemName: "house.fill")
+                Text("Home")
+              }
+           BodyPredictionScreen()
+             .tabItem {
+                Image(systemName: "bolt.horizontal.circle.fill")
+                Text("Second Tab")
+              }
+        }
     }
 }
 
 struct MainScreen_Previews: PreviewProvider {
     static var previews: some View {
-        MainScreen()
+        MainScreen(groups: .constant(Group.data),groupViewModel: GroupViewModel(), userViewModel: UserViewModel())
     }
 }

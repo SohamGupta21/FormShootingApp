@@ -1,10 +1,23 @@
 import SwiftUI
 import AVFoundation
 import Vision
-
+import AVKit
 struct BodyPredictionScreen: View {
     @ObservedObject var dataModel = DataModel()
+    @State var cameraScreenRunning = true
     var body: some View {
+        if cameraScreenRunning {
+            CameraViewScreen(dataModel: dataModel, cameraScreenRunning: $cameraScreenRunning)
+        } else {
+            VideoView(videoPlayerUrl: VideoConverter().buildVideoFromImageArray(framesArray: dataModel.frames))
+        }
+    }
+}
+
+struct CameraViewScreen : View {
+    @ObservedObject var dataModel : DataModel
+    @Binding var cameraScreenRunning : Bool
+    var body : some View {
         ZStack{
             ImageView(dM: dataModel)
                 .aspectRatio(contentMode: .fill)
@@ -18,18 +31,29 @@ struct BodyPredictionScreen: View {
                     Spacer()
                 }
                 Spacer()
+                HStack{
+                    VStack{
+                        Text(dataModel.predictionText)
+                            .font(.custom("Helvetica Neue", size: 40))
+                            .foregroundColor(.black)
+                        Text("\(dataModel.confidenceText)")
+                            .font(.custom("Helvetica Neue", size: 40))
+                            .foregroundColor(.black)
+                        
+                    }
+                    .background(Color.gray)
+                    .cornerRadius(10)
+                    .opacity(0.5)
+                    Button {
+                        cameraScreenRunning = false
+                    } label: {
+                        Text("Click Me")
+                    }
 
-                VStack{
-                    Text(dataModel.predictionText)
-                        .font(.custom("Helvetica Neue", size: 40))
-                        .foregroundColor(.black)
-                    Text("\(dataModel.confidenceText)")
-                        .font(.custom("Helvetica Neue", size: 40))
-                        .foregroundColor(.black)
+                    .onTapGesture {
+                        dataModel.avPlayer = AVPlayer(url: VideoConverter().buildVideoFromImageArray(framesArray: dataModel.frames))
+                    }
                 }
-                .background(Color.gray)
-                .cornerRadius(10)
-                .opacity(0.5)
             }
             .padding()
         }
@@ -40,7 +64,6 @@ struct BodyPredictionScreen: View {
         .navigationBarTitle("", displayMode: .inline)
         .edgesIgnoringSafeArea(.top)
     }
-
 }
 
 class DataModel : ObservableObject {
@@ -50,6 +73,8 @@ class DataModel : ObservableObject {
     @Published var videoProcessingChain : VideoProcessingChain
     @Published var actionFrameCounts : [String: Int]
     @Published var imageView : UIImageView
+    @Published var frames  : [UIImage]
+    @Published var avPlayer : AVPlayer
     init(){
         predictionText = ""
         confidenceText = ""
@@ -57,15 +82,21 @@ class DataModel : ObservableObject {
         videoProcessingChain = VideoProcessingChain()
         actionFrameCounts = [String: Int]()
         imageView = UIImageView()
+        frames = []
+        avPlayer = AVPlayer(url: URL(fileURLWithPath: ""))
     }
 }
 
-struct BodyPredictionScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        BodyPredictionScreen()
+
+struct VideoView : View {
+    @State var videoPlayerUrl : URL
+    var body: some View {
+        VStack{
+            Text("\(videoPlayerUrl.absoluteString)")
+            VideoPlayer(player: AVPlayer(url: videoPlayerUrl))
+        }
     }
 }
-
 struct ImageView: UIViewRepresentable {
     func makeCoordinator() -> Coordinator {
         Coordinator(dM: dataModel)
@@ -87,7 +118,7 @@ struct ImageView: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: UIImageView, context: Context) {
-        print("update UI view is getting called")
+
     }
 
     func updateUILabelsWithPrediction(_ prediction : ActionPrediction){
@@ -187,7 +218,10 @@ struct ImageView: UIViewRepresentable {
 
             // Update the UI's full-screen image view on the main thread.
         
-            DispatchQueue.main.async { self.dataModel.imageView.image = frameWithPosesRendering }
+            DispatchQueue.main.async {
+                self.dataModel.imageView.image = frameWithPosesRendering
+                self.dataModel.frames.append(self.dataModel.imageView.image ?? UIImage())
+            }
         }
     
     }

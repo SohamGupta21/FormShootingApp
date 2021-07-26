@@ -39,6 +39,8 @@
 		315534BB2662DDF000276732 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315534BA2662DDF000276732 /* UserInfo.swift */; };
 		315534BD2662EFF800276732 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315534BC2662EFF800276732 /* Group.swift */; };
 		315534BF2662F19400276732 /* GroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315534BE2662F19400276732 /* GroupView.swift */; };
+		317271FF26A51E12000F11CD /* VideoConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317271FE26A51E12000F11CD /* VideoConverter.swift */; };
+		3172720126A68240000F11CD /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3172720026A68240000F11CD /* VideoPlayerView.swift */; };
 		3179C954267E2EBA00431DA4 /* FindGroupsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3179C953267E2EBA00431DA4 /* FindGroupsView.swift */; };
 		3179C956267E421200431DA4 /* BasicInformationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3179C955267E421200431DA4 /* BasicInformationRepository.swift */; };
 		317AB631266EC6DB003ABA6D /* GroupRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317AB630266EC6DB003ABA6D /* GroupRepository.swift */; };
@@ -112,6 +114,8 @@
 		315534BA2662DDF000276732 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		315534BC2662EFF800276732 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		315534BE2662F19400276732 /* GroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupView.swift; sourceTree = "<group>"; };
+		317271FE26A51E12000F11CD /* VideoConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoConverter.swift; sourceTree = "<group>"; };
+		3172720026A68240000F11CD /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
 		3179C953267E2EBA00431DA4 /* FindGroupsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindGroupsView.swift; sourceTree = "<group>"; };
 		3179C955267E421200431DA4 /* BasicInformationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicInformationRepository.swift; sourceTree = "<group>"; };
 		317AB630266EC6DB003ABA6D /* GroupRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupRepository.swift; sourceTree = "<group>"; };
@@ -260,6 +264,7 @@
 				31479FA2262F2F5B00F8EA26 /* Info.plist */,
 				31479FC7262F2FE100F8EA26 /* GoogleService-Info.plist */,
 				31479F9F262F2F5B00F8EA26 /* Preview Content */,
+				317271FE26A51E12000F11CD /* VideoConverter.swift */,
 			);
 			path = ShootingApp;
 			sourceTree = "<group>";
@@ -302,6 +307,7 @@
 				31479FF2262F78A800F8EA26 /* MainScreen.swift */,
 				3179C953267E2EBA00431DA4 /* FindGroupsView.swift */,
 				31D76FFF269E40B0009B252C /* BodyPredictionScreen.swift */,
+				3172720026A68240000F11CD /* VideoPlayerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -619,6 +625,7 @@
 				315534BD2662EFF800276732 /* Group.swift in Sources */,
 				31191B5926A1322D00B8791F /* VideoCapture.swift in Sources */,
 				31191B7326A1324900B8791F /* ActionPrediction.swift in Sources */,
+				317271FF26A51E12000F11CD /* VideoConverter.swift in Sources */,
 				317AB631266EC6DB003ABA6D /* GroupRepository.swift in Sources */,
 				3190AEA82697E0220072F0AE /* Predictor.swift in Sources */,
 				31191B6626A1323B00B8791F /* Pose.swift in Sources */,
@@ -629,6 +636,7 @@
 				315534BB2662DDF000276732 /* UserInfo.swift in Sources */,
 				31479F9A262F2F5900F8EA26 /* ShootingAppApp.swift in Sources */,
 				312B8842266AA31C00745B76 /* User.swift in Sources */,
+				3172720126A68240000F11CD /* VideoPlayerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

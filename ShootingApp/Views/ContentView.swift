@@ -32,7 +32,7 @@ struct Home: View {
     @ObservedObject var userViewModel : UserViewModel
     var body: some View {
         if self.status{
-            HomeScreen(groups: $groups, groupViewModel: GroupViewModel(), userViewModel: self.userViewModel)
+            MainScreen(groups: $groups, groupViewModel: GroupViewModel(), userViewModel: self.userViewModel)
         } else {
             VStack{
                 ZStack{
