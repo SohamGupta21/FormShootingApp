@@ -9,6 +9,7 @@ Builds a chain of Combine publisher-subscribers upon the video capture
 import Vision
 import Combine
 import CoreImage
+import UIKit
 
 protocol VideoProcessingChainDelegate: AnyObject {
     /// Informs the delegate when Vision analyzes an image in the frame chain.
@@ -74,7 +75,7 @@ struct VideoProcessingChain {
     ///
     /// Increase the stride's value to make predictions less frequently.
     /// - Tag: windowStride
-    private let windowStride = 10
+    private let windowStride = 30
 
     /// A performance reporter that logs the number of predictions and frames
     /// that pass through the chain.
@@ -321,7 +322,6 @@ extension VideoProcessingChain {
     /// - Tag: sendPrediction
     private func sendPrediction(_ actionPrediction: ActionPrediction) {
         // Send the prediction to the delegate on the main queue.
-        print(actionPrediction)
         DispatchQueue.main.async {
             self.delegate?.videoProcessingChain(self,
                                                 didPredict: actionPrediction,
