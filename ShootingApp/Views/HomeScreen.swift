@@ -19,6 +19,16 @@ struct HomeScreen: View {
     let db = Firestore.firestore()
     var body: some View {
         VStack{
+            HStack{
+                NavigationLink(destination: BodyPredictionScreen(), label:{
+                    Text("Body Prediction Screen")
+                })
+                Spacer()
+                NavigationLink(destination: VideoPlaybackView(), label:{
+                    Text("Video Playback View")
+                })
+            }
+            .padding()
             VStack{
                 HStack{
                     Text("Groups")
@@ -29,24 +39,7 @@ struct HomeScreen: View {
                         Image(systemName: "plus")
                     }
                 }.padding()
-                List {
-                    ForEach(groups, id: \.name) { group in
-                        NavigationLink(destination: GroupDetailView(group:binding(for:group))){
-                            GroupView(group: group)
-                        }.listRowBackground(group.color)
-                        
-                    }
-                }.padding()
             }
-            // link that takes the users to page where they can search for more groups
-            HStack{
-                NavigationLink(destination: FindGroupsView(groupViewModel: groupViewModel)){
-                    Text("Search for groups")
-                        .font(.title3)
-                    Spacer()
-                }
-            }
-            .padding()
         }
         .navigationTitle("Analyze")
         .navigationBarItems(trailing:
@@ -64,20 +57,6 @@ struct HomeScreen: View {
                 Image(systemName: "gearshape.fill")
             }
         )
-        .sheet(isPresented: $isPresented, content: {
-            NavigationView{
-                EditGroupView(groupData: $newGroupData)
-                    .navigationBarItems(leading: Button("Dismiss") {
-                            isPresented = false
-                        }, trailing: Button("Add") {
-                            let newGroup = Group(name: newGroupData.name, coach: newGroupData.coach, players:newGroupData.players, workouts: newGroupData.workouts , color:newGroupData.color)
-                            groups.append(newGroup)
-                            groupViewModel.add(newGroup)
-                            userViewModel.addGroup(newGroup)
-                            isPresented = false
-                        })
-            }
-        })
     }
     private func binding(for group: Group) -> Binding<Group> {
         guard let groupIndex = groups.firstIndex(where: { $0.name == group.name }) else {
