@@ -28,7 +28,6 @@ struct CameraPredictionScreen : View {
                     Spacer()
                 }
                 Spacer()
-
                 VStack{
                     Text(dataModel.predictionText)
                         .font(.custom("Helvetica Neue", size: 40))
@@ -36,7 +35,9 @@ struct CameraPredictionScreen : View {
                     Text("\(dataModel.confidenceText)")
                         .font(.custom("Helvetica Neue", size: 40))
                         .foregroundColor(.black)
-
+                    Text("\(dataModel.distance)")
+                        .font(.custom("Helvetica Neue", size: 40))
+                        .foregroundColor(.black)
                 }
                 .background(Color.gray)
                 .cornerRadius(10)
@@ -59,8 +60,6 @@ struct CameraPredictionScreen : View {
         .navigationBarHidden(true)
         .navigationBarTitle("", displayMode: .inline)
         .edgesIgnoringSafeArea(.top)
-        
-        
     }
 }
 

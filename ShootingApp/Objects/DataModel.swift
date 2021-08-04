@@ -20,6 +20,7 @@ class DataModel : ObservableObject {
     @Published var lastFrames : [UIImage]
     @Published var cameraRunning : Bool
     @Published var player : AVPlayer
+    @Published var distance : String
     init(){
         predictionText = ""
         confidenceText = ""
@@ -32,5 +33,6 @@ class DataModel : ObservableObject {
         lastFrames = []
         cameraRunning = true
         player = AVPlayer()
+        distance = ""
     }
 }

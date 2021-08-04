@@ -70,6 +70,7 @@ struct ImageView: UIViewRepresentable {
             // Present the prediction in the UI.
             updateUILabelsWithPrediction(actionPrediction)
         }
+        
         func updateUILabelsWithPrediction(_ prediction : ActionPrediction){
             DispatchQueue.main.async { self.dataModel.predictionText = prediction.label }
 

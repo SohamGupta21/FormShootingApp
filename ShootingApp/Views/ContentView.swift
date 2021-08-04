@@ -45,13 +45,13 @@ struct Home: View {
             }
             
             .navigationBarTitle("")
-                    .navigationBarHidden(true)
-                    .navigationBarBackButtonHidden(true)
-                    .onAppear() {
-                        NotificationCenter.default.addObserver(forName: NSNotification.Name("status"), object: nil, queue: .main) { (_) in
-                            self.status = UserDefaults.standard.value(forKey: "status") as? Bool ?? false
-                        }
-                    }
+            .navigationBarHidden(true)
+            .navigationBarBackButtonHidden(true)
+            .onAppear() {
+                NotificationCenter.default.addObserver(forName: NSNotification.Name("status"), object: nil, queue: .main) { (_) in
+                    self.status = UserDefaults.standard.value(forKey: "status") as? Bool ?? false
+                }
+            }
         }
         
     }

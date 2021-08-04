@@ -12,12 +12,15 @@ protocol PredictorDelegate: AnyObject{
     // the didFindNewRecognizedPoints function receives an array of points
     func predictor(_ predictor: Predictor, didFindNewRecognizedPoints points: [CGPoint])
     func predictor(_ predictor: Predictor, didLabelAction action: String, with confidence: Double)
+    // this passes up angles to the main screen
 }
 class Predictor{
     //connectes the predictor class to the delegate bariable
     weak var delegate: PredictorDelegate?
     
     let predictionWindowSize = 64
+    
+    //MARK: this array can help us to do angle analysis after the workout is done
     var posesWindow: [VNHumanBodyPoseObservation] = []
     
     var request = VNDetectHumanBodyPoseRequest()
@@ -106,7 +109,6 @@ class Predictor{
         if posesWindow.count >= predictionWindowSize {
             posesWindow.removeFirst()
         }
-        
         posesWindow.append(observation)
     }
     // this processes a single observation

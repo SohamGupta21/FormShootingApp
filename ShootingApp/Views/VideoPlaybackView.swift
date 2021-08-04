@@ -10,25 +10,38 @@ import AVKit
 import FirebaseStorage
 import FirebaseAuth
 
-struct VideoPlaybackView: View {
-    var currentUser = Auth.auth().currentUser
-    @State var currentVideo : URL = URL(string: "path/to/image")!
-    @State var videos : [URL] = []
+
+class VideoPlaybackModel: ObservableObject {
+    @Published var currentUser = Auth.auth().currentUser
+    @Published var currentVideo : URL = URL(fileURLWithPath: "")
+    @Published var videos : [URL] = []
+    @Published var videoNames : [String] = []
     
     init(){
-        let userVideosRef = Storage.storage().reference().child("\(self.currentUser!.uid)/54F0EF39-32C8-4BBD-B9BA-F9F0D80CA019.mp4")
-        // Download to the local filesystem
-        let downloadTask = userVideosRef.write(toFile: currentVideo) { url, error in
+        let videosReference = storageRef.child("C3OLmLkb8RevYUOSx0X2xIm8l0U2/54F0EF39-32C8-4BBD-B9BA-F9F0D80CA019")
+//        // Fetch the download URL
+//        videosReference.listAll { (result, error) in
+//            if let error = error {
+//                print(error)
+//            }
+//            for prefix in result.prefixes {
+//                self.videoNames.append(prefix.fullPath)
+//            }
+//        }
+        // Fetch the download url
+        videosReference.downloadURL(completion: { url, error in
           if let error = error {
-            // Uh-oh, an error occurred!
+            print(error)
           } else {
-            // Local file URL for "images/island.jpg" is returned
-          }
-        }
+            self.currentVideo = url!
+          }})
     }
+}
+struct VideoPlaybackView: View {
+    @ObservedObject var videoPlaybackModel : VideoPlaybackModel = VideoPlaybackModel()
     var body: some View {
         VStack{
-            VideoPlayerURLController(videoURL: currentVideo)
+            VideoPlayerURLController(videoURL: videoPlaybackModel.currentVideo)
         }
     }
 }
