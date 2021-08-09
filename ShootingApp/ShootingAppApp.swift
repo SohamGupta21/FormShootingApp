@@ -15,7 +15,7 @@ struct ShootingAppApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView{
-                ContentView()
+                EntryView()
             }
         }
     }
