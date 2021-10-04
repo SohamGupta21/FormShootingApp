@@ -23,6 +23,8 @@ class WorkoutViewModel : ObservableObject {
     // collects frames that can be used to make and playback videos
     @Published var formShootingFrames : [[UIImage]]
     @Published var lastFrames : [UIImage]
+    @Published var posesPerFrame : [[Pose]]
+    @Published var lastPoses : [Pose]
     
     init(){
         
@@ -39,6 +41,9 @@ class WorkoutViewModel : ObservableObject {
         
         formShootingFrames = []
         lastFrames = []
+        posesPerFrame = []
+        
+        lastPoses = []
     }
     
 }

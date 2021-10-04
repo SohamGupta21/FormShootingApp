@@ -106,7 +106,13 @@ struct SignUpView : View {
             ErrorView(alert: $signUpViewModel.alert, error: $signUpViewModel.error)
         }
     }
-        
         .navigationBarBackButtonHidden(true)
     }
 }
+
+struct SignUpView_Previews : PreviewProvider {
+    static var previews: some View {
+        SignUpView(show: .constant(false))
+    }
+}
+

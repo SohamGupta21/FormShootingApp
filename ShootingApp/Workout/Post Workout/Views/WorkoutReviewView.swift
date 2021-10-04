@@ -21,6 +21,7 @@ struct WorkoutReviewView: View {
     @State var currentVideo : [UIImage]
     @State var formShootingFrames : [[UIImage]]
     @State var videosToSave: [[UIImage]] = []
+    @State var formAnalysis : FormAnalysis
 
     var body: some View{
         VStack{
@@ -71,7 +72,7 @@ struct WorkoutReviewView: View {
                 })
             }
             .padding()
-            
+            Text("Primary Shooting Arm Angle: \(formAnalysis.primaryShootingArmAngle)")
         }
         
     }

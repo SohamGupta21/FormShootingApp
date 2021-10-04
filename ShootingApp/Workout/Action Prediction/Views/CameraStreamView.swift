@@ -133,16 +133,25 @@ struct CameraStreamView: UIViewRepresentable {
             DispatchQueue.main.async {
                 self.workoutViewModel.imageView.image = frameWithPosesRendering
                 self.workoutViewModel.lastFrames.append(frameWithPosesRendering)
+                if poses!.count > 0 {
+                    self.workoutViewModel.lastPoses.append(poses![0])
+                }
                 if self.workoutViewModel.lastFrames.count > 48 {
                     self.workoutViewModel.lastFrames.remove(at: 0)
                 }
+                if self.workoutViewModel.lastPoses.count > 48 {
+                    self.workoutViewModel.lastPoses.remove(at:0)
+                }
                 /// this saves video that can be played back
+                /// use this section to also save the poses that analysis can be applied on
                 if self.workoutViewModel.predictionText == "Form"{
                     if self.workoutViewModel.previousPrediction != "Form"{
 //                        self.workoutViewModel.formShootingFrames.append([])
                         self.workoutViewModel.formShootingFrames.append(self.workoutViewModel.lastFrames)
+                        self.workoutViewModel.posesPerFrame.append(self.workoutViewModel.lastPoses)
                     }
                     self.workoutViewModel.formShootingFrames[self.workoutViewModel.formShootingFrames.count - 1].append(frameWithPosesRendering)
+                    self.workoutViewModel.posesPerFrame[self.workoutViewModel.posesPerFrame.count - 1].append(poses![0])
                 }
                 self.workoutViewModel.previousPrediction = self.workoutViewModel.predictionText
             }

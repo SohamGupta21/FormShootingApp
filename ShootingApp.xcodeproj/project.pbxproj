@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31065EEA27047EF9000082C4 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31065EE927047EF9000082C4 /* Colors.swift */; };
 		31191B5926A1322D00B8791F /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31191B5526A1322D00B8791F /* VideoCapture.swift */; };
 		31191B5A26A1322D00B8791F /* AVCaptureDeviceInput+Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31191B5626A1322D00B8791F /* AVCaptureDeviceInput+Camera.swift */; };
 		31191B5B26A1322D00B8791F /* AVCaptureDevice+FrameRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31191B5726A1322D00B8791F /* AVCaptureDevice+FrameRate.swift */; };
@@ -31,6 +32,7 @@
 		315C316626BDD9EC0021AD1F /* EntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315C316526BDD9EC0021AD1F /* EntryViewModel.swift */; };
 		315C316926BDDB420021AD1F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315C316826BDDB420021AD1F /* LoginViewModel.swift */; };
 		315C316D26BDF25B0021AD1F /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315C316C26BDF25B0021AD1F /* SignUpViewModel.swift */; };
+		315C5444270A892700C5FEA7 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315C5443270A892700C5FEA7 /* RegisterView.swift */; };
 		3166D95C26C1AA7E00BDC28F /* FormShootingClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3166D95B26C1AA7E00BDC28F /* FormShootingClassifier.mlmodel */; };
 		3166D95E26C1AB5100BDC28F /* FormShootingClassifierExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3166D95D26C1AB5100BDC28F /* FormShootingClassifierExtensions.swift */; };
 		3166D96226C1B1B900BDC28F /* WorkoutEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3166D96126C1B1B900BDC28F /* WorkoutEntryView.swift */; };
@@ -41,6 +43,7 @@
 		3166D97426C1BDC500BDC28F /* VideoPlaybackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3166D97326C1BDC500BDC28F /* VideoPlaybackView.swift */; };
 		3166D97626C1BDFA00BDC28F /* URLVideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3166D97526C1BDFA00BDC28F /* URLVideoPlayerView.swift */; };
 		3166D97826C1BE2700BDC28F /* VideoPlaybackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3166D97726C1BE2700BDC28F /* VideoPlaybackModel.swift */; };
+		3166D97B26C1DCAC00BDC28F /* FormAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3166D97A26C1DCAC00BDC28F /* FormAnalysis.swift */; };
 		3178E48526B50668002EB671 /* WorkoutReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3178E48426B50668002EB671 /* WorkoutReviewView.swift */; };
 		3178E48726B506A7002EB671 /* CameraStreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3178E48626B506A7002EB671 /* CameraStreamView.swift */; };
 		3190AEA82697E0220072F0AE /* Predictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3190AEA72697E0220072F0AE /* Predictor.swift */; };
@@ -68,6 +71,7 @@
 
 /* Begin PBXFileReference section */
 		0FF5F714AA11035F9CB41568 /* Pods-ShootingAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShootingAppTests.debug.xcconfig"; path = "Target Support Files/Pods-ShootingAppTests/Pods-ShootingAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		31065EE927047EF9000082C4 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		31191B5526A1322D00B8791F /* VideoCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
 		31191B5626A1322D00B8791F /* AVCaptureDeviceInput+Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVCaptureDeviceInput+Camera.swift"; sourceTree = "<group>"; };
 		31191B5726A1322D00B8791F /* AVCaptureDevice+FrameRate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVCaptureDevice+FrameRate.swift"; sourceTree = "<group>"; };
@@ -97,6 +101,7 @@
 		315C316526BDD9EC0021AD1F /* EntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewModel.swift; sourceTree = "<group>"; };
 		315C316826BDDB420021AD1F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		315C316C26BDF25B0021AD1F /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		315C5443270A892700C5FEA7 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		3166D95B26C1AA7E00BDC28F /* FormShootingClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FormShootingClassifier.mlmodel; sourceTree = "<group>"; };
 		3166D95D26C1AB5100BDC28F /* FormShootingClassifierExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormShootingClassifierExtensions.swift; sourceTree = "<group>"; };
 		3166D96126C1B1B900BDC28F /* WorkoutEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutEntryView.swift; sourceTree = "<group>"; };
@@ -107,6 +112,7 @@
 		3166D97326C1BDC500BDC28F /* VideoPlaybackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlaybackView.swift; sourceTree = "<group>"; };
 		3166D97526C1BDFA00BDC28F /* URLVideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLVideoPlayerView.swift; sourceTree = "<group>"; };
 		3166D97726C1BE2700BDC28F /* VideoPlaybackModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlaybackModel.swift; sourceTree = "<group>"; };
+		3166D97A26C1DCAC00BDC28F /* FormAnalysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormAnalysis.swift; sourceTree = "<group>"; };
 		3178E48426B50668002EB671 /* WorkoutReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutReviewView.swift; sourceTree = "<group>"; };
 		3178E48626B506A7002EB671 /* CameraStreamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraStreamView.swift; sourceTree = "<group>"; };
 		3190AEA72697E0220072F0AE /* Predictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predictor.swift; sourceTree = "<group>"; };
@@ -220,6 +226,7 @@
 				31479FA2262F2F5B00F8EA26 /* Info.plist */,
 				31479FC7262F2FE100F8EA26 /* GoogleService-Info.plist */,
 				31479F9F262F2F5B00F8EA26 /* Preview Content */,
+				31065EE927047EF9000082C4 /* Colors.swift */,
 			);
 			path = ShootingApp;
 			sourceTree = "<group>";
@@ -284,6 +291,7 @@
 			children = (
 				315C315E26BDD5D90021AD1F /* SignUpView.swift */,
 				315C316C26BDF25B0021AD1F /* SignUpViewModel.swift */,
+				315C5443270A892700C5FEA7 /* RegisterView.swift */,
 			);
 			path = "\U0010Sign Up";
 			sourceTree = "<group>";
@@ -374,6 +382,7 @@
 			isa = PBXGroup;
 			children = (
 				3166D96B26C1BBC700BDC28F /* VideoBuilder.swift */,
+				3166D97A26C1DCAC00BDC28F /* FormAnalysis.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -659,10 +668,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3166D95E26C1AB5100BDC28F /* FormShootingClassifierExtensions.swift in Sources */,
+				31065EEA27047EF9000082C4 /* Colors.swift in Sources */,
 				315534B92662D52100276732 /* HomeScreen.swift in Sources */,
 				3166D97826C1BE2700BDC28F /* VideoPlaybackModel.swift in Sources */,
 				31479FF3262F78A800F8EA26 /* MainScreen.swift in Sources */,
 				315C316126BDD61B0021AD1F /* ErrorView.swift in Sources */,
+				3166D97B26C1DCAC00BDC28F /* FormAnalysis.swift in Sources */,
 				3166D96226C1B1B900BDC28F /* WorkoutEntryView.swift in Sources */,
 				31191B5B26A1322D00B8791F /* AVCaptureDevice+FrameRate.swift in Sources */,
 				31191B5C26A1322D00B8791F /* AVCaptureVideoDataOutput+PixelFormat.swift in Sources */,
@@ -681,6 +692,7 @@
 				3178E48726B506A7002EB671 /* CameraStreamView.swift in Sources */,
 				315C316626BDD9EC0021AD1F /* EntryViewModel.swift in Sources */,
 				315C315D26BDD58F0021AD1F /* LoginView.swift in Sources */,
+				315C5444270A892700C5FEA7 /* RegisterView.swift in Sources */,
 				3166D96A26C1BB6100BDC28F /* VideoPlayerView.swift in Sources */,
 				3166D95C26C1AA7E00BDC28F /* FormShootingClassifier.mlmodel in Sources */,
 				31191B5A26A1322D00B8791F /* AVCaptureDeviceInput+Camera.swift in Sources */,

@@ -8,24 +8,25 @@
 import SwiftUI
 
 struct ErrorView : View {
-    @State var color = Color.black.opacity(0.7)
     @Binding var alert : Bool
     @Binding var error : String
+    var colors = Colors()
     var body: some View{
-        GeometryReader{_ in
+        GeometryReader{geometry in
             VStack{
                 HStack{
+                    Spacer()
                     Text(self.error == "RESET" ? "Message" : "Error")
                         .font(.title)
                         .fontWeight(.bold)
-                        .foregroundColor(self.color)
+                        .foregroundColor(colors.orangeColor)
                     
                     Spacer()
                 }
                 .padding(.horizontal, 25)
                 
                 Text(self.error == "RESET" ? "Password reset link has been sent" : self.error)
-                    .foregroundColor(self.color)
+                    .foregroundColor(colors.orangeColor)
                     .padding(.top)
                     .padding(.horizontal, 25)
                 
@@ -33,19 +34,26 @@ struct ErrorView : View {
                     self.alert.toggle()
                 }){
                     Text(self.error == "RESET" ? "Ok" : "Cancel")
-                        .foregroundColor(.white)
+                        .foregroundColor(colors.whiteColor)
                         .padding(.vertical)
                         .frame(width: UIScreen.main.bounds.width - 120)
                 }
-                .background(Color.blue)
+                .background(colors.orangeColor)
                 .cornerRadius(10)
                 .padding(.top, 25)
             }
             .padding(.vertical, 25)
             .frame(width: UIScreen.main.bounds.width-70)
-            .background(Color.white)
+            .background(colors.whiteColor)
             .cornerRadius(15)
+            .frame(width:geometry.size.width)
         }
         .background(Color.black.opacity(0.35).edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/))
     }
 }
+struct ErrorView_Previews : PreviewProvider {
+    static var previews: some View {
+        ErrorView(alert: .constant(false), error:.constant("Please fill contents properly"))
+    }
+}
+

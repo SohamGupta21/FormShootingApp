@@ -4,17 +4,36 @@ import FirebaseAuth
 struct LoginView: View {
     @StateObject var loginViewModel = LoginViewModel()
     @Binding var show: Bool
+    var colors = Colors()
     var body: some View{
         ZStack{
             ZStack(alignment: .topTrailing){
-                GeometryReader{_ in
+                //            Photo by <a href="https://unsplash.com/@solarfri?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Mira Kireeva</a> on <a href="https://unsplash.com/s/photos/basketball?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                GeometryReader { geo in
+                    Image("man-layup")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: geo.size.width)
+                        .edgesIgnoringSafeArea(.all)
+                }
+                GeometryReader{geometry in
                     VStack {
-                        Text("Log In")
-                            .font(.title)
+                        ZStack{
+//                            RoundedRectangle(cornerRadius: 50)
+//                                .fill(colors.whiteColor)
+//                                .frame(width:200, height:50)
+                            Text("Log In")
+                                .font(.title)
+                                .foregroundColor(colors.whiteColor)
+                                .cornerRadius(50)
+                        }
+                        
                         TextField("Email", text: $loginViewModel.email)
                             .autocapitalization(.none)
                             .padding()
-                            .background(RoundedRectangle(cornerRadius:4).stroke(loginViewModel.email != "" ? Color("Color") : loginViewModel.color, lineWidth: 2))
+                            .background(
+                                RoundedRectangle(cornerRadius:50).fill(colors.whiteColor)
+                            )
                             .padding(.top, 25)
                             HStack{
                                 VStack{
@@ -36,7 +55,9 @@ struct LoginView: View {
 
                             }
                             .padding()
-                            .background(RoundedRectangle(cornerRadius:4).stroke(loginViewModel.pass != "" ? Color("Color") : loginViewModel.color, lineWidth: 2))
+                            .background(
+                                RoundedRectangle(cornerRadius:50).fill(colors.whiteColor)
+                            )
                             .padding(.top, 25)
                             
                             HStack{
@@ -47,7 +68,7 @@ struct LoginView: View {
                                 }) {
                                     Text("Forgot password")
                                         .fontWeight(.bold)
-                                        .foregroundColor(Color.blue)
+                                        .foregroundColor(colors.whiteColor)
                                 }
                             }
                             .padding(.top, 20)
@@ -60,28 +81,35 @@ struct LoginView: View {
                                     .padding(.vertical)
                                     .frame(width: UIScreen.main.bounds.width - 50)
                             }
-                            .background(Color.blue)
-                            .cornerRadius(10)
+                            .background(colors.orangeColor)
+                            .cornerRadius(50)
                             .padding(.top, 25)
                     }
-                    .padding(.horizontal, 25)
-                    
+                    .padding(.horizontal)
+                    .frame(height:geometry.size.height/1.5)
                 }
-                
                 Button(action:{
                     self.show.toggle()
                 }){
                     Text("Register")
                         .fontWeight(.bold)
-                        .foregroundColor(Color.blue)
+                        .foregroundColor(colors.whiteColor)
                 }
                 .padding()
+                
+             
             }
             
             if loginViewModel.alert{
                 ErrorView(alert: $loginViewModel.alert, error: $loginViewModel.error)
             }
         }
-        
     }
 }
+
+struct LoginView_Previews : PreviewProvider {
+    static var previews: some View {
+        LoginView(show: .constant(false))
+    }
+}
+

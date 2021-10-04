@@ -13,46 +13,60 @@ import FirebaseFirestore
 struct HomeScreen: View {
     @State private var isPresented = false
     let db = Firestore.firestore()
+    let colors = Colors();
     var body: some View {
-        VStack{
-            HStack{
-                NavigationLink(destination: WorkoutEntryView(), label:{
-                    Text("Workout Entry View")
-                })
-                Spacer()
-                NavigationLink(destination: VideoPlaybackView(), label:{
-                    Text("Video Playback View")
-                })
-            }
-            .padding()
+        ZStack{
+            Color(colors.greyCGColor)
+                .edgesIgnoringSafeArea(.all)
             VStack{
                 HStack{
-                    Text("Groups")
+                    NavigationLink(destination: WorkoutEntryView(), label:{
+                        Text("Workout Entry View")
+                            .foregroundColor(colors.whiteColor)
+                    })
                     Spacer()
-                    Button(action: {
-                        isPresented = true
-                    }) {
-                        Image(systemName: "plus")
-                    }
-                }.padding()
-            }
-        }
-        .navigationTitle("Analyze")
-        .navigationBarItems(trailing:
-            VStack{
-                Button(action: {
-                    try! Auth.auth().signOut()
-                    UserDefaults.standard.set(false, forKey: "status")
-                    NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
-                }) {
-                    Text("Log out")
+                    NavigationLink(destination: VideoPlaybackView(), label:{
+                        Text("Video Playback View")
+                            .foregroundColor(colors.whiteColor)
+                    })
                 }
-                .padding(.top, 25)
+                .padding()
                 Spacer()
-                Image(systemName: "gearshape.fill")
+                VStack{
+                    HStack{
+                        Text("Groups")
+                        Spacer()
+                        Button(action: {
+                            isPresented = true
+                        }) {
+                            Image(systemName: "plus")
+                        }
+                    }.padding()
+                }
             }
-        )
+            .navigationTitle("Analyze")
+            .navigationBarItems(trailing:
+                VStack{
+                    Button(action: {
+                        try! Auth.auth().signOut()
+                        UserDefaults.standard.set(false, forKey: "status")
+                        NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
+                    }) {
+                        Text("Log out")
+                    }
+                    .padding(.top, 25)
+                    Spacer()
+                    Image(systemName: "gearshape.fill")
+                }
+            )
+        }
+        
     }
-    
+}
+
+struct HomeScreen_Previews : PreviewProvider {
+    static var previews: some View {
+        HomeScreen()
+    }
 }
 
