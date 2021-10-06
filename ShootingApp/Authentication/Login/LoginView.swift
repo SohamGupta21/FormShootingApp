@@ -35,6 +35,7 @@ struct LoginView: View {
                                 RoundedRectangle(cornerRadius:50).fill(colors.whiteColor)
                             )
                             .padding(.top, 25)
+                            .opacity(0.85)
                             HStack{
                                 VStack{
                                     if loginViewModel.visible{
@@ -59,6 +60,7 @@ struct LoginView: View {
                                 RoundedRectangle(cornerRadius:50).fill(colors.whiteColor)
                             )
                             .padding(.top, 25)
+                            .opacity(0.85)
                             
                             HStack{
                                 Spacer()
