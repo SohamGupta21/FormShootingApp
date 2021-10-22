@@ -13,7 +13,7 @@ import Photos
 struct ActiveWorkoutView : View {
     @ObservedObject var workoutViewModel : WorkoutViewModel
     @Binding var cameraRunning : Bool
-   
+    @State var alertShowing = true
     var body : some View {
         ZStack{
             CameraStreamView(workoutViewModel: workoutViewModel)
@@ -49,13 +49,23 @@ struct ActiveWorkoutView : View {
                 })
             }
             .padding()
+            
+            if alertShowing {
+                WorkoutStartPopUpView(alert: self.$alertShowing)
+            }
+            
         }
+//        .sheet(isPresented: self.$alertShowing) {
+//            WorkoutStartPopUpView(alert: self.$alertShowing)
+//                .padding(.all)
+//        }
         .onAppear(perform:{
             UIApplication.shared.isIdleTimerDisabled = true
         })
         .navigationBarHidden(true)
         .navigationBarTitle("", displayMode: .inline)
         .edgesIgnoringSafeArea(.top)
+        
     }
 }
 

@@ -10,24 +10,42 @@ import Firebase
 
 struct EntryView: View {
     @StateObject var entryViewModel = EntryViewModel()
+    var colors = Colors()
     var body: some View {
-        NavigationView{
-            if entryViewModel.status{
+        if entryViewModel.status{
+            TabView{
                 HomeScreen()
                     .onAppear(perform: setBackgroundColor)
-            } else {
-                VStack{
-                    ZStack{
-                        NavigationLink(destination: SignUp(show: $entryViewModel.show),isActive: $entryViewModel.show){
-                        Text("Error is occuring at the moment, sorry")
+                    .tabItem {
+                        Label("Home", systemImage: "house.fill")
                     }
-                    .hidden()
-                        LoginView(show: $entryViewModel.show)
+                WorkoutEntryView()
+                    .tabItem {
+                        Label("Workout", systemImage:"play.fill")
                     }
+                Text("Quick Improvement")
+                    .tabItem {
+                        Label("Improve", systemImage: "camera.fill")
+                    }
+                Text("Statistics")
+                    .tabItem{
+                        Label("Stats", systemImage:"chart.bar.fill")
+                    }
+            }
+            .accentColor(colors.orangeColor)
+            .ignoresSafeArea(.all)
+        } else {
+            VStack{
+                ZStack{
+                    NavigationLink(destination: SignUp(show: $entryViewModel.show),isActive: $entryViewModel.show){
+                    Text("Error is occuring at the moment, sorry")
                 }
-                .onAppear() {
-                    entryViewModel.addObserver()
+                .hidden()
+                    LoginView(show: $entryViewModel.show)
                 }
+            }
+            .onAppear() {
+                entryViewModel.addObserver()
             }
         }
     }

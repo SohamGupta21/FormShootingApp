@@ -21,39 +21,42 @@ struct WorkoutReviewView: View {
     @State var currentVideo : [UIImage]
     @State var formShootingFrames : [[UIImage]]
     @State var videosToSave: [[UIImage]] = []
+    @State var posesPerFrame : [[Pose]]
     @State var formAnalysis : FormAnalysis
 
     var body: some View{
         VStack{
             VideoPlayerView(frames: currentVideo)
-                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height/2)
-            Spacer()
-            ScrollView (.horizontal, showsIndicators: false) {
-                 HStack {
-                    ForEach((0...formShootingFrames.count - 1), id: \.self) { frameIndex in
-                        Button(action: {
-                            currentVideo = formShootingFrames[frameIndex]
-                        }, label: {
-                            ZStack{
-                                RoundedRectangle(cornerRadius: 10, style: .continuous)
-                                    .fill(Color.white)
-                                    .frame(width: 150, height: 175)
-                                VStack{
-                                    Image(uiImage:formShootingFrames[frameIndex][0])
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(width: 150, height: 150)
-                                    Text("Shot \(frameIndex + 1)")
+                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height/3)
+            ScrollView(.vertical, showsIndicators: true) {
+                
+                AngleComparisonView(formAnalysis: self.formAnalysis)
+                    .padding()
+                    .cornerRadius(5)
+                ScrollView (.horizontal, showsIndicators: false) {
+                     HStack {
+                        ForEach((0...formShootingFrames.count - 1), id: \.self) { frameIndex in
+                            Button(action: {
+                                currentVideo = formShootingFrames[frameIndex]
+                                self.formAnalysis = FormAnalysis(posesArray: posesPerFrame[frameIndex])
+                            }, label: {
+                                ZStack{
+                                    VStack{
+                                        Image(uiImage:formShootingFrames[frameIndex][0])
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 150, height: 150)
+                                            .cornerRadius(10)
+                                    }
                                 }
-                                
-                                
-                            }
-                        })
-                    }
-                 }
+                            })
+                        }
+                     }
+                }
+                .frame(height: 100)
+                .padding()
             }
-            .frame(height: 100)
-            .padding()
+            
             Spacer()
             
             HStack{
@@ -77,4 +80,3 @@ struct WorkoutReviewView: View {
         
     }
 }
-

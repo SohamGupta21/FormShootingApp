@@ -14,4 +14,6 @@ class Colors{
     let orangeColor = Color(#colorLiteral(red: 1, green: 0.65, blue: 0, alpha: 1))
     let whiteColor = Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))
     var whiteCGColor : CGColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1.0).cgColor
+    let greenColor = Color(#colorLiteral(red: 0.1, green: 1, blue: 0.02, alpha: 1))
+    let redColor = Color(#colorLiteral(red: 1, green: 0.01, blue: 0.01, alpha: 1))
 }

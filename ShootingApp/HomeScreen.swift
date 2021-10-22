@@ -30,51 +30,16 @@ struct HomeScreen: View {
             LinearGradient(gradient: Gradient(colors: [colors.orangeColor, colors.greyColor, colors.greyColor]), startPoint: .topLeading, endPoint: .bottomTrailing)
                 .edgesIgnoringSafeArea(.bottom)
            VStack{
-               HStack{
-                   Text("Improve Your Form")
-                       .font(.title2)
-                       .foregroundColor(colors.whiteColor)
-                       .cornerRadius(50)
-                   Spacer()
-               }
-               .padding()
+               Heading("Improve Your Form")
                
-               NavigationLink(destination: VideoPlaybackView(), label:{
-                   Text("Video Playback View")
-                       .foregroundColor(colors.whiteColor)
-                       .foregroundColor(.white)
-                       .padding(.vertical)
-                       .frame(width: UIScreen.main.bounds.width - 50)
-               })
-               .background(colors.orangeColor)
-               .cornerRadius(50)
-               .padding(.top, 25)
+               NavigationButton(destContent:{VideoPlaybackView()}, text:"Video Playback View")
                
-               HStack{
-                   Text("Get Your Reps In")
-                       .font(.title2)
-                       .foregroundColor(colors.whiteColor)
-                       .cornerRadius(50)
-                   Spacer()
-               }
-               .padding()
-               NavigationLink(destination: WorkoutEntryView(), label:{
-                   Text("Start a New Workout")
-                       .foregroundColor(.white)
-                       .padding(.vertical)
-                       .frame(width: UIScreen.main.bounds.width - 50)
-               })
-               .background(colors.orangeColor)
-               .cornerRadius(50)
-               .padding(.top, 25)
-               HStack{
-                   Text("Check Your Stats")
-                       .font(.title2)
-                       .foregroundColor(colors.whiteColor)
-                       .cornerRadius(50)
-                   Spacer()
-               }
-               .padding()
+              Heading("Get Your Reps In")
+            
+               
+               NavigationButton(destContent: {WorkoutEntryView()}, text: "Start A New Workout")
+               
+               Heading("Check Your Stats")
                
                // Bar Chart
                BarChartView(data: ChartData(values: [
@@ -87,30 +52,6 @@ struct HomeScreen: View {
                 ("Sat", 356)]), title: "Your Progress", legend:"Shots Taken", form:ChartForm.medium)
 
            }
-           .navigationTitle("Home")
-           .navigationBarTitleDisplayMode(.inline)
-           .navigationBarItems(trailing:
-               HStack{
-                   
-               }
-           )
-           .navigationBarItems(leading:
-               HStack{
-                   Image(systemName: "list.dash")
-                   .foregroundColor(colors.greyColor)
-               Button(action: {
-                   try! Auth.auth().signOut()
-                   UserDefaults.standard.set(false, forKey: "status")
-                   NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
-               }) {
-                   Image(systemName: "person.crop.circle")
-                       .foregroundColor(colors.greyColor)
-               }
-               Spacer()
-               Image(systemName: "gearshape.fill")
-               .foregroundColor(colors.greyColor)
-               }
-           )
        }
     }
 }
