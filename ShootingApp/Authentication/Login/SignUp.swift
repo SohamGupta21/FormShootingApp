@@ -35,19 +35,22 @@ struct SignUp: View {
                         TextField("Email", text: $signUpViewModel.email)
                             .autocapitalization(.none)
                             .padding()
-                            .background(
-                                RoundedRectangle(cornerRadius:50).fill(colors.whiteColor)
-                            )
+//                            .background(
+//                                RoundedRectangle(cornerRadius:50).fill(colors.whiteColor)
+//                            )
                             .padding(.top, 25)
                             .opacity(0.85)
+                            .foregroundColor(colors.greyColor)
                         HStack{
                             VStack{
                                 if signUpViewModel.visible{
                                     TextField("Password", text:$signUpViewModel.pass)
                                         .autocapitalization(.none)
+                                        .foregroundColor(colors.greyColor)
                                 } else {
                                     SecureField("Password", text: $signUpViewModel.pass)
                                         .autocapitalization(.none)
+                                        .foregroundColor(colors.greyColor)
                                 }
                             }
                             Button(action: {
@@ -58,9 +61,9 @@ struct SignUp: View {
                             }
                         }
                         .padding()
-                        .background(
-                            RoundedRectangle(cornerRadius:50).fill(colors.whiteColor)
-                        )
+//                        .background(
+//                            RoundedRectangle(cornerRadius:50).fill(colors.whiteColor)
+//                        )
                         .padding(.top, 25)
                         .opacity(0.85)
                             
@@ -82,9 +85,9 @@ struct SignUp: View {
                             }
                         }
                         .padding()
-                        .background(
-                            RoundedRectangle(cornerRadius:50).fill(colors.whiteColor)
-                        )
+//                        .background(
+//                            RoundedRectangle(cornerRadius:50).fill(colors.whiteColor)
+//                        )
                         .padding(.top, 25)
                         .opacity(0.85)
                 
@@ -94,9 +97,9 @@ struct SignUp: View {
                                 TextField("Username", text: $signUpViewModel.username)
                                     .autocapitalization(.none)
                                     .padding()
-                                    .background(
-                                        RoundedRectangle(cornerRadius:50).fill(colors.whiteColor)
-                                    )
+//                                    .background(
+//                                        RoundedRectangle(cornerRadius:50).fill(colors.whiteColor)
+//                                    )
                                     .padding(.top, 25)
                                     .opacity(0.85)
                             }
@@ -119,14 +122,14 @@ struct SignUp: View {
                             
                 }
                 
-                Button(action:{
-                    self.show.toggle()
-                }){
-                    Image(systemName: "chevron.left")
-                        .font(.title)
-                        .foregroundColor(Color.blue)
-                }
-                .padding()
+//                Button(action:{
+//                    self.show.toggle()
+//                }){
+//                    Image(systemName: "chevron.left")
+//                        .font(.title)
+//                        .foregroundColor(Color.blue)
+//                }
+//                .padding()
             }
             
             if signUpViewModel.alert{

@@ -18,8 +18,8 @@ struct CameraStreamView: UIViewRepresentable {
     func makeUIView(context: Context) -> UIImageView {
         updateUILabelsWithPrediction(.startingPrediction)
         workoutViewModel.videoCapture.updateDeviceOrientation()
-        workoutViewModel.videoCapture.delegate = context.coordinator
-        workoutViewModel.videoProcessingChain.delegate = context.coordinator
+//        workoutViewModel.videoCapture.delegate = context.coordinator
+//        workoutViewModel.videoProcessingChain.delegate = context.coordinator
         workoutViewModel.imageView.frame = UIScreen.main.bounds
         return workoutViewModel.imageView;
     }

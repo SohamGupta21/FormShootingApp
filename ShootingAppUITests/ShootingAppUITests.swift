@@ -30,6 +30,24 @@ class ShootingAppUITests: XCTestCase {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
+    
+    func testStartVideoCapture(){
+        let app = XCUIApplication()
+                
+       
+        let options = XCTMeasureOptions()
+        options.invocationOptions = [.manuallyStart]
+
+        measure(metrics: [XCTMemoryMetric(application: app)],
+                options: options) {
+            app.launch()
+            startMeasuring()
+            app.tabBars.buttons.element(boundBy: 1).tap()
+
+            let workoutButton = app.buttons["Begin"]
+            XCTAssertTrue(workoutButton.waitForExistence(timeout: 30))
+        }
+    }
 
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {

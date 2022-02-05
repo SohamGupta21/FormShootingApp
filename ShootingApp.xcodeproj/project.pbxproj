@@ -47,10 +47,16 @@
 		31866143270BE783006E026C /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31866142270BE783006E026C /* SignUp.swift */; };
 		31866145270BE7A2006E026C /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31866144270BE7A2006E026C /* SignUpView.swift */; };
 		3190AEA82697E0220072F0AE /* Predictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3190AEA72697E0220072F0AE /* Predictor.swift */; };
+		31AA8BA22751C88D005EF9EA /* SuperTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AA8BA12751C88D005EF9EA /* SuperTextField.swift */; };
+		31AA8BA52751E082005EF9EA /* TeamsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AA8BA42751E082005EF9EA /* TeamsModel.swift */; };
+		31AA8BA72751E2E3005EF9EA /* TeamCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AA8BA62751E2E3005EF9EA /* TeamCard.swift */; };
+		31AA8BA92751EA7E005EF9EA /* TeamsHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AA8BA82751EA7E005EF9EA /* TeamsHomeView.swift */; };
+		31AA8BAB2751F389005EF9EA /* TeamDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AA8BAA2751F388005EF9EA /* TeamDetailView.swift */; };
+		31AA8BAD2751F7B6005EF9EA /* TeamEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AA8BAC2751F7B6005EF9EA /* TeamEditView.swift */; };
+		31AA8BAF27520F99005EF9EA /* TeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AA8BAE27520F99005EF9EA /* TeamViewModel.swift */; };
 		31ABC32B27211F7F007E8043 /* WorkoutStartPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ABC32A27211F7F007E8043 /* WorkoutStartPopUpView.swift */; };
 		31D027FE270F11EA003A9B9E /* NavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D027FD270F11EA003A9B9E /* NavigationButton.swift */; };
 		31D02800270F1508003A9B9E /* Heading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D027FF270F1508003A9B9E /* Heading.swift */; };
-		31D02806270F16E7003A9B9E /* QuickImprovementStartScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D02805270F16E7003A9B9E /* QuickImprovementStartScreen.swift */; };
 		31D02808270F1784003A9B9E /* BackgroundColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D02807270F1784003A9B9E /* BackgroundColorView.swift */; };
 		31FCC44127225C0E00240E47 /* AngleComparisonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FCC44027225C0E00240E47 /* AngleComparisonView.swift */; };
 		3FD3E4E2D1D2E1C745C83FD7 /* Pods_ShootingApp_ShootingAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D81B9931FADD2BA46C2FB61 /* Pods_ShootingApp_ShootingAppUITests.framework */; };
@@ -122,10 +128,16 @@
 		31866142270BE783006E026C /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		31866144270BE7A2006E026C /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		3190AEA72697E0220072F0AE /* Predictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predictor.swift; sourceTree = "<group>"; };
+		31AA8BA12751C88D005EF9EA /* SuperTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperTextField.swift; sourceTree = "<group>"; };
+		31AA8BA42751E082005EF9EA /* TeamsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsModel.swift; sourceTree = "<group>"; };
+		31AA8BA62751E2E3005EF9EA /* TeamCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCard.swift; sourceTree = "<group>"; };
+		31AA8BA82751EA7E005EF9EA /* TeamsHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsHomeView.swift; sourceTree = "<group>"; };
+		31AA8BAA2751F388005EF9EA /* TeamDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailView.swift; sourceTree = "<group>"; };
+		31AA8BAC2751F7B6005EF9EA /* TeamEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamEditView.swift; sourceTree = "<group>"; };
+		31AA8BAE27520F99005EF9EA /* TeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewModel.swift; sourceTree = "<group>"; };
 		31ABC32A27211F7F007E8043 /* WorkoutStartPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutStartPopUpView.swift; sourceTree = "<group>"; };
 		31D027FD270F11EA003A9B9E /* NavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButton.swift; sourceTree = "<group>"; };
 		31D027FF270F1508003A9B9E /* Heading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heading.swift; sourceTree = "<group>"; };
-		31D02805270F16E7003A9B9E /* QuickImprovementStartScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickImprovementStartScreen.swift; sourceTree = "<group>"; };
 		31D02807270F1784003A9B9E /* BackgroundColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColorView.swift; sourceTree = "<group>"; };
 		31FCC44027225C0E00240E47 /* AngleComparisonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngleComparisonView.swift; sourceTree = "<group>"; };
 		4C043489A2C28564CC8BA73B /* Pods-ShootingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShootingApp.debug.xcconfig"; path = "Target Support Files/Pods-ShootingApp/Pods-ShootingApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -233,10 +245,10 @@
 				31479FF2262F78A800F8EA26 /* MainScreen.swift */,
 				31D02801270F15CA003A9B9E /* Generic */,
 				315C315A26BDD55B0021AD1F /* Authentication */,
-				31D02802270F1693003A9B9E /* Quick Improvement */,
-				3166D96526C1B3B700BDC28F /* Workout */,
+				31AA8BA32751E052005EF9EA /* Teams */,
 				3166D95A26C1A95D00BDC28F /* Video Playback */,
 				31479F9D262F2F5B00F8EA26 /* Assets.xcassets */,
+				3166D96526C1B3B700BDC28F /* Workout */,
 				31479FA2262F2F5B00F8EA26 /* Info.plist */,
 				31479FC7262F2FE100F8EA26 /* GoogleService-Info.plist */,
 				31479F9F262F2F5B00F8EA26 /* Preview Content */,
@@ -428,6 +440,19 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		31AA8BA32751E052005EF9EA /* Teams */ = {
+			isa = PBXGroup;
+			children = (
+				31AA8BA42751E082005EF9EA /* TeamsModel.swift */,
+				31AA8BA62751E2E3005EF9EA /* TeamCard.swift */,
+				31AA8BA82751EA7E005EF9EA /* TeamsHomeView.swift */,
+				31AA8BAA2751F388005EF9EA /* TeamDetailView.swift */,
+				31AA8BAC2751F7B6005EF9EA /* TeamEditView.swift */,
+				31AA8BAE27520F99005EF9EA /* TeamViewModel.swift */,
+			);
+			path = Teams;
+			sourceTree = "<group>";
+		};
 		31D02801270F15CA003A9B9E /* Generic */ = {
 			isa = PBXGroup;
 			children = (
@@ -435,16 +460,9 @@
 				31D027FD270F11EA003A9B9E /* NavigationButton.swift */,
 				31D027FF270F1508003A9B9E /* Heading.swift */,
 				31D02807270F1784003A9B9E /* BackgroundColorView.swift */,
+				31AA8BA12751C88D005EF9EA /* SuperTextField.swift */,
 			);
 			path = Generic;
-			sourceTree = "<group>";
-		};
-		31D02802270F1693003A9B9E /* Quick Improvement */ = {
-			isa = PBXGroup;
-			children = (
-				31D02805270F16E7003A9B9E /* QuickImprovementStartScreen.swift */,
-			);
-			path = "Quick Improvement";
 			sourceTree = "<group>";
 		};
 		E7807B3084CD39EA65C4C4B2 /* Frameworks */ = {
@@ -709,13 +727,15 @@
 				3166D97826C1BE2700BDC28F /* VideoPlaybackModel.swift in Sources */,
 				31479FF3262F78A800F8EA26 /* MainScreen.swift in Sources */,
 				315C316126BDD61B0021AD1F /* ErrorView.swift in Sources */,
+				31AA8BA52751E082005EF9EA /* TeamsModel.swift in Sources */,
 				3166D97B26C1DCAC00BDC28F /* FormAnalysis.swift in Sources */,
+				31AA8BA92751EA7E005EF9EA /* TeamsHomeView.swift in Sources */,
 				3166D96226C1B1B900BDC28F /* WorkoutEntryView.swift in Sources */,
 				31191B5B26A1322D00B8791F /* AVCaptureDevice+FrameRate.swift in Sources */,
 				31D02808270F1784003A9B9E /* BackgroundColorView.swift in Sources */,
 				31191B5C26A1322D00B8791F /* AVCaptureVideoDataOutput+PixelFormat.swift in Sources */,
-				31D02806270F16E7003A9B9E /* QuickImprovementStartScreen.swift in Sources */,
 				31191B7926A1325600B8791F /* PerformanceReporter.swift in Sources */,
+				31AA8BAB2751F389005EF9EA /* TeamDetailView.swift in Sources */,
 				31191B5F26A1323300B8791F /* VideoProcessingChain.swift in Sources */,
 				31866145270BE7A2006E026C /* SignUpView.swift in Sources */,
 				31ABC32B27211F7F007E8043 /* WorkoutStartPopUpView.swift in Sources */,
@@ -725,13 +745,16 @@
 				315C316926BDDB420021AD1F /* LoginViewModel.swift in Sources */,
 				3166D96426C1B31B00BDC28F /* WorkoutViewModel.swift in Sources */,
 				3166D96826C1B4AD00BDC28F /* ActiveWorkoutView.swift in Sources */,
+				31AA8BA22751C88D005EF9EA /* SuperTextField.swift in Sources */,
 				315C316D26BDF25B0021AD1F /* SignUpViewModel.swift in Sources */,
 				31191B7326A1324900B8791F /* ActionPrediction.swift in Sources */,
 				3190AEA82697E0220072F0AE /* Predictor.swift in Sources */,
 				31191B6626A1323B00B8791F /* Pose.swift in Sources */,
+				31AA8BAF27520F99005EF9EA /* TeamViewModel.swift in Sources */,
 				3178E48726B506A7002EB671 /* CameraStreamView.swift in Sources */,
 				315C316626BDD9EC0021AD1F /* EntryViewModel.swift in Sources */,
 				315C315D26BDD58F0021AD1F /* LoginView.swift in Sources */,
+				31AA8BA72751E2E3005EF9EA /* TeamCard.swift in Sources */,
 				31866143270BE783006E026C /* SignUp.swift in Sources */,
 				3166D96A26C1BB6100BDC28F /* VideoPlayerView.swift in Sources */,
 				31D027FE270F11EA003A9B9E /* NavigationButton.swift in Sources */,
@@ -741,6 +764,7 @@
 				3178E48526B50668002EB671 /* WorkoutReviewView.swift in Sources */,
 				31479F9A262F2F5900F8EA26 /* ShootingAppApp.swift in Sources */,
 				3166D97426C1BDC500BDC28F /* VideoPlaybackView.swift in Sources */,
+				31AA8BAD2751F7B6005EF9EA /* TeamEditView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

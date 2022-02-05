@@ -42,14 +42,14 @@ struct HomeScreen: View {
                Heading("Check Your Stats")
                
                // Bar Chart
-               BarChartView(data: ChartData(values: [
-                ("S", 23),
-                ("M", 126),
-                ("T", 54),
-                ("W", 234),
-                ("Th", 435),
-                ("F", 230),
-                ("Sat", 356)]), title: "Your Progress", legend:"Shots Taken", form:ChartForm.medium)
+//               BarChartView(data: ChartData(values: [
+//                ("S", 23),
+//                ("M", 126),
+//                ("T", 54),
+//                ("W", 234),
+//                ("Th", 435),
+//                ("F", 230),
+//                ("Sat", 356)]), title: "Your Progress", legend:"Shots Taken", form:ChartForm.medium)
 
            }
        }

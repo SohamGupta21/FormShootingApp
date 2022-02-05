@@ -9,45 +9,77 @@ import SwiftUI
 import Firebase
 
 struct EntryView: View {
-    @StateObject var entryViewModel = EntryViewModel()
+    @State var show = false
+    @State var status = UserDefaults.standard.value(forKey: "status") as? Bool ?? false
     var colors = Colors()
     var body: some View {
-        if entryViewModel.status{
-            TabView{
-                HomeScreen()
-                    .onAppear(perform: setBackgroundColor)
-                    .tabItem {
-                        Label("Home", systemImage: "house.fill")
-                    }
-                WorkoutEntryView()
-                    .tabItem {
-                        Label("Workout", systemImage:"play.fill")
-                    }
-                Text("Quick Improvement")
-                    .tabItem {
-                        Label("Improve", systemImage: "camera.fill")
-                    }
-                Text("Statistics")
-                    .tabItem{
-                        Label("Stats", systemImage:"chart.bar.fill")
-                    }
-            }
-            .accentColor(colors.orangeColor)
-            .ignoresSafeArea(.all)
-        } else {
+        NavigationView {
             VStack{
-                ZStack{
-                    NavigationLink(destination: SignUp(show: $entryViewModel.show),isActive: $entryViewModel.show){
-                    Text("Error is occuring at the moment, sorry")
-                }
-                .hidden()
-                    LoginView(show: $entryViewModel.show)
+                if self.status{
+                    TabView{
+                        HomeScreen()
+                            .onAppear(perform: setBackgroundColor)
+                            .navigationBarTitleDisplayMode(.inline)
+                        .tabItem {
+                            Label("Home", systemImage: "house.fill")
+                        }
+                        
+                        Text("Workout")
+                            .onAppear(perform: setBackgroundColor)
+                        .tabItem {
+                            Label("Workout", systemImage: "waveform.path.ecg")
+                        }
+                       
+                        TeamsHomeView()
+                            .onAppear(perform: setBackgroundColor)
+                        .tabItem {
+                            Label("Teams", systemImage: "person.3.fill")
+                        }
+                       
+                        WorkoutEntryView()
+                        .tabItem {
+                            Label("Fix your shot", systemImage:"wrench.and.screwdriver.fill")
+                        }
+                       
+                        Text("Statistics")
+                        .tabItem{
+                            Label("Stats", systemImage:"chart.bar.fill")
+                        }
+                    }
+                    .accentColor(colors.orangeColor)
+                    .ignoresSafeArea(.all)
+                    .navigationTitle("Form")
+                    .navigationBarItems(trailing:
+                        Button(action:{
+                            try! Auth.auth().signOut()
+                            UserDefaults.standard.set(false, forKey: "status")
+                            NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
+                        self.status = false
+                        
+                        }){
+                            Text("Log Out")
+                        }
+                    )
+                } else {
+                    VStack{
+                        ZStack{
+                            NavigationLink(destination: SignUp(show: self.$show),isActive: self.$show){
+                                Text("Error is occuring at the moment, sorry")
+                            }
+                            .hidden()
+                                LoginView(show: self.$show)
+                        }
+                    }
+                    .onAppear() {
+                        NotificationCenter.default.addObserver(forName: NSNotification.Name("status"), object: nil, queue: .main) { (_) in
+                            self.status = UserDefaults.standard.value(forKey: "status") as? Bool ?? false
+                        }
+                    }
                 }
             }
-            .onAppear() {
-                entryViewModel.addObserver()
-            }
+            
         }
+        
     }
 }
 

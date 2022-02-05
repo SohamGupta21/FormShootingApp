@@ -8,6 +8,8 @@
 import Foundation
 import SwiftUI
 import FirebaseAuth
+import Firebase
+import FirebaseFirestore
 final class SignUpViewModel: ObservableObject {
     @Published var color = Color.black.opacity(0.7)
     @Published var visible = false
@@ -18,11 +20,12 @@ final class SignUpViewModel: ObservableObject {
     @Published var username = ""
     @Published var alert = false
     @Published var error = ""
+    let db = Firestore.firestore()
     
     func register(){
         if self.email != ""{
             if self.pass == self.repass{
-                Auth.auth().createUser(withEmail: self.email, password: self.pass) {
+                Auth.auth().createUser(withEmail: self.email, password: self.pass) { [self]
                     (res,err) in
                     if err != nil{
                         self.error = err!.localizedDescription
@@ -34,6 +37,19 @@ final class SignUpViewModel: ObservableObject {
                     UserDefaults.standard.set(true, forKey: "status")
                     NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
                     print(NSNotification.Name("status"))
+                    
+                    // add the user to the users section of the database
+                    db.collection("users").document(Auth.auth().currentUser?.uid ?? "").setData([
+                        "email": self.email,
+                        "username": self.username,
+                        "teams" : []
+                    ]) { err in
+                        if let err = err {
+                            print("Error writing document: \(err)")
+                        } else {
+                            print("Document successfully written!")
+                        }
+                    }
                 }
             } else {
                 self.error = "Password Mismatch"

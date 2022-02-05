@@ -39,6 +39,7 @@ struct WorkoutStartPopUpView: View {
                 .background(colors.orangeColor)
                 .cornerRadius(10)
                 .padding(.top, 25)
+                .accessibilityIdentifier("Begin")
             }
             .padding(.vertical, 25)
             .frame(width: UIScreen.main.bounds.width-70)

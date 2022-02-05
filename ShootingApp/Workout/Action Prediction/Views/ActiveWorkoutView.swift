@@ -47,6 +47,7 @@ struct ActiveWorkoutView : View {
                         Text("End Workout")
                     }
                 })
+                .accessibilityIdentifier("workoutButton")
             }
             .padding()
             

@@ -4,6 +4,7 @@ import FirebaseAuth
 struct LoginView: View {
     @StateObject var loginViewModel = LoginViewModel()
     @Binding var show: Bool
+    
     var colors = Colors()
     var body: some View{
         ZStack{
@@ -18,24 +19,24 @@ struct LoginView: View {
                 }
                 GeometryReader{geometry in
                     VStack {
-                        ZStack{
-//                            RoundedRectangle(cornerRadius: 50)
-//                                .fill(colors.whiteColor)
-//                                .frame(width:200, height:50)
-                            Text("Log In")
-                                .font(.title)
-                                .foregroundColor(colors.whiteColor)
-                                .cornerRadius(50)
-                        }
-                        
+//                        ZStack{
+////                            RoundedRectangle(cornerRadius: 50)
+////                                .fill(colors.whiteColor)
+////                                .frame(width:200, height:50)
+//                            Text("Log In")
+//                                .font(.title)
+//                                .foregroundColor(colors.whiteColor)
+//                                .cornerRadius(50)
+//                        }
                         TextField("Email", text: $loginViewModel.email)
                             .autocapitalization(.none)
                             .padding()
-                            .background(
-                                RoundedRectangle(cornerRadius:50).fill(colors.whiteColor)
-                            )
+//                            .background(
+//                                RoundedRectangle(cornerRadius:50).fill(colors.whiteColor)
+//                                    .opacity(1)
+//                            )
                             .padding(.top, 25)
-                            .opacity(0.85)
+                            //.opacity(0.85)
                             HStack{
                                 VStack{
                                     if loginViewModel.visible{
@@ -56,48 +57,48 @@ struct LoginView: View {
 
                             }
                             .padding()
-                            .background(
-                                RoundedRectangle(cornerRadius:50).fill(colors.whiteColor)
-                            )
+//                            .background(
+//                                RoundedRectangle(cornerRadius:50).fill(colors.whiteColor)
+//                            )
                             .padding(.top, 25)
                             .opacity(0.85)
+                        Button(action: {
+                            loginViewModel.verify()
+                        }) {
+                            Text("Log In")
+                                .foregroundColor(.white)
+                                .padding(.vertical)
+                                .frame(width: UIScreen.main.bounds.width - 50)
+                        }
+                        .background(colors.orangeColor)
+                        .cornerRadius(50)
+                        .padding(.top, 25)
+                        HStack{
+//                            Spacer()
                             
-                            HStack{
-                                Spacer()
-                                
-                                Button(action:{
-                                    loginViewModel.reset()
-                                }) {
-                                    Text("Forgot password")
-                                        .fontWeight(.bold)
-                                        .foregroundColor(colors.whiteColor)
-                                }
-                            }
-                            .padding(.top, 20)
-                            
-                            Button(action: {
-                                loginViewModel.verify()
+                            Button(action:{
+                                loginViewModel.reset()
                             }) {
-                                Text("Log in")
-                                    .foregroundColor(.white)
-                                    .padding(.vertical)
-                                    .frame(width: UIScreen.main.bounds.width - 50)
+                                Text("Forgot password")
+                                    .fontWeight(.bold)
+                                    .foregroundColor(colors.whiteColor)
                             }
-                            .background(colors.orangeColor)
-                            .cornerRadius(50)
-                            .padding(.top, 25)
+                        }
+                        .padding(.top, 20)
+                        Button(action:{
+                            self.show.toggle()
+                        }){
+                            Text("Register")
+                                .fontWeight(.bold)
+                                .foregroundColor(colors.whiteColor)
+                        }
+                        .padding()
+
+                           
                     }
                     .padding(.horizontal)
                     .frame(height:geometry.size.height/1.5)
                 }
-                Button(action:{
-                    self.show.toggle()
-                }){
-                    Text("Register")
-                        .fontWeight(.bold)
-                        .foregroundColor(colors.whiteColor)
-                }
-                .padding()
                 
              
             }
