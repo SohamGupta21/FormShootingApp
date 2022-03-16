@@ -32,7 +32,7 @@ struct HomeScreen: View {
            VStack{
                Heading("Improve Your Form")
                
-               NavigationButton(destContent:{VideoPlaybackView()}, text:"Video Playback View")
+               NavigationButton(destContent:{VideoComparisonChooseScreen()}, text:"Video Playback View")
                
               Heading("Get Your Reps In")
             
