@@ -14,6 +14,7 @@ class VideoBuilder {
     
     static func saveVideoToFirebase(videoURL: URL, videoTitle: String) {
         // File located on disk
+        print("SAVE VIDEO")
         let localFile = videoURL
 
         // Create a reference to the file you want to upload
@@ -23,6 +24,7 @@ class VideoBuilder {
         let uploadTask = videosRef.putFile(from: localFile, metadata: nil) { metadata, error in
           guard let metadata = metadata else {
             // Uh-oh, an error occurred!
+              print("there is a huge error")
             return
           }
           // Metadata contains file metadata such as size, content-type.

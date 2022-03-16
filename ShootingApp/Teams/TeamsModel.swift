@@ -40,8 +40,10 @@ struct Team {
 extension Team {
     static var data : [Team] {
         [
-            Team(teamID: "sdfdf", name: "Sohams", color: .blue, membersNames: ["Soham", "Michael Jordan", "Steph Curry"], coachName: "Coach Soham"),
-            Team(teamID: "sdfdf", name: "Bulls", color: .red, membersNames: [], coachName: "Coach Soham")
+            Team(teamID: "sdfdf", name: "Conant", color: .blue, membersNames: ["Soham", "Michael Jordan", "Steph Curry"], coachName: "Coach Walsh"),
+            Team(teamID: "sdfdf", name: "Bulls", color: .red, membersNames: [], coachName: "Billy Donovan"),
+            Team(teamID: "sdfdf", name: "Sierra Canyon", color: .blue, membersNames: ["Soham", "Michael Jordan", "Steph Curry"], coachName: "Coach Walsh"),
+            Team(teamID: "sdfdf", name: "Warriors", color: .red, membersNames: [], coachName: "Billy Donovan")
         ]
     }
 }

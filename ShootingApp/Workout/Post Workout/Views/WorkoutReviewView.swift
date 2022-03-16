@@ -68,6 +68,7 @@ struct WorkoutReviewView: View {
                 Spacer()
                 Button(action:{
                     for video in videosToSave {
+                        print("Building Video From Image Array")
                         VideoBuilder.buildVideoFromImageArray(framesArray: video)
                     }
                 },label:{
@@ -75,6 +76,7 @@ struct WorkoutReviewView: View {
                 })
             }
             .padding()
+            // figure out when it is moving forward and backward and when the motion changes, measure the angle that you need (for example, the second that it starts moving forward, then you know that it is time to measure the angle)
             Text("Primary Shooting Arm Angle: \(formAnalysis.primaryShootingArmAngle)")
         }
         

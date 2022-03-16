@@ -18,9 +18,9 @@ struct TeamsHomeView: View {
             Heading("Teams You Coach:")
             ScrollView(.horizontal) {
                 HStack(spacing: 20) {
-                    ForEach(0..<10) {_ in
+                    ForEach(0..<2) {num in
                         NavigationLink(destination: TeamDetailView(team: $team1)){
-                            TeamCard(team: team1)
+                            TeamCard(team: Team.data[num])
                         }
                     }
                 }
@@ -28,9 +28,9 @@ struct TeamsHomeView: View {
             Heading("Teams You Play For:")
             ScrollView(.horizontal) {
                 HStack(spacing: 20) {
-                    ForEach(0..<10) {_ in
+                    ForEach(2..<4) {num in
                         NavigationLink(destination: TeamDetailView(team: $team1)){
-                            TeamCard(team: team1)
+                            TeamCard(team: Team.data[num])
                         }
                     }
                 }
