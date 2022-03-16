@@ -24,7 +24,7 @@ struct EntryView: View {
                             Label("Home", systemImage: "house.fill")
                         }
                         
-                        Text("Workout")
+                        WorkoutEntryView()
                             .onAppear(perform: setBackgroundColor)
                         .tabItem {
                             Label("Workout", systemImage: "waveform.path.ecg")
@@ -36,7 +36,7 @@ struct EntryView: View {
                             Label("Teams", systemImage: "person.3.fill")
                         }
                        
-                        WorkoutEntryView()
+                        VideoComparisonChooseScreen()
                         .tabItem {
                             Label("Fix your shot", systemImage:"wrench.and.screwdriver.fill")
                         }

@@ -24,7 +24,7 @@ struct VideoComparisonChooseScreen: View {
     
     var body: some View {
         ZStack{
-            Color(Colors().greyCGColor)
+            Color(.black)
                 .edgesIgnoringSafeArea(.all)
             if !isLoading {
                 VStack {
