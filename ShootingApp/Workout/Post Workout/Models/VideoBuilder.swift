@@ -8,7 +8,7 @@
 import SwiftUI
 import AVKit
 import FirebaseStorage
-
+import FirebaseFirestore
 
 class VideoBuilder {
     
@@ -37,6 +37,25 @@ class VideoBuilder {
             }
           }
         }
+        
+        // upload the video to firestore so that it can be accessed later
+        let db = Firestore.firestore()
+        
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        
+        db.collection("videos").document(videoTitle).setData([
+            "url": videoTitle,
+            "date": dateFormatter.string(from: date)
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+
     }
 
 
@@ -145,6 +164,10 @@ class VideoBuilder {
                     print("Done saving")
                     print("OUTPUT URL: \(videoOutputURL.relativeString)")
                     saveVideoToFirebase(videoURL: videoOutputURL, videoTitle: UUID().uuidString)
+                    
+                    // add this to a document in firestore
+                    
+                    
                 }
              })
             

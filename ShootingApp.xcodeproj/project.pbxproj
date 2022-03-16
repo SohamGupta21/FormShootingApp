@@ -60,6 +60,8 @@
 		31D02808270F1784003A9B9E /* BackgroundColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D02807270F1784003A9B9E /* BackgroundColorView.swift */; };
 		31FCC44127225C0E00240E47 /* AngleComparisonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FCC44027225C0E00240E47 /* AngleComparisonView.swift */; };
 		3FD3E4E2D1D2E1C745C83FD7 /* Pods_ShootingApp_ShootingAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D81B9931FADD2BA46C2FB61 /* Pods_ShootingApp_ShootingAppUITests.framework */; };
+		6DE152B527E18F16004B148A /* VideoComparisonChooseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE152B427E18F16004B148A /* VideoComparisonChooseScreen.swift */; };
+		6DE152B727E18F73004B148A /* VideoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE152B627E18F73004B148A /* VideoCard.swift */; };
 		CCAA72340BF947FD32E7A703 /* Pods_ShootingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CD9ABC271F7C7FA50B9E1A0 /* Pods_ShootingApp.framework */; };
 		EBA395B08571D86B8B79415E /* Pods_ShootingAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6802AA8A588C1E7B004D45E1 /* Pods_ShootingAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -143,6 +145,8 @@
 		4C043489A2C28564CC8BA73B /* Pods-ShootingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShootingApp.debug.xcconfig"; path = "Target Support Files/Pods-ShootingApp/Pods-ShootingApp.debug.xcconfig"; sourceTree = "<group>"; };
 		4D81B9931FADD2BA46C2FB61 /* Pods_ShootingApp_ShootingAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShootingApp_ShootingAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6802AA8A588C1E7B004D45E1 /* Pods_ShootingAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShootingAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DE152B427E18F16004B148A /* VideoComparisonChooseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoComparisonChooseScreen.swift; sourceTree = "<group>"; };
+		6DE152B627E18F73004B148A /* VideoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCard.swift; sourceTree = "<group>"; };
 		7CD9ABC271F7C7FA50B9E1A0 /* Pods_ShootingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShootingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		959345918F01501C0D2DE200 /* Pods-ShootingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShootingApp.release.xcconfig"; path = "Target Support Files/Pods-ShootingApp/Pods-ShootingApp.release.xcconfig"; sourceTree = "<group>"; };
 		A64870B55A6D31A06E724282 /* Pods-ShootingAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShootingAppTests.release.xcconfig"; path = "Target Support Files/Pods-ShootingAppTests/Pods-ShootingAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -428,6 +432,8 @@
 			children = (
 				3166D97326C1BDC500BDC28F /* VideoPlaybackView.swift */,
 				3166D97526C1BDFA00BDC28F /* URLVideoPlayerView.swift */,
+				6DE152B427E18F16004B148A /* VideoComparisonChooseScreen.swift */,
+				6DE152B627E18F73004B148A /* VideoCard.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -741,6 +747,7 @@
 				31ABC32B27211F7F007E8043 /* WorkoutStartPopUpView.swift in Sources */,
 				3166D97626C1BDFA00BDC28F /* URLVideoPlayerView.swift in Sources */,
 				31191B5926A1322D00B8791F /* VideoCapture.swift in Sources */,
+				6DE152B527E18F16004B148A /* VideoComparisonChooseScreen.swift in Sources */,
 				315C316326BDD66D0021AD1F /* EntryView.swift in Sources */,
 				315C316926BDDB420021AD1F /* LoginViewModel.swift in Sources */,
 				3166D96426C1B31B00BDC28F /* WorkoutViewModel.swift in Sources */,
@@ -761,6 +768,7 @@
 				3166D95C26C1AA7E00BDC28F /* FormShootingClassifier.mlmodel in Sources */,
 				31191B5A26A1322D00B8791F /* AVCaptureDeviceInput+Camera.swift in Sources */,
 				3166D96C26C1BBC700BDC28F /* VideoBuilder.swift in Sources */,
+				6DE152B727E18F73004B148A /* VideoCard.swift in Sources */,
 				3178E48526B50668002EB671 /* WorkoutReviewView.swift in Sources */,
 				31479F9A262F2F5900F8EA26 /* ShootingAppApp.swift in Sources */,
 				3166D97426C1BDC500BDC28F /* VideoPlaybackView.swift in Sources */,
