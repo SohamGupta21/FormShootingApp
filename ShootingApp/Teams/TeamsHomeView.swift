@@ -10,28 +10,17 @@ import FirebaseFirestore
 import FirebaseAuth
 
 struct TeamsHomeView: View {
-    @State var team1 = Team.data[0]
+    //@State var team1 = Team.data[0]
     @StateObject var teamViewModel : TeamViewModel = TeamViewModel()
+    @EnvironmentObject var firestoreManager : FirestoreManager
     // queries the database in order to get all of the person's teams
     var body: some View {
         VStack {
-            Heading("Teams You Coach:")
+            Heading("Your Teams:")
             ScrollView(.horizontal) {
                 HStack(spacing: 20) {
-                    ForEach(0..<2) {num in
-                        NavigationLink(destination: TeamDetailView(team: $team1)){
-                            TeamCard(team: Team.data[num])
-                        }
-                    }
-                }
-            }
-            Heading("Teams You Play For:")
-            ScrollView(.horizontal) {
-                HStack(spacing: 20) {
-                    ForEach(2..<4) {num in
-                        NavigationLink(destination: TeamDetailView(team: $team1)){
-                            TeamCard(team: Team.data[num])
-                        }
+                    ForEach(firestoreManager.teams) {team in
+                        ProductCard(image: "team_logo", title: team.name, type: team.id, price: Double(team.players.count))
                     }
                 }
             }

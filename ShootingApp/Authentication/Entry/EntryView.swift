@@ -11,6 +11,7 @@ import Firebase
 struct EntryView: View {
     @State var show = false
     @State var status = UserDefaults.standard.value(forKey: "status") as? Bool ?? false
+    @EnvironmentObject var firestoreManager : FirestoreManager
     var colors = Colors()
     var body: some View {
         NavigationView {
@@ -24,14 +25,24 @@ struct EntryView: View {
                             Label("Home", systemImage: "house.fill")
                         }
                         
+                        ManualWorkoutEntry()
+                            .onAppear(perform: setBackgroundColor)
+                        .tabItem {
+                            Label("Workout", systemImage: "sportscourt")
+                        }
+                        
                         WorkoutEntryView()
                             .onAppear(perform: setBackgroundColor)
                         .tabItem {
                             Label("Workout", systemImage: "waveform.path.ecg")
                         }
-                       
+                
                         TeamsHomeView()
-                            .onAppear(perform: setBackgroundColor)
+                            .onAppear(perform: {
+                                setBackgroundColor()
+                                DatabaseManager.shared.getTeams()
+                            })
+                            .environmentObject(firestoreManager)
                         .tabItem {
                             Label("Teams", systemImage: "person.3.fill")
                         }
@@ -93,3 +104,4 @@ struct EntryView_Previews : PreviewProvider {
         EntryView()
     }
 }
+

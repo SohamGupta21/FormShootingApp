@@ -23,7 +23,7 @@ struct TeamDetailView: View {
                     Label("Color", systemImage: "paintpalette")
                     Spacer()
                     Image(systemName: "checkmark.circle.fill")
-                        .foregroundColor(team.color)
+                        .foregroundColor(.blue)
                 }
                 .accessibilityElement(children: .ignore)
             }

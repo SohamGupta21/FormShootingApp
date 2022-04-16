@@ -9,12 +9,16 @@ import SwiftUI
 import Firebase
 @main
 struct ShootingAppApp: App {
+    
+    @StateObject var firestoreManager = FirestoreManager()
+    
     init(){
         FirebaseApp.configure()
     }
     var body: some Scene {
         WindowGroup {
             EntryView()
+                .environmentObject(firestoreManager)
         }
     }
 }

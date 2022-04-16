@@ -9,12 +9,11 @@ import Foundation
 import SwiftUI
 
 
-struct Team {
+struct Team : Identifiable{
     // the team id in the database
-    var teamID : String
+    var id : String
     
     var name : String
-    var color : Color
     
     // all of these will be the same size, it is just easier to split them up
     var players : [String]
@@ -22,12 +21,11 @@ struct Team {
     // the information for the coach
     var coach : String
     
-    init(teamID : String, name : String, color : Color, membersNames : [String], coachName : String){
+    init(teamID : String, name : String, membersNames : [String], coachName : String){
         
-        self.teamID = teamID
+        self.id = teamID
         
         self.name = name
-        self.color = color
         
         self.players = membersNames
         
@@ -40,10 +38,10 @@ struct Team {
 extension Team {
     static var data : [Team] {
         [
-            Team(teamID: "sdfdf", name: "Conant", color: .blue, membersNames: ["Soham", "Michael Jordan", "Steph Curry"], coachName: "Coach Walsh"),
-            Team(teamID: "sdfdf", name: "Bulls", color: .red, membersNames: [], coachName: "Billy Donovan"),
-            Team(teamID: "sdfdf", name: "Sierra Canyon", color: .blue, membersNames: ["Soham", "Michael Jordan", "Steph Curry"], coachName: "Coach Walsh"),
-            Team(teamID: "sdfdf", name: "Warriors", color: .red, membersNames: [], coachName: "Billy Donovan")
+            Team(teamID: "sdfdf", name: "Conant", membersNames: ["Soham", "Michael Jordan", "Steph Curry"], coachName: "Coach Walsh"),
+            Team(teamID: "sdfdf", name: "Bulls", membersNames: [], coachName: "Billy Donovan"),
+            Team(teamID: "sdfdf", name: "Sierra Canyon", membersNames: ["Soham", "Michael Jordan", "Steph Curry"], coachName: "Coach Walsh"),
+            Team(teamID: "sdfdf", name: "Warriors", membersNames: [], coachName: "Billy Donovan")
         ]
     }
 }
@@ -57,6 +55,6 @@ extension Team {
     }
 
     var data: Data {
-        return Data(name: name,coach : coach, players: players, color: color)
+        return Data(name: name,coach : coach, players: players)
     }
 }

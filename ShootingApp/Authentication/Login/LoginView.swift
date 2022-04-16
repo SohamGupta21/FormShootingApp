@@ -11,7 +11,7 @@ struct LoginView: View {
             ZStack(alignment: .topTrailing){
                 //            Photo by <a href="https://unsplash.com/@solarfri?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Mira Kireeva</a> on <a href="https://unsplash.com/s/photos/basketball?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
                 GeometryReader { geo in
-                    Image("man-layup")
+                    Image("sunset_hoop")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: geo.size.width)

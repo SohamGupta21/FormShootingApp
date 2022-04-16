@@ -23,10 +23,10 @@ class TeamViewModel : ObservableObject{
             if let document = document, document.exists {
                 let dataDescription = document.data()!
                 for team in dataDescription["teams"] as! [String] {
-                    print("AAAAHHHHHJ \(team)")
                     self.teams.append(team)
                 }
                 // this doesn't load immediately since it is a database call
+                print("we are heressssss")
                 print(self.teams)
             } else {
                 print("Document does not exist")
