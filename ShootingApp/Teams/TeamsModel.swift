@@ -15,46 +15,55 @@ struct Team : Identifiable{
     
     var name : String
     
+    var description : String
+    
     // all of these will be the same size, it is just easier to split them up
-    var players : [String]
+    
+    var players : [User] = []
     
     // the information for the coach
-    var coach : String
+    var coach : User
     
-    init(teamID : String, name : String, membersNames : [String], coachName : String){
+    init(teamID : String, name : String, desc : String, players : [User], coach : User){
         
         self.id = teamID
         
         self.name = name
         
-        self.players = membersNames
+        self.description = desc
         
-        self.coach = coachName
+        self.players = players
+        
+        self.coach = coach
+        
+    }
+    
+    init(){
+        self.id = ""
+        
+        self.name = ""
+        
+        self.description = ""
+        
+        self.players = []
+        
+        self.coach = User(userID: "", name: "")
+    }
+}
+
+struct User : Identifiable{
+    // the team id in the database
+    var id : String
+    
+    var username : String
+    
+    
+    init(userID : String, name : String){
+        
+        self.id = userID
+        
+        self.username = name
         
     }
 }
 
-
-extension Team {
-    static var data : [Team] {
-        [
-            Team(teamID: "sdfdf", name: "Conant", membersNames: ["Soham", "Michael Jordan", "Steph Curry"], coachName: "Coach Walsh"),
-            Team(teamID: "sdfdf", name: "Bulls", membersNames: [], coachName: "Billy Donovan"),
-            Team(teamID: "sdfdf", name: "Sierra Canyon", membersNames: ["Soham", "Michael Jordan", "Steph Curry"], coachName: "Coach Walsh"),
-            Team(teamID: "sdfdf", name: "Warriors", membersNames: [], coachName: "Billy Donovan")
-        ]
-    }
-}
-
-extension Team {
-    struct Data {
-        var name: String = ""
-        var coach : String = ""
-        var players: [String] = []
-        var color: Color = .blue
-    }
-
-    var data: Data {
-        return Data(name: name,coach : coach, players: players)
-    }
-}

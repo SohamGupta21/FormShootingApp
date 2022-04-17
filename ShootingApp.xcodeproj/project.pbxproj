@@ -60,8 +60,8 @@
 		31D02808270F1784003A9B9E /* BackgroundColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D02807270F1784003A9B9E /* BackgroundColorView.swift */; };
 		31FCC44127225C0E00240E47 /* AngleComparisonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FCC44027225C0E00240E47 /* AngleComparisonView.swift */; };
 		3FD3E4E2D1D2E1C745C83FD7 /* Pods_ShootingApp_ShootingAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D81B9931FADD2BA46C2FB61 /* Pods_ShootingApp_ShootingAppUITests.framework */; };
-		6D022845280A6D7600C51F79 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D022844280A6D7600C51F79 /* DatabaseManager.swift */; };
-		6D022847280A881800C51F79 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D022846280A881800C51F79 /* FirestoreManager.swift */; };
+		6D02284B280B767400C51F79 /* NavigationTitleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D02284A280B767400C51F79 /* NavigationTitleModifier.swift */; };
+		6D02284D280BACA100C51F79 /* TeamCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D02284C280BACA100C51F79 /* TeamCreateView.swift */; };
 		6DE152B527E18F16004B148A /* VideoComparisonChooseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE152B427E18F16004B148A /* VideoComparisonChooseScreen.swift */; };
 		6DE152B727E18F73004B148A /* VideoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE152B627E18F73004B148A /* VideoCard.swift */; };
 		6DE3781E27FB763F00B28DF5 /* WorkoutInformationTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE3781D27FB763F00B28DF5 /* WorkoutInformationTag.swift */; };
@@ -152,8 +152,8 @@
 		4C043489A2C28564CC8BA73B /* Pods-ShootingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShootingApp.debug.xcconfig"; path = "Target Support Files/Pods-ShootingApp/Pods-ShootingApp.debug.xcconfig"; sourceTree = "<group>"; };
 		4D81B9931FADD2BA46C2FB61 /* Pods_ShootingApp_ShootingAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShootingApp_ShootingAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6802AA8A588C1E7B004D45E1 /* Pods_ShootingAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShootingAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D022844280A6D7600C51F79 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
-		6D022846280A881800C51F79 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
+		6D02284A280B767400C51F79 /* NavigationTitleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTitleModifier.swift; sourceTree = "<group>"; };
+		6D02284C280BACA100C51F79 /* TeamCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCreateView.swift; sourceTree = "<group>"; };
 		6DE152B427E18F16004B148A /* VideoComparisonChooseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoComparisonChooseScreen.swift; sourceTree = "<group>"; };
 		6DE152B627E18F73004B148A /* VideoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCard.swift; sourceTree = "<group>"; };
 		6DE3781D27FB763F00B28DF5 /* WorkoutInformationTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutInformationTag.swift; sourceTree = "<group>"; };
@@ -470,6 +470,7 @@
 				31AA8BAA2751F388005EF9EA /* TeamDetailView.swift */,
 				31AA8BAC2751F7B6005EF9EA /* TeamEditView.swift */,
 				31AA8BAE27520F99005EF9EA /* TeamViewModel.swift */,
+				6D02284C280BACA100C51F79 /* TeamCreateView.swift */,
 			);
 			path = Teams;
 			sourceTree = "<group>";
@@ -482,8 +483,7 @@
 				31D027FF270F1508003A9B9E /* Heading.swift */,
 				31D02807270F1784003A9B9E /* BackgroundColorView.swift */,
 				31AA8BA12751C88D005EF9EA /* SuperTextField.swift */,
-				6D022844280A6D7600C51F79 /* DatabaseManager.swift */,
-				6D022846280A881800C51F79 /* FirestoreManager.swift */,
+				6D02284A280B767400C51F79 /* NavigationTitleModifier.swift */,
 			);
 			path = Generic;
 			sourceTree = "<group>";
@@ -770,21 +770,21 @@
 				6DE616C327F785DE0087AE6B /* ManualWorkoutEntry.swift in Sources */,
 				31191B5B26A1322D00B8791F /* AVCaptureDevice+FrameRate.swift in Sources */,
 				31D02808270F1784003A9B9E /* BackgroundColorView.swift in Sources */,
+				6D02284D280BACA100C51F79 /* TeamCreateView.swift in Sources */,
 				6DE3781E27FB763F00B28DF5 /* WorkoutInformationTag.swift in Sources */,
 				31191B5C26A1322D00B8791F /* AVCaptureVideoDataOutput+PixelFormat.swift in Sources */,
 				31191B7926A1325600B8791F /* PerformanceReporter.swift in Sources */,
 				31AA8BAB2751F389005EF9EA /* TeamDetailView.swift in Sources */,
 				6DE3782327FBE8D800B28DF5 /* WorkoutDetailView.swift in Sources */,
-				6D022847280A881800C51F79 /* FirestoreManager.swift in Sources */,
 				31191B5F26A1323300B8791F /* VideoProcessingChain.swift in Sources */,
 				31866145270BE7A2006E026C /* SignUpView.swift in Sources */,
 				31ABC32B27211F7F007E8043 /* WorkoutStartPopUpView.swift in Sources */,
 				3166D97626C1BDFA00BDC28F /* URLVideoPlayerView.swift in Sources */,
 				31191B5926A1322D00B8791F /* VideoCapture.swift in Sources */,
-				6D022845280A6D7600C51F79 /* DatabaseManager.swift in Sources */,
 				6DE152B527E18F16004B148A /* VideoComparisonChooseScreen.swift in Sources */,
 				315C316326BDD66D0021AD1F /* EntryView.swift in Sources */,
 				315C316926BDDB420021AD1F /* LoginViewModel.swift in Sources */,
+				6D02284B280B767400C51F79 /* NavigationTitleModifier.swift in Sources */,
 				3166D96426C1B31B00BDC28F /* WorkoutViewModel.swift in Sources */,
 				3166D96826C1B4AD00BDC28F /* ActiveWorkoutView.swift in Sources */,
 				31AA8BA22751C88D005EF9EA /* SuperTextField.swift in Sources */,

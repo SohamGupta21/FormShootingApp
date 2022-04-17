@@ -7,29 +7,6 @@
 
 import SwiftUI
 
-struct TeamCard: View {
-    var colors = Colors()
-    var team : Team
-    var body: some View{
-        VStack{
-            Text(team.name)
-                .font(.title)
-                .fontWeight(.bold)
-                .foregroundColor(.white)
-        }
-        .padding()
-        .cornerRadius(15)
-        
-    }
-}
-
-struct TeamCard_Previews: PreviewProvider {
-    static var team = Team.data[0]
-    static var previews: some View {
-        ProductCard(image:"team_logo", title: "Tigers", type: "We are the Tonetown high school Tigers! Rawr!!", price: 10)
-    }
-}
-
 
 struct CardModifier: ViewModifier {
     func body(content: Content) -> some View {
@@ -40,12 +17,12 @@ struct CardModifier: ViewModifier {
     
 }
 
-struct ProductCard: View {
+struct TeamCard: View {
     
     var image: String
-    var title: String
-    var type: String
-    var price: Double
+    var name: String
+    var description: String
+    var num_players: Int
     
     var body: some View {
         HStack(alignment: .center) {
@@ -56,14 +33,14 @@ struct ProductCard: View {
                 .padding(.all, 20)
             
             VStack(alignment: .leading) {
-                Text(title)
+                Text(name)
                     .font(.system(size: 26, weight: .bold, design: .default))
                     .foregroundColor(.white)
-                Text(type)
+                Text(description)
                     .font(.system(size: 16, weight: .bold, design: .default))
                     .foregroundColor(.gray)
                 HStack {
-                    Text(String.init(format: "%0.0f", price) + " members")
+                    Text("\(num_players) members")
                         .font(.system(size: 16, weight: .bold, design: .default))
                         .foregroundColor(.white)
                         .padding(.top, 8)
@@ -77,3 +54,4 @@ struct ProductCard: View {
         .padding(.all, 10)
     }
 }
+

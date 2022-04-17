@@ -8,49 +8,54 @@
 import SwiftUI
 
 struct TeamDetailView: View {
-    @Binding var team : Team
-    @State private var data: Team.Data = Team.Data()
+    var team : Team
     @State private var isPresented = false
+    
+    init(team : Team) {
+        let appearance = UINavigationBarAppearance()
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.red]
+        
+        self.team = team
+    }
     var body: some View {
         List {
             Section(header: Text("\(team.name) Info")) {
                 HStack {
                     Label("Coach", systemImage: "person.fill")
                     Spacer()
-                    Text("\(team.coach)")
+                    Text("\(team.coach.username)")
                 }
-                HStack {
-                    Label("Color", systemImage: "paintpalette")
-                    Spacer()
-                    Image(systemName: "checkmark.circle.fill")
-                        .foregroundColor(.blue)
-                }
-                .accessibilityElement(children: .ignore)
+            }
+            
+            
+            Section(header: Text("Description")) {
+                Text(team.description)
             }
             
             Section(header: Text("Players")) {
-                ForEach(team.players, id: \.self) { player in
-                    Label(player, systemImage: "person")
+                ForEach(0..<team.players.count) { ind in
+                    Label(team.players[ind].username, systemImage: "person")
                         .accessibilityLabel(Text("Person"))
-                        .accessibilityValue(Text(player))
+                        //.accessibilityValue(Text(player))
                 }
             }
         }
         .listStyle(InsetGroupedListStyle())
         .navigationBarItems(trailing: Button("Edit") {
             isPresented = true
-            data = team.data
+            //data = team.data
         })
-        .navigationTitle("Details")
+        .navigationTitle(team.name)
+        .navigationBarColor(backgroundColor: .orange, titleColor: .black)
         .fullScreenCover(isPresented: $isPresented) {
             NavigationView {
-                TeamEditView(teamData: $data)
-                    .navigationTitle(team.name)
-                    .navigationBarItems(leading: Button("Cancel") {
-                        isPresented = false
-                    }, trailing: Button("Done") {
-                        isPresented = false
-                    })
+//                TeamEditView(teamData: $data)
+//                    .navigationTitle(team.name)
+//                    .navigationBarItems(leading: Button("Cancel") {
+//                        isPresented = false
+//                    }, trailing: Button("Done") {
+//                        isPresented = false
+//                    })
             }
         }
 

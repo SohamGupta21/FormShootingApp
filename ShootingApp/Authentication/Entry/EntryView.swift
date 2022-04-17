@@ -11,7 +11,6 @@ import Firebase
 struct EntryView: View {
     @State var show = false
     @State var status = UserDefaults.standard.value(forKey: "status") as? Bool ?? false
-    @EnvironmentObject var firestoreManager : FirestoreManager
     var colors = Colors()
     var body: some View {
         NavigationView {
@@ -40,9 +39,7 @@ struct EntryView: View {
                         TeamsHomeView()
                             .onAppear(perform: {
                                 setBackgroundColor()
-                                DatabaseManager.shared.getTeams()
                             })
-                            .environmentObject(firestoreManager)
                         .tabItem {
                             Label("Teams", systemImage: "person.3.fill")
                         }

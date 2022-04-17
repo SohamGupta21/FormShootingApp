@@ -8,20 +8,21 @@
 import SwiftUI
 
 struct TeamEditView: View {
-    @Binding var teamData : Team.Data
     @State var newPlayer = ""
+    var team : Team
     var body: some View {
-        List {
-               Section(header: Text("Team Info")) {
-                   TextField("Name", text: $teamData.name)
-                   ColorPicker("Color", selection: $teamData.color)
-               }
+        
+        Text("Jello World")
+//        List {
+//               Section(header: Text("Team Info")) {
+//                   TextField("Name", text: team.name)
+//               }
 //               Section(header: Text("Players")) {
-//                   ForEach(teamData.players, id: \.self) { player in
-//                       Text(player)
+//                   ForEach(team.players, id: \.self) { player in
+//                       Text(player.username)
 //                   }
 //                   .onDelete { indices in
-//                       teamData.players.remove(atOffsets: indices)
+//                       team.players.remove(atOffsets: indices)
 //                   }
 //                   HStack {
 //                       TextField("New Player", text: $newPlayer)
@@ -36,8 +37,8 @@ struct TeamEditView: View {
 //                       .disabled(newPlayer.isEmpty)
 //                   }
 //               }
-           }
-           .listStyle(InsetGroupedListStyle())
+//           }
+//           .listStyle(InsetGroupedListStyle())
     }
 }
 
