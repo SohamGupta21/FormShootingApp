@@ -19,7 +19,7 @@ struct TeamCreateView: View {
             }
             
             Button(action: {
-                teamViewModel.createNewTeam(name: teamName, description: teamDescription)
+                teamViewModel.createNewTeam(name: teamName, description: teamDescription, loggedInUserName: UserInfoModel.shared.username)
             }, label: {
                 Text("Submit")
             })

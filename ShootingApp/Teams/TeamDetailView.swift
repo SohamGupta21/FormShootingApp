@@ -25,6 +25,11 @@ struct TeamDetailView: View {
                     Spacer()
                     Text("\(team.coach.username)")
                 }
+                HStack {
+                    Label("Code", systemImage: "person.fill")
+                    Spacer()
+                    Text("\(team.code)")
+                }
             }
             
             

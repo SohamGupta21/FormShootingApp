@@ -12,6 +12,7 @@ import FirebaseAuth
 struct TeamsHomeView: View {
     //@State var team1 = Team.data[0]
     @StateObject var teamViewModel : TeamViewModel = TeamViewModel()
+    @State var updater : Bool = false
     // queries the database in order to get all of the person's teams
     var body: some View {
         VStack {
@@ -19,7 +20,7 @@ struct TeamsHomeView: View {
                 .font(.headline)
                 .padding()
             ScrollView(.vertical) {
-                HStack(spacing: 20) {
+                VStack(spacing: 20) {
                     ForEach(teamViewModel.teams) {team in
                         NavigationLink(
                         destination: {
@@ -40,21 +41,22 @@ struct TeamsHomeView: View {
                 }
             })
             Spacer()
-            Button(action: {
-                // join a new team
-            }){
+            
+            NavigationLink (destination: {
+                TeamJoinView(teamViewModel: teamViewModel)
+            }, label: {
                 HStack{
                     Image(systemName: "arrow.up.circle")
                     Text("Join New Team")
                 }
-            }
+            })
             Spacer()
         }
     }
 }
 
-struct TeamsHomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        TeamsHomeView()
-    }
-}
+//struct TeamsHomeView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TeamsHomeView()
+//    }
+//}

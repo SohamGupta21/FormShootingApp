@@ -24,7 +24,9 @@ struct Team : Identifiable{
     // the information for the coach
     var coach : User
     
-    init(teamID : String, name : String, desc : String, players : [User], coach : User){
+    var code : String
+    
+    init(teamID : String, name : String, desc : String, players : [User], coach : User, code : String){
         
         self.id = teamID
         
@@ -35,6 +37,8 @@ struct Team : Identifiable{
         self.players = players
         
         self.coach = coach
+        
+        self.code = code
         
     }
     
@@ -48,6 +52,8 @@ struct Team : Identifiable{
         self.players = []
         
         self.coach = User(userID: "", name: "")
+        
+        self.code = ""
     }
 }
 

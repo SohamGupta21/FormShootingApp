@@ -8,9 +8,12 @@
 import Foundation
 import FirebaseFirestore
 import FirebaseAuth
+import SwiftUI
 
 class TeamViewModel : ObservableObject{
     @Published var teams : [Team] = []
+    
+    var userInfoModel : UserInfoModel = UserInfoModel.shared
     
     let db = Firestore.firestore()
     
@@ -55,12 +58,14 @@ class TeamViewModel : ObservableObject{
                 let playerIDs = dataDescription["playerIDs"] as! [String]
                 let playerNames = dataDescription["playerNames"] as! [String]
                 
+                let code = dataDescription["code"] as! String
+                
                 for (index, _) in playerIDs.enumerated() {
                     players.append(User(userID: playerIDs[index], name: playerNames[index]))
                 }
                 
 
-                self.teams.append(Team(teamID: teamID, name: teamName, desc: teamDescription, players: players, coach: coach))
+                self.teams.append(Team(teamID: teamID, name: teamName, desc: teamDescription, players: players, coach: coach, code : code))
             } else {
                 print("Document does not exist")
 
@@ -68,18 +73,34 @@ class TeamViewModel : ObservableObject{
         }
     }
     
-    func createNewTeam(name: String, description: String){
+    func createNewTeam(name: String, description: String, loggedInUserName : String){
+        
+        var proposedCode = randomString(length: 6)
+        
+        var codes = db.collection("teams").whereField("code", isEqualTo: proposedCode)
+        
+        while codes.accessibilityElementCount() != 0 {
+            proposedCode = randomString(length: 6)
+            codes = db.collection("teams").whereField("code", isEqualTo: proposedCode)
+        }
+        
+        
         let docData: [String: Any] = [
             "name": name,
             "description": description,
-            "coachID": "",
-            "coachName": "",
+            "coachID": Auth.auth().currentUser?.uid,
+            "coachName": loggedInUserName,
+            "code" : proposedCode,
             "playerIDs": [String](),
             "playerNames": [String](),
             "workouts" : [String]()
         ]
         
-        let docRef = db.collection("teams").document(UUID().uuidString)
+        let newDocId = UUID().uuidString
+        
+        let docRef = db.collection("teams").document(newDocId)
+        
+        self.addNewTeamToUser(teamID: newDocId)
 
         docRef.setData(docData) { error in
             if let error = error {
@@ -88,5 +109,67 @@ class TeamViewModel : ObservableObject{
                 print("Document successfully written!")
             }
         }
+        
+        var teamToAdd = Team(teamID: newDocId, name: name, desc: description, players: [], coach: User(userID: Auth.auth().currentUser?.uid ?? "", name: loggedInUserName), code: proposedCode)
+        
+        teams.append(teamToAdd)
     }
+    
+    func addNewTeamToUser(teamID : String) {
+        let docRef = db.collection("users").document(Auth.auth().currentUser?.uid ?? "")
+        
+        docRef.updateData([
+            "teams": FieldValue.arrayUnion([teamID])
+        ])
+    }
+    
+    func addNewUserToTeam(teamID : String){
+        let docRef = db.collection("teams").document(teamID)
+        
+        docRef.updateData([
+            "playerIDs": FieldValue.arrayUnion([Auth.auth().currentUser?.uid ?? ""])
+        ])
+        
+        let userDocRef = db.collection("users").document(Auth.auth().currentUser?.uid ?? "")
+
+        userDocRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let dataDescription = document.data()!
+                
+                let userName = dataDescription["username"] as! String
+                
+                docRef.updateData([
+                    "playerNames": FieldValue.arrayUnion([self.userInfoModel.username])
+                ])
+            } else {
+                print("Document does not exist")
+            }
+        }
+    }
+    
+    
+    func joinNewTeam(code : String){
+        db.collection("teams").whereField("code", isEqualTo: code)
+            .getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    for document in querySnapshot!.documents {
+                        print("\(document.documentID) => \(document.data())")
+                        // add this user to the teams document
+                        self.addNewUserToTeam(teamID: document.documentID)
+                        // add this team to the user's persoal document
+                        self.addNewTeamToUser(teamID: document.documentID)
+                        // update the teams array so that the user can see this change in the UI
+                        self.singleTeamDatabaseCall(uid: document.documentID)
+                    }
+                }
+        }
+    }
+    
+    func randomString(length: Int) -> String {
+      let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+      return String((0..<length).map{ _ in letters.randomElement()! })
+    }
+   
 }
