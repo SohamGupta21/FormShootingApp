@@ -55,7 +55,7 @@ class ManualWorkoutViewModel : ObservableObject{
                 
                 for w in workoutDrillsInformation {
                     print(w)
-                    var d = Drill(name: w["drill"] as! String ?? "", amount: Int(w["amount"] as! String)!)
+                    var d = Drill(name: w["drill"] as! String ?? "", amount: Int(w["amount"] as! String ?? "0")!)
                     workoutDrills.append(d)
                 }
                 
@@ -116,7 +116,7 @@ class ManualWorkoutViewModel : ObservableObject{
         
         for drill in workout.drills {
             let drillInfo = [
-                "name" : drill.name,
+                "drill" : drill.name,
                 "amount" : String(drill.amount)
             ]
             
