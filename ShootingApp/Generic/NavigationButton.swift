@@ -14,6 +14,7 @@ struct NavigationButton<Content: View>: View {
     
     var colors = Colors()
     
+    
     init(@ViewBuilder destContent: () -> Content, text:String){
         self.dest = destContent()
         self.text = text

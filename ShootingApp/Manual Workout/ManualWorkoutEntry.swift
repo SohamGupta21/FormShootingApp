@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ManualWorkoutEntry: View {
+    
+    @StateObject var manualWorkoutViewModel : ManualWorkoutViewModel = ManualWorkoutViewModel()
+    
     var body: some View {
         ScrollView {
             VStack {
@@ -26,28 +29,20 @@ struct ManualWorkoutEntry: View {
                 SectionView(title: "Your Workouts")
                 ScrollView(.horizontal) {
                     HStack(spacing: 10) {
-                        ForEach(0..<10) { index in
-                            WorkoutInformationTag()
-                        }.padding()
-                    }
-                }
-                SectionView(title: "Team Workouts")
-                ScrollView(.horizontal) {
-                    HStack(spacing: 10) {
-                        ForEach(0..<10) { index in
-                            WorkoutInformationTag()
-                        }.padding()
-                    }
-                }
-                SectionView(title: "Workout Challenges")
-                ScrollView(.horizontal) {
-                    HStack(spacing: 10) {
-                        ForEach(0..<10) { index in
-                            WorkoutInformationTag()
+                        ForEach(manualWorkoutViewModel.workouts) { workout in
+                            WorkoutInformationTag(workout: workout, manualWorkoutViewModel: manualWorkoutViewModel)
                         }.padding()
                     }
                 }
                 Spacer()
+                NavigationLink (destination: {
+                    ManualWorkoutCreateView(manualWorkoutViewModel: manualWorkoutViewModel)
+                }, label: {
+                    HStack{
+                        Image(systemName: "plus")
+                        Text("Create New Workout")
+                    }
+                })
             }
         }
     }

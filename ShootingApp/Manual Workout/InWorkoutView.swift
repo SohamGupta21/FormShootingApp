@@ -9,28 +9,37 @@ import SwiftUI
 
 struct InWorkoutView: View {
     
-    @State private var totalShots : String = ""
+    @State private var madeShots : String = ""
+    
+    @State var workout : Workout
+    
+    @State var index = 0
+    
+    @ObservedObject var manualWorkoutViewModel : ManualWorkoutViewModel
     
     var body: some View {
         VStack {
-            HStack {
-                Spacer()
-                Image(systemName: "plus")
-                    .font(.headline)
-                TextField("50", text: $totalShots)
-                    .frame(width: 50, height:50)
-                    .multilineTextAlignment(.center)
-                    .keyboardType(.numberPad)
-                    .background(Color.white)
-                Image(systemName: "minus")
-                  .font(.headline)
-                Spacer()
-            }
-            .padding()
+//            HStack {
+//                Spacer()
+//                Image(systemName: "plus")
+//                    .font(.headline)
+//                TextField("50", text: $totalShots)
+//                    .frame(width: 50, height:50)
+//                    .multilineTextAlignment(.center)
+//                    .keyboardType(.numberPad)
+//                    .background(Color.white)
+//                Image(systemName: "minus")
+//                  .font(.headline)
+//                Spacer()
+//            }
+//            .padding()
+            
+            Text(workout.drills[index].name)
+                .font(.title)
             Spacer()
             HStack {
                 Spacer()
-                TextField("50", text: $totalShots)
+                TextField("0", text: $madeShots)
                     .frame(width: 100, height:100)
                     .multilineTextAlignment(.center)
                     .keyboardType(.numberPad)
@@ -38,26 +47,56 @@ struct InWorkoutView: View {
                 
                 Text("out of")
                 
-                TextField("50", text: $totalShots)
-                    .frame(width: 100, height:100)
-                    .multilineTextAlignment(.center)
-                    .keyboardType(.numberPad)
-                    .background(Color.white)
+                
+                Text("\(workout.drills[index].amount)")
+                    .font(.title)
+                //TextField("50", text: $totalShots)
+//                    .frame(width: 100, height:100)
+//                    .multilineTextAlignment(.center)
+//                    .keyboardType(.numberPad)
+//                    .background(Color.white)
                 
                 Spacer()
             }
             .padding()
             Spacer()
-            NavigationButton(destContent: {}, text: "Next")
+            
+            Button(action: {
+                workout.drills[index].madeBaskets = Int(madeShots) ?? 0
+                if index < workout.drills.count - 1{
+                    index += 1
+                }
+            }, label: {
+                Text("Finish Drill")
+                    .foregroundColor(.white)
+                    .padding(.vertical)
+                    .frame(width: UIScreen.main.bounds.width - 50)
+            })
+            .background(Colors().orangeColor)
+            .cornerRadius(50)
+            .padding(.top, 25)
+            
+            if index >= workout.drills.count - 1 {
+                NavigationLink(destination: {
+                    ManualWorkoutCompletedSummaryView(workout: workout, mWVM: manualWorkoutViewModel)
+                }, label:{
+                    Text("Finish Workout")
+                        .foregroundColor(.white)
+                        .padding(.vertical)
+                        .frame(width: UIScreen.main.bounds.width - 50)
+                })
+                .background(Colors().orangeColor)
+                .cornerRadius(50)
+                .padding(.top, 25)
+            }
         }
         .padding()
-        .edgesIgnoringSafeArea(.all)
         .background(Color.gray)
     }
 }
 
-struct InWorkoutView_Previews: PreviewProvider {
-    static var previews: some View {
-        InWorkoutView()
-    }
-}
+//struct InWorkoutView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        InWorkoutView()
+//    }
+//}

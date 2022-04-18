@@ -58,7 +58,7 @@ struct Team : Identifiable{
 }
 
 struct User : Identifiable{
-    // the team id in the database
+    // the team id in thae database
     var id : String
     
     var username : String
