@@ -68,6 +68,7 @@
 		6D022855280CEC8000C51F79 /* WorkoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D022854280CEC8000C51F79 /* WorkoutModel.swift */; };
 		6D022857280D0A6400C51F79 /* ManualWorkoutCompletedSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D022856280D0A6400C51F79 /* ManualWorkoutCompletedSummaryView.swift */; };
 		6D022859280D198500C51F79 /* ManualWorkoutCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D022858280D198400C51F79 /* ManualWorkoutCreateView.swift */; };
+		6D5F19AB280DF21000271C9A /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5F19AA280DF21000271C9A /* ChartView.swift */; };
 		6DE152B527E18F16004B148A /* VideoComparisonChooseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE152B427E18F16004B148A /* VideoComparisonChooseScreen.swift */; };
 		6DE152B727E18F73004B148A /* VideoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE152B627E18F73004B148A /* VideoCard.swift */; };
 		6DE3781E27FB763F00B28DF5 /* WorkoutInformationTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE3781D27FB763F00B28DF5 /* WorkoutInformationTag.swift */; };
@@ -166,6 +167,7 @@
 		6D022854280CEC8000C51F79 /* WorkoutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutModel.swift; sourceTree = "<group>"; };
 		6D022856280D0A6400C51F79 /* ManualWorkoutCompletedSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualWorkoutCompletedSummaryView.swift; sourceTree = "<group>"; };
 		6D022858280D198400C51F79 /* ManualWorkoutCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualWorkoutCreateView.swift; sourceTree = "<group>"; };
+		6D5F19AA280DF21000271C9A /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		6DE152B427E18F16004B148A /* VideoComparisonChooseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoComparisonChooseScreen.swift; sourceTree = "<group>"; };
 		6DE152B627E18F73004B148A /* VideoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCard.swift; sourceTree = "<group>"; };
 		6DE3781D27FB763F00B28DF5 /* WorkoutInformationTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutInformationTag.swift; sourceTree = "<group>"; };
@@ -498,6 +500,7 @@
 				31D02807270F1784003A9B9E /* BackgroundColorView.swift */,
 				31AA8BA12751C88D005EF9EA /* SuperTextField.swift */,
 				6D02284A280B767400C51F79 /* NavigationTitleModifier.swift */,
+				6D5F19AA280DF21000271C9A /* ChartView.swift */,
 			);
 			path = Generic;
 			sourceTree = "<group>";
@@ -781,6 +784,7 @@
 				31479FF3262F78A800F8EA26 /* MainScreen.swift in Sources */,
 				315C316126BDD61B0021AD1F /* ErrorView.swift in Sources */,
 				6D022851280BCF0500C51F79 /* TeamJoinView.swift in Sources */,
+				6D5F19AB280DF21000271C9A /* ChartView.swift in Sources */,
 				31AA8BA52751E082005EF9EA /* TeamsModel.swift in Sources */,
 				3166D97B26C1DCAC00BDC28F /* FormAnalysis.swift in Sources */,
 				6DE3782727FBEDE900B28DF5 /* InWorkoutView.swift in Sources */,
