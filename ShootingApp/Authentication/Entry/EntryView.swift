@@ -30,24 +30,24 @@ struct EntryView: View {
                             Label("Workout", systemImage: "sportscourt")
                         }
                         
-//                        WorkoutEntryView()
-//                            .onAppear(perform: setBackgroundColor)
-//                        .tabItem {
-//                            Label("Workout", systemImage: "waveform.path.ecg")
-//                        }
-//
-//                        TeamsHomeView()
-//                            .onAppear(perform: {
-//                                setBackgroundColor()
-//                            })
-//                        .tabItem {
-//                            Label("Teams", systemImage: "person.3.fill")
-//                        }
-//
-//                        VideoComparisonChooseScreen()
-//                        .tabItem {
-//                            Label("Fix your shot", systemImage:"wrench.and.screwdriver.fill")
-//                        }
+                        WorkoutEntryView()
+                            .onAppear(perform: setBackgroundColor)
+                        .tabItem {
+                            Label("Workout", systemImage: "waveform.path.ecg")
+                        }
+
+                        TeamsHomeView()
+                            .onAppear(perform: {
+                                setBackgroundColor()
+                            })
+                        .tabItem {
+                            Label("Teams", systemImage: "person.3.fill")
+                        }
+
+                        VideoComparisonChooseScreen()
+                        .tabItem {
+                            Label("Fix your shot", systemImage:"wrench.and.screwdriver.fill")
+                        }
                        
                         ChartView()
                         .tabItem{

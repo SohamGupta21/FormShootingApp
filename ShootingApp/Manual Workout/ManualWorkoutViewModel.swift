@@ -86,8 +86,7 @@ class ManualWorkoutViewModel : ObservableObject{
 
         // initialize the date formatter and set the style
         let formatter = DateFormatter()
-        formatter.timeStyle = .medium
-        formatter.dateStyle = .long
+        formatter.dateFormat = "yyyy-MM-dd"
         
         let workoutLogInfo : [String: String] = [
             "workout_name": workout.name,

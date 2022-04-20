@@ -30,6 +30,11 @@ struct TeamDetailView: View {
                     Spacer()
                     Text("\(team.code)")
                 }
+                NavigationLink(destination: {
+                    Chat(chatViewModel: ChatViewModel(teamID: team.id))
+                }, label: {
+                    Text("Chat")
+                })
             }
             
             

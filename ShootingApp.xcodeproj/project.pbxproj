@@ -69,6 +69,13 @@
 		6D022857280D0A6400C51F79 /* ManualWorkoutCompletedSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D022856280D0A6400C51F79 /* ManualWorkoutCompletedSummaryView.swift */; };
 		6D022859280D198500C51F79 /* ManualWorkoutCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D022858280D198400C51F79 /* ManualWorkoutCreateView.swift */; };
 		6D5F19AB280DF21000271C9A /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5F19AA280DF21000271C9A /* ChartView.swift */; };
+		6D5F19AE280F041500271C9A /* StatisticsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5F19AD280F041500271C9A /* StatisticsModel.swift */; };
+		6D5F19B0280F042600271C9A /* StatisticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5F19AF280F042500271C9A /* StatisticsViewModel.swift */; };
+		6D5F19B3280F49C200271C9A /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5F19B2280F49C200271C9A /* ChatViewModel.swift */; };
+		6D5F19B5280F49E600271C9A /* MsgModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5F19B4280F49E600271C9A /* MsgModel.swift */; };
+		6DBC2718280F844500DE27CA /* ChatRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBC2717280F844500DE27CA /* ChatRow.swift */; };
+		6DBC271A280F844B00DE27CA /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBC2719280F844B00DE27CA /* ChatBubble.swift */; };
+		6DBC271C280F94DF00DE27CA /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBC271B280F94DF00DE27CA /* Chat.swift */; };
 		6DE152B527E18F16004B148A /* VideoComparisonChooseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE152B427E18F16004B148A /* VideoComparisonChooseScreen.swift */; };
 		6DE152B727E18F73004B148A /* VideoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE152B627E18F73004B148A /* VideoCard.swift */; };
 		6DE3781E27FB763F00B28DF5 /* WorkoutInformationTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE3781D27FB763F00B28DF5 /* WorkoutInformationTag.swift */; };
@@ -168,6 +175,13 @@
 		6D022856280D0A6400C51F79 /* ManualWorkoutCompletedSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualWorkoutCompletedSummaryView.swift; sourceTree = "<group>"; };
 		6D022858280D198400C51F79 /* ManualWorkoutCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualWorkoutCreateView.swift; sourceTree = "<group>"; };
 		6D5F19AA280DF21000271C9A /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		6D5F19AD280F041500271C9A /* StatisticsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsModel.swift; sourceTree = "<group>"; };
+		6D5F19AF280F042500271C9A /* StatisticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewModel.swift; sourceTree = "<group>"; };
+		6D5F19B2280F49C200271C9A /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		6D5F19B4280F49E600271C9A /* MsgModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsgModel.swift; sourceTree = "<group>"; };
+		6DBC2717280F844500DE27CA /* ChatRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatRow.swift; path = "../../../../../Downloads/KavSoft-Tutorials-iOS-main/FirebaseGlobalChat/FirebaseGlobalChat/View/ChatRow.swift"; sourceTree = "<group>"; };
+		6DBC2719280F844B00DE27CA /* ChatBubble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatBubble.swift; path = "../../../../../Downloads/KavSoft-Tutorials-iOS-main/FirebaseGlobalChat/FirebaseGlobalChat/View/ChatBubble.swift"; sourceTree = "<group>"; };
+		6DBC271B280F94DF00DE27CA /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		6DE152B427E18F16004B148A /* VideoComparisonChooseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoComparisonChooseScreen.swift; sourceTree = "<group>"; };
 		6DE152B627E18F73004B148A /* VideoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCard.swift; sourceTree = "<group>"; };
 		6DE3781D27FB763F00B28DF5 /* WorkoutInformationTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutInformationTag.swift; sourceTree = "<group>"; };
@@ -279,6 +293,8 @@
 				315C315A26BDD55B0021AD1F /* Authentication */,
 				6DE616C127F785820087AE6B /* Manual Workout */,
 				31AA8BA32751E052005EF9EA /* Teams */,
+				6D5F19B1280F499400271C9A /* Chat */,
+				6D5F19AC280E744B00271C9A /* Statistics */,
 				3166D95A26C1A95D00BDC28F /* Video Playback */,
 				31479F9D262F2F5B00F8EA26 /* Assets.xcassets */,
 				3166D96526C1B3B700BDC28F /* Workout */,
@@ -500,9 +516,30 @@
 				31D02807270F1784003A9B9E /* BackgroundColorView.swift */,
 				31AA8BA12751C88D005EF9EA /* SuperTextField.swift */,
 				6D02284A280B767400C51F79 /* NavigationTitleModifier.swift */,
-				6D5F19AA280DF21000271C9A /* ChartView.swift */,
 			);
 			path = Generic;
+			sourceTree = "<group>";
+		};
+		6D5F19AC280E744B00271C9A /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				6D5F19AA280DF21000271C9A /* ChartView.swift */,
+				6D5F19AD280F041500271C9A /* StatisticsModel.swift */,
+				6D5F19AF280F042500271C9A /* StatisticsViewModel.swift */,
+			);
+			path = Statistics;
+			sourceTree = "<group>";
+		};
+		6D5F19B1280F499400271C9A /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				6DBC2719280F844B00DE27CA /* ChatBubble.swift */,
+				6DBC2717280F844500DE27CA /* ChatRow.swift */,
+				6D5F19B2280F49C200271C9A /* ChatViewModel.swift */,
+				6D5F19B4280F49E600271C9A /* MsgModel.swift */,
+				6DBC271B280F94DF00DE27CA /* Chat.swift */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 		6DE616C127F785820087AE6B /* Manual Workout */ = {
@@ -780,6 +817,7 @@
 				3166D95E26C1AB5100BDC28F /* FormShootingClassifierExtensions.swift in Sources */,
 				31065EEA27047EF9000082C4 /* Colors.swift in Sources */,
 				315534B92662D52100276732 /* HomeScreen.swift in Sources */,
+				6D5F19AE280F041500271C9A /* StatisticsModel.swift in Sources */,
 				3166D97826C1BE2700BDC28F /* VideoPlaybackModel.swift in Sources */,
 				31479FF3262F78A800F8EA26 /* MainScreen.swift in Sources */,
 				315C316126BDD61B0021AD1F /* ErrorView.swift in Sources */,
@@ -787,6 +825,7 @@
 				6D5F19AB280DF21000271C9A /* ChartView.swift in Sources */,
 				31AA8BA52751E082005EF9EA /* TeamsModel.swift in Sources */,
 				3166D97B26C1DCAC00BDC28F /* FormAnalysis.swift in Sources */,
+				6DBC271C280F94DF00DE27CA /* Chat.swift in Sources */,
 				6DE3782727FBEDE900B28DF5 /* InWorkoutView.swift in Sources */,
 				31AA8BA92751EA7E005EF9EA /* TeamsHomeView.swift in Sources */,
 				3166D96226C1B1B900BDC28F /* WorkoutEntryView.swift in Sources */,
@@ -806,6 +845,7 @@
 				3166D97626C1BDFA00BDC28F /* URLVideoPlayerView.swift in Sources */,
 				31191B5926A1322D00B8791F /* VideoCapture.swift in Sources */,
 				6DE152B527E18F16004B148A /* VideoComparisonChooseScreen.swift in Sources */,
+				6DBC2718280F844500DE27CA /* ChatRow.swift in Sources */,
 				315C316326BDD66D0021AD1F /* EntryView.swift in Sources */,
 				315C316926BDDB420021AD1F /* LoginViewModel.swift in Sources */,
 				6D02284B280B767400C51F79 /* NavigationTitleModifier.swift in Sources */,
@@ -817,18 +857,22 @@
 				6D022853280CEC4900C51F79 /* ManualWorkoutViewModel.swift in Sources */,
 				6D022855280CEC8000C51F79 /* WorkoutModel.swift in Sources */,
 				3190AEA82697E0220072F0AE /* Predictor.swift in Sources */,
+				6D5F19B0280F042600271C9A /* StatisticsViewModel.swift in Sources */,
 				31191B6626A1323B00B8791F /* Pose.swift in Sources */,
 				31AA8BAF27520F99005EF9EA /* TeamViewModel.swift in Sources */,
 				3178E48726B506A7002EB671 /* CameraStreamView.swift in Sources */,
 				315C316626BDD9EC0021AD1F /* EntryViewModel.swift in Sources */,
+				6D5F19B3280F49C200271C9A /* ChatViewModel.swift in Sources */,
 				315C315D26BDD58F0021AD1F /* LoginView.swift in Sources */,
 				31AA8BA72751E2E3005EF9EA /* TeamCard.swift in Sources */,
 				31866143270BE783006E026C /* SignUp.swift in Sources */,
 				3166D96A26C1BB6100BDC28F /* VideoPlayerView.swift in Sources */,
+				6DBC271A280F844B00DE27CA /* ChatBubble.swift in Sources */,
 				31D027FE270F11EA003A9B9E /* NavigationButton.swift in Sources */,
 				3166D95C26C1AA7E00BDC28F /* FormShootingClassifier.mlmodel in Sources */,
 				31191B5A26A1322D00B8791F /* AVCaptureDeviceInput+Camera.swift in Sources */,
 				6D022859280D198500C51F79 /* ManualWorkoutCreateView.swift in Sources */,
+				6D5F19B5280F49E600271C9A /* MsgModel.swift in Sources */,
 				3166D96C26C1BBC700BDC28F /* VideoBuilder.swift in Sources */,
 				6D022857280D0A6400C51F79 /* ManualWorkoutCompletedSummaryView.swift in Sources */,
 				6DE152B727E18F73004B148A /* VideoCard.swift in Sources */,
@@ -999,6 +1043,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ShootingApp/Preview Content\"";
 				DEVELOPMENT_TEAM = U554ZH8R56;
 				ENABLE_PREVIEWS = YES;
+				"EXCLUDED_ARCHS[sdk=*]" = arm64;
 				INFOPLIST_FILE = ShootingApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1024,12 +1069,14 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ShootingApp/Preview Content\"";
 				DEVELOPMENT_TEAM = U554ZH8R56;
 				ENABLE_PREVIEWS = YES;
+				"EXCLUDED_ARCHS[sdk=*]" = arm64;
 				INFOPLIST_FILE = ShootingApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "Soham-Gupta.ShootingApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

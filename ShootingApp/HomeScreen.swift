@@ -9,7 +9,7 @@ import SwiftUI
 import Firebase
 import FirebaseAuth
 import FirebaseFirestore
-import SwiftUICharts
+//import SwiftUICharts
 
 struct HomeScreen: View {
     @State private var isPresented = false

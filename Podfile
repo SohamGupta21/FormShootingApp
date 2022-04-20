@@ -10,6 +10,7 @@ target 'ShootingApp' do
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'Firebase/Storage'
+  pod 'FirebaseFirestoreSwift'
 
   target 'ShootingAppTests' do
     inherit! :search_paths
