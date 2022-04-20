@@ -16,6 +16,8 @@ struct ShootingAppApp: App {
     var body: some Scene {
         WindowGroup {
             EntryView()
+                .preferredColorScheme(.dark)
         }
+
     }
 }

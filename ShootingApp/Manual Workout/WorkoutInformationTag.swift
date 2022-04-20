@@ -23,7 +23,8 @@ struct WorkoutInformationTag : View {
                     .frame(width:150, height:150)
                 cardText.padding(.horizontal, 8)
             }
-            .background(Color.white)
+            .background(Color.black)
+            .opacity(0.7)
             .clipShape(RoundedRectangle(cornerRadius: 24.0))
             .shadow(radius:8)
         }

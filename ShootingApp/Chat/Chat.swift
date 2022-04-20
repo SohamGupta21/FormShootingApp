@@ -15,10 +15,10 @@ struct Chat: View {
     var body: some View {
         VStack(spacing: 0) {
             HStack {
-                Text("Global Chat")
+                Text("Team Chat")
                     .font(.title)
                     .fontWeight(.heavy)
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
                 
                 Spacer(minLength: 0)
             }
@@ -61,7 +61,7 @@ struct Chat: View {
                     Button(action: chatViewModel.writeMsg) {
                         Image(systemName: "paperplane.fill")
                             .font(.system(size: 22))
-                            .foregroundColor(.white)
+                            .foregroundColor(.black)
                             .frame(width: 45, height: 45)
                             .background(Color("Color"))
                             .clipShape(Circle())

@@ -42,7 +42,8 @@ final class SignUpViewModel: ObservableObject {
                     db.collection("users").document(Auth.auth().currentUser?.uid ?? "").setData([
                         "email": self.email,
                         "username": self.username,
-                        "teams" : []
+                        "teams" : [],
+                        "workouts" : []
                     ]) { err in
                         if let err = err {
                             print("Error writing document: \(err)")

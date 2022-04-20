@@ -43,7 +43,7 @@ struct InWorkoutView: View {
                     .frame(width: 100, height:100)
                     .multilineTextAlignment(.center)
                     .keyboardType(.numberPad)
-                    .background(Color.white)
+                    .background(Color.orange)
                 
                 Text("out of")
                 
@@ -91,7 +91,6 @@ struct InWorkoutView: View {
             }
         }
         .padding()
-        .background(Color.gray)
     }
 }
 

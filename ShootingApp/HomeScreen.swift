@@ -27,8 +27,6 @@ struct HomeScreen: View {
     }
     var body: some View {
         ZStack{
-            LinearGradient(gradient: Gradient(colors: [colors.orangeColor, colors.greyColor, colors.greyColor]), startPoint: .topLeading, endPoint: .bottomTrailing)
-                .edgesIgnoringSafeArea(.bottom)
            VStack{
                Heading("Improve Your Form")
                

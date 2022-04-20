@@ -27,12 +27,15 @@ class ManualWorkoutViewModel : ObservableObject{
         docRef.getDocument { (document, error) in
             if let document = document, document.exists {
                 let dataDescription = document.data()!
-                for workout in dataDescription["workouts"] as! [String] {
-                    // make a database call for information about this team
-                    print("WE OUT HERE")
-                    print(workout)
-                    self.singleWorkoutDatabaseCall(uid: workout)
+                if (dataDescription["workouts"] as! [String]).count > 0 {
+                    for workout in dataDescription["workouts"] as! [String] {
+                        // make a database call for information about this team
+                        print("WE OUT HERE")
+                        print(workout)
+                        self.singleWorkoutDatabaseCall(uid: workout)
+                    }
                 }
+                
             } else {
                 print("Document does not exist")
             }

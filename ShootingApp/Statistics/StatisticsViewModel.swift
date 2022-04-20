@@ -9,20 +9,14 @@ import Foundation
 import CoreGraphics
 import FirebaseFirestore
 import FirebaseAuth
+import SwiftUI
 
 class StatsViewModel : ObservableObject{
     
     @Published var statsData = [[String : String]]()
     @Published var bigChartData : [Daily] = []
     
-    @Published var circle_Data = [
-        Stats(id: 0, title: "Running", currentData: 6.8, goal: 15, color: Colors().redColor),
-        Stats(id: 1, title: "Water", currentData: 3.5, goal: 5, color: Colors().whiteColor),
-        Stats(id: 2, title: "Energy Burn", currentData: 585, goal: 1000, color: Colors().greyColor),
-        Stats(id: 3, title: "Sleep", currentData: 6.2, goal: 10, color: Colors().redColor),
-        Stats(id: 4, title: "Cycling", currentData: 12.5, goal: 25, color: Colors().greenColor),
-        Stats(id: 5, title: "Steps", currentData: 16889, goal: 20000, color: Colors().orangeColor)
-    ]
+    @Published var circle_Data : [Stats] = []
     
     init(){
         self.downloadStats()
@@ -50,6 +44,17 @@ class StatsViewModel : ObservableObject{
     }
     
     func generateCircleChartData() {
+        // overall shooting percentage
+        var shotsMade = 0
+        var shotsTaken = 0
+        for workout in statsData {
+            shotsMade += Int(workout["shots_made"] ?? "0") ?? 0
+            shotsTaken += Int(workout["shots_taken"] ?? "0") ?? 0
+        }
+        
+        self.circle_Data.append(Stats(id: 0, title: "Percentage", currentData: CGFloat(shotsMade), goal: CGFloat(shotsTaken), color: Color.yellow))
+        // 10,000 shots goal
+        self.circle_Data.append(Stats(id: 1, title: "10,000 Club", currentData: CGFloat(shotsMade), goal: CGFloat(10000), color: Color.red))
         
     }
     
@@ -90,6 +95,7 @@ class StatsViewModel : ObservableObject{
                 self.statsData = dataDescription["workout_log"] as! [[String : String]]
                 
                 self.generateBigChartData()
+                self.generateCircleChartData()
 
             } else {
                 print("Document does not exist")

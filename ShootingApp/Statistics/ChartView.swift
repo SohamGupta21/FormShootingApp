@@ -125,11 +125,11 @@ struct ChartView: View {
                                     .rotationEffect(.init(degrees: 90))
                             }
                             .rotationEffect(.init(degrees: -90))
-                            
-                            Text(statsViewModel.getDec(val: stat.currentData) + " " + statsViewModel.getType(val: stat.title))
-                                .font(.system(size:22))
-                                .foregroundColor(.white)
-                                .fontWeight(.bold)
+//
+//                            Text(statsViewModel.getDec(val: stat.currentData) + " " + statsViewModel.getType(val: stat.title))
+//                                .font(.system(size:22))
+//                                .foregroundColor(.white)
+//                                .fontWeight(.bold)
                         }
                         .padding()
                         .background(Color.white.opacity(0.06))
@@ -142,7 +142,6 @@ struct ChartView: View {
 
         }
         .background(Color.black.edgesIgnoringSafeArea(.all))
-        .preferredColorScheme(.dark)
     }
 }
 
