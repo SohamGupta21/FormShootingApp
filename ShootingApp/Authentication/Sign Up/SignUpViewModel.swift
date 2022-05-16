@@ -43,7 +43,8 @@ final class SignUpViewModel: ObservableObject {
                         "email": self.email,
                         "username": self.username,
                         "teams" : [],
-                        "workouts" : []
+                        "workouts" : [],
+                        "ideal_angles" : [[String: Int]]()
                     ]) { err in
                         if let err = err {
                             print("Error writing document: \(err)")

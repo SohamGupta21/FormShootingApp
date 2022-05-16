@@ -92,6 +92,7 @@ class StatsViewModel : ObservableObject{
         docRef.getDocument { (document, error) in
             if let document = document, document.exists {
                 let dataDescription = document.data()!
+                
                 self.statsData = dataDescription["workout_log"] as! [[String : String]]
                 
                 self.generateBigChartData()

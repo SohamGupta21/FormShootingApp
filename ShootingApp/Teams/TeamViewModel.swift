@@ -60,8 +60,12 @@ class TeamViewModel : ObservableObject{
                 
                 let code = dataDescription["code"] as! String
                 
-                for (index, _) in playerIDs.enumerated() {
-                    players.append(User(userID: playerIDs[index], name: playerNames[index]))
+                if playerIDs.count > 0{
+                    for (index, _) in playerIDs.enumerated() {
+                        print(teamName)
+                        print(index)
+                        players.append(User(userID: playerIDs[index], name: playerNames[index]))
+                    }
                 }
                 
 

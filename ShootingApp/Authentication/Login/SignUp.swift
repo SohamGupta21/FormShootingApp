@@ -20,7 +20,7 @@ struct SignUp: View {
             ZStack(alignment: .topLeading){
                 GeometryReader { geo in
                     // Photo by Mira Kireeva on Unsplash
-                    Image("girl-shooting")
+                    Image("dusk_basketball_hoop")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: geo.size.width)

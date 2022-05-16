@@ -38,16 +38,18 @@ struct ActiveWorkoutView : View {
                 .background(Color.gray)
                 .cornerRadius(10)
                 .opacity(0.5)
-                Button(action:{
-                    if cameraRunning{
-                        cameraRunning.toggle()
-                    }
-                }, label:{
-                    ZStack{
-                        Text("End Workout")
-                    }
-                })
-                .accessibilityIdentifier("workoutButton")
+                if workoutViewModel.formShootingFrames.count > 0{
+                    Button(action:{
+                        if cameraRunning{
+                            cameraRunning.toggle()
+                        }
+                    }, label:{
+                        ZStack{
+                            Text("End Workout")
+                        }
+                    })
+                    .accessibilityIdentifier("workoutButton")
+                }
             }
             .padding()
             
@@ -56,17 +58,12 @@ struct ActiveWorkoutView : View {
             }
             
         }
-//        .sheet(isPresented: self.$alertShowing) {
-//            WorkoutStartPopUpView(alert: self.$alertShowing)
-//                .padding(.all)
-//        }
         .onAppear(perform:{
             UIApplication.shared.isIdleTimerDisabled = true
         })
         .navigationBarHidden(true)
         .navigationBarTitle("", displayMode: .inline)
         .edgesIgnoringSafeArea(.top)
-        
     }
 }
 

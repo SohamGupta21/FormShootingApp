@@ -17,57 +17,44 @@ struct AngleComparisonView: View {
                 .fontWeight(.bold)
                 .font(.title)
             HStack {
+                Spacer()
                 VStack {
-                    Text("\(formAnalysis.secondaryShootingArmAngle.rounded(.toNearestOrAwayFromZero))")
-                        .foregroundColor(colors.redColor)
+                    Text("\(Int(formAnalysis.rightArmAngle))")
+                        .foregroundColor(colors.orangeColor)
                         .font(.largeTitle)
                     Text("Right Arm")
                         .foregroundColor(colors.whiteColor)
                 }
                 Spacer()
                 VStack {
-                    Text("\(formAnalysis.primaryShootingArmAngle.rounded(.toNearestOrAwayFromZero))")
-                        .foregroundColor(colors.greenColor)
+                    Text("\(Int(formAnalysis.leftArmAngle))")
+                        .foregroundColor(colors.orangeColor)
                         .font(.largeTitle)
                     Text("Left Arm")
                         .foregroundColor(colors.whiteColor)
                 }
                 Spacer()
-                VStack {
-                    Text("+12")
-                        .foregroundColor(colors.greenColor)
-                        .font(.largeTitle)
-                    Text("Back")
-                        .foregroundColor(colors.whiteColor)
-                }
             }.padding(.all)
             HStack {
+                Spacer()
                 VStack {
-                    Text("\(formAnalysis.rightLegAngle.rounded(.toNearestOrAwayFromZero))")
-                        .foregroundColor(colors.redColor)
+                    Text("\(Int(formAnalysis.rightLegAngle))")
+                        .foregroundColor(colors.orangeColor)
                         .font(.largeTitle)
                     Text("Right Leg")
                         .foregroundColor(colors.whiteColor)
                 }
                 Spacer()
                 VStack {
-                    Text("\(formAnalysis.leftLegAngle.rounded(.toNearestOrAwayFromZero))")
-                        .foregroundColor(colors.greenColor)
+                    Text("\(Int(formAnalysis.leftLegAngle))")
+                        .foregroundColor(colors.orangeColor)
                         .font(.largeTitle)
                     Text("Left Leg")
                         .foregroundColor(colors.whiteColor)
                 }
                 Spacer()
-                VStack {
-                    Text("+12")
-                        .foregroundColor(colors.greenColor)
-                        .font(.largeTitle)
-                    Text("Waist")
-                        .foregroundColor(colors.whiteColor)
-                }
             }.padding(.all)
         }
-        .background(colors.greyColor)
     }
 }
 

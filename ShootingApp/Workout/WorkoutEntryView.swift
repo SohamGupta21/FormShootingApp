@@ -18,7 +18,9 @@ struct WorkoutEntryView: View {
         if cameraRunning {
             ActiveWorkoutView(workoutViewModel: workoutViewModel, cameraRunning: self.$cameraRunning)
         } else {
-            WorkoutReviewView(currentVideo: workoutViewModel.formShootingFrames[0], formShootingFrames: workoutViewModel.formShootingFrames, posesPerFrame: workoutViewModel.posesPerFrame, formAnalysis: FormAnalysis(posesArray: workoutViewModel.posesPerFrame[0]))
+            WorkoutReviewView(currentVideo: workoutViewModel.formShootingFrames[0], formShootingFrames: workoutViewModel.formShootingFrames, posesPerFrame: workoutViewModel.posesPerFrame, formAnalysis: FormAnalysis(posesArray: workoutViewModel.posesPerFrame[0]), workoutViewModel: self.workoutViewModel)
         }
     }
 }
+
+
