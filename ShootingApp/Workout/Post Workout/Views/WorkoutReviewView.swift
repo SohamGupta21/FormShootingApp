@@ -75,12 +75,14 @@ struct WorkoutReviewView: View {
                     videosToSave.append(currentVideo)
                 },label:{
                     Text("Save Video")
+                        .foregroundColor(.orange)
                 })
                 Spacer()
                 Button(action:{
                     self.setIdealAngles()
                 }, label: {
                     Text("Save Shot Information")
+                        .foregroundColor(.orange)
                 })
                 Spacer()
                 Button(action:{
@@ -90,7 +92,16 @@ struct WorkoutReviewView: View {
                     }
                 },label:{
                     Text("Done")
+                        .foregroundColor(.orange)
                 })
+                Spacer()
+                NavigationLink(destination: {
+                    EntryView()
+                }) {
+                    Text("Home")
+                        .foregroundColor(.orange)
+                }
+
             }
             .padding()
             // figure out when it is moving forward and backward and when the motion changes, measure the angle that you need (for example, the second that it starts moving forward, then you know that it is time to measure the angle)

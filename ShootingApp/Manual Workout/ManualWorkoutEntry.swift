@@ -14,17 +14,6 @@ struct ManualWorkoutEntry: View {
     var body: some View {
         ScrollView {
             VStack {
-                HStack {
-                    VStack {
-                        Text("Start a Workout")
-                            .fontWeight(.bold)
-                            .font(.title)
-                        Text("Let's Get Some Work In")
-                            .italic()
-                            .font(.title3)
-                    }
-                }
-                .padding()
                 
                 SectionView(title: "Your Workouts")
                 ScrollView(.horizontal) {

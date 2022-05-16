@@ -17,42 +17,61 @@ struct EntryView: View {
             VStack{
                 if self.status{
                     TabView{
-                        HomeScreen()
-                            .onAppear(perform: setBackgroundColor)
-                            .navigationBarTitleDisplayMode(.inline)
-                        .tabItem {
-                            Label("Home", systemImage: "house.fill")
-                        }
-                        
-                        ManualWorkoutEntry()
-                            .onAppear(perform: setBackgroundColor)
+                        WorkoutHomeView()
+                        .navigationBarTitleDisplayMode(.inline)
                         .tabItem {
                             Label("Workout", systemImage: "sportscourt")
                         }
                         
-                        WorkoutEntryView()
-                            .onAppear(perform: setBackgroundColor)
-                        .tabItem {
-                            Label("Workout", systemImage: "waveform.path.ecg")
-                        }
-
                         TeamsHomeView()
-                            .onAppear(perform: {
-                                setBackgroundColor()
-                            })
+                        .onAppear(perform: {
+                            setBackgroundColor()
+                        })
                         .tabItem {
                             Label("Teams", systemImage: "person.3.fill")
                         }
-
-                        VideoComparisonChooseScreen()
-                        .tabItem {
-                            Label("Fix your shot", systemImage:"wrench.and.screwdriver.fill")
-                        }
-                       
+                        
                         ChartView()
-                        .tabItem{
-                            Label("Stats", systemImage:"chart.bar.fill")
-                        }
+                                .tabItem{
+                                    Label("Stats", systemImage:"chart.bar.fill")
+                                }
+                            
+//                        HomeScreen()
+//                            .onAppear(perform: setBackgroundColor)
+//                            .navigationBarTitleDisplayMode(.inline)
+//                        .tabItem {
+//                            Label("Home", systemImage: "house.fill")
+//                        }
+//
+//                        ManualWorkoutEntry()
+//                            .onAppear(perform: setBackgroundColor)
+//                        .tabItem {
+//                            Label("Workout", systemImage: "sportscourt")
+//                        }
+//
+//                        WorkoutEntryView()
+//                            .onAppear(perform: setBackgroundColor)
+//                        .tabItem {
+//                            Label("Workout", systemImage: "waveform.path.ecg")
+//                        }
+//
+//                        TeamsHomeView()
+//                            .onAppear(perform: {
+//                                setBackgroundColor()
+//                            })
+//                        .tabItem {
+//                            Label("Teams", systemImage: "person.3.fill")
+//                        }
+//
+//                        VideoComparisonChooseScreen()
+//                        .tabItem {
+//                            Label("Fix your shot", systemImage:"wrench.and.screwdriver.fill")
+//                        }
+//
+//                        ChartView()
+//                        .tabItem{
+//                            Label("Stats", systemImage:"chart.bar.fill")
+//                        }
                     }
                     .accentColor(colors.orangeColor)
                     .ignoresSafeArea(.all)

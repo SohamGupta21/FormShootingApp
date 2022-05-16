@@ -77,6 +77,7 @@
 		6D6ECE8E28195A6A00BF1708 /* ChatRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6ECE8D28195A6A00BF1708 /* ChatRow.swift */; };
 		6DBC271C280F94DF00DE27CA /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBC271B280F94DF00DE27CA /* Chat.swift */; };
 		6DDEB904283177E6004C6398 /* VerbalFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDEB903283177E6004C6398 /* VerbalFeedbackView.swift */; };
+		6DDEB9062832045B004C6398 /* WorkoutHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDEB9052832045B004C6398 /* WorkoutHomeView.swift */; };
 		6DE152B527E18F16004B148A /* VideoComparisonChooseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE152B427E18F16004B148A /* VideoComparisonChooseScreen.swift */; };
 		6DE152B727E18F73004B148A /* VideoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE152B627E18F73004B148A /* VideoCard.swift */; };
 		6DE3781E27FB763F00B28DF5 /* WorkoutInformationTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE3781D27FB763F00B28DF5 /* WorkoutInformationTag.swift */; };
@@ -183,6 +184,7 @@
 		6D6ECE8D28195A6A00BF1708 /* ChatRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRow.swift; sourceTree = "<group>"; };
 		6DBC271B280F94DF00DE27CA /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		6DDEB903283177E6004C6398 /* VerbalFeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbalFeedbackView.swift; sourceTree = "<group>"; };
+		6DDEB9052832045B004C6398 /* WorkoutHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutHomeView.swift; sourceTree = "<group>"; };
 		6DE152B427E18F16004B148A /* VideoComparisonChooseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoComparisonChooseScreen.swift; sourceTree = "<group>"; };
 		6DE152B627E18F73004B148A /* VideoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCard.swift; sourceTree = "<group>"; };
 		6DE3781D27FB763F00B28DF5 /* WorkoutInformationTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutInformationTag.swift; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 				31479FC7262F2FE100F8EA26 /* GoogleService-Info.plist */,
 				31479F9F262F2F5B00F8EA26 /* Preview Content */,
 				6D02284E280BC3FA00C51F79 /* UserInfoModel.swift */,
+				6DDEB9052832045B004C6398 /* WorkoutHomeView.swift */,
 			);
 			path = ShootingApp;
 			sourceTree = "<group>";
@@ -842,6 +845,7 @@
 				31191B5C26A1322D00B8791F /* AVCaptureVideoDataOutput+PixelFormat.swift in Sources */,
 				31191B7926A1325600B8791F /* PerformanceReporter.swift in Sources */,
 				31AA8BAB2751F389005EF9EA /* TeamDetailView.swift in Sources */,
+				6DDEB9062832045B004C6398 /* WorkoutHomeView.swift in Sources */,
 				6DE3782327FBE8D800B28DF5 /* WorkoutDetailView.swift in Sources */,
 				31191B5F26A1323300B8791F /* VideoProcessingChain.swift in Sources */,
 				31866145270BE7A2006E026C /* SignUpView.swift in Sources */,

@@ -44,6 +44,7 @@ final class SignUpViewModel: ObservableObject {
                         "username": self.username,
                         "teams" : [],
                         "workouts" : [],
+                        "workout_log" : [],
                         "ideal_angles" : [[String: Int]]()
                     ]) { err in
                         if let err = err {
