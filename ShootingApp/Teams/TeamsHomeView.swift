@@ -13,6 +13,7 @@ struct TeamsHomeView: View {
     //@State var team1 = Team.data[0]
     @StateObject var teamViewModel : TeamViewModel = TeamViewModel()
     @State var updater : Bool = false
+    @State private var showingJoinView = false
     // queries the database in order to get all of the person's teams
     var body: some View {
         VStack {
@@ -42,14 +43,27 @@ struct TeamsHomeView: View {
             })
             Spacer()
             
-            NavigationLink (destination: {
-                TeamJoinView(teamViewModel: teamViewModel)
+            Button(action: {
+                showingJoinView.toggle()
             }, label: {
                 HStack{
                     Image(systemName: "arrow.up.circle")
                     Text("Join New Team")
                 }
             })
+            .sheet(isPresented: $showingJoinView) {
+                TeamJoinView(teamViewModel: teamViewModel)
+                    .opacity(0.5)
+            }
+            
+//            NavigationLink (destination: {
+//                TeamJoinView(teamViewModel: teamViewModel)
+//            }, label: {
+//                HStack{
+//                    Image(systemName: "arrow.up.circle")
+//                    Text("Join New Team")
+//                }
+//            })
             Spacer()
         }
     }

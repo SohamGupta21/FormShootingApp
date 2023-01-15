@@ -30,22 +30,26 @@ struct VerbalFeedbackView: View {
             }
             .padding()
             HStack {
-                Text("• \(workoutViewModel.leftArmText)")
+                Text("Raise your left arm higher")
+                //Text("• \(workoutViewModel.leftArmText)")
                 Spacer()
             }
             .padding()
             HStack {
-                Text("• \(workoutViewModel.leftLegText)")
+                Text("Bend your left leg more")
+                //Text("• \(workoutViewModel.leftLegText)")
                 Spacer()
             }
             .padding()
             HStack {
-                Text("• \(workoutViewModel.rightArmText)")
+                Text("Your right arm looks good")
+                //Text("• \(workoutViewModel.rightArmText)")
                 Spacer()
             }
             .padding()
             HStack {
-                Text("• \(workoutViewModel.rightLegText)")
+                Text("Bend your right leg more")
+                //Text("• \(workoutViewModel.rightLegText)")
                 Spacer()
             }
             .padding()

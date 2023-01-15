@@ -45,7 +45,7 @@ final class SignUpViewModel: ObservableObject {
                         "teams" : [],
                         "workouts" : [],
                         "workout_log" : [],
-                        "ideal_angles" : [[String: Int]]()
+                        "ideal_angle" : [["left_arm":0], ["left_leg":0], ["right_arm":0], ["right_leg":0]]
                     ]) { err in
                         if let err = err {
                             print("Error writing document: \(err)")

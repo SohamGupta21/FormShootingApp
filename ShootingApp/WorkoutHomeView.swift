@@ -27,17 +27,15 @@ struct WorkoutHomeView: View {
                 NavigationLink(destination: {
                     WorkoutEntryView()
                 }, label: {
-                    WorkoutNavigationButtonView(icon_name: "camera.viewfinder", title: "Video Workout")
+                    WorkoutNavigationButtonView(icon_name: "camera.viewfinder", title: "Video Workout", description: "Use this to record yourself shooting and get live feedback on your performance.")
                 })
-                
-                NavigationLink(destination: {
-                    VideoComparisonChooseScreen()
-                }, label: {
-                    WorkoutNavigationButtonView(icon_name: "wrench.and.screwdriver", title: "Fix Your Shot")
-                })
+//
+//                NavigationLink(destination: {
+//                    VideoComparisonChooseScreen()
+//                }, label: {
+//                    WorkoutNavigationButtonView(icon_name: "wrench.and.screwdriver", title: "Fix Your Shot")
+//                })
             }
-
-            
             ManualWorkoutEntry()
         }
     }
@@ -54,15 +52,22 @@ struct WorkoutNavigationButtonView : View {
     
     var icon_name = ""
     var title = ""
+    var description = ""
     
     var body : some View {
-        VStack {
+        HStack {
             Image(systemName: icon_name)
                 .resizable()
                 .scaledToFit()
                 .frame(width: 100, height: 100)
                 .foregroundColor(Colors().orangeColor)
-            Text(title)
+            VStack {
+                Text(title)
+                    .font(.title)
+                    .fontWeight(.bold)
+                Text(description)
+            }
+            
                 
         }
         .padding()

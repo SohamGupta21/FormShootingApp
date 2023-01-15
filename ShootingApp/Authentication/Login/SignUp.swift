@@ -35,22 +35,16 @@ struct SignUp: View {
                         TextField("Email", text: $signUpViewModel.email)
                             .autocapitalization(.none)
                             .padding()
-//                            .background(
-//                                RoundedRectangle(cornerRadius:50).fill(colors.whiteColor)
-//                            )
                             .padding(.top, 25)
                             .opacity(0.85)
-                            .foregroundColor(colors.greyColor)
                         HStack{
                             VStack{
                                 if signUpViewModel.visible{
                                     TextField("Password", text:$signUpViewModel.pass)
                                         .autocapitalization(.none)
-                                        .foregroundColor(colors.greyColor)
                                 } else {
                                     SecureField("Password", text: $signUpViewModel.pass)
                                         .autocapitalization(.none)
-                                        .foregroundColor(colors.greyColor)
                                 }
                             }
                             Button(action: {

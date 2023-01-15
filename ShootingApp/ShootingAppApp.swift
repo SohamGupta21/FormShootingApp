@@ -18,6 +18,7 @@ struct ShootingAppApp: App {
             EntryView()
                 .preferredColorScheme(.dark)
         }
+        
 
     }
 }
