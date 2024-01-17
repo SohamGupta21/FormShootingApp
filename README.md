@@ -1,8 +1,8 @@
 # FORM: An AI-Powered Basketball Training App
 
-https://youtu.be/zg3E0OIwIhc?si=NYvP3GoGMtbRlJ4c&t=14
-
 ![Icon-Spotlight-40@2x-1](https://github.com/SohamGupta21/FormShootingApp/assets/62520353/28d00563-d90d-4f30-8420-a7da7f6d9f76)
+
+https://youtu.be/zg3E0OIwIhc?si=NYvP3GoGMtbRlJ4c&t=14
 
 ## Overview
 
