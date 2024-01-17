@@ -2,7 +2,7 @@
 
 https://youtu.be/zg3E0OIwIhc?si=NYvP3GoGMtbRlJ4c&t=14
 
-![Screenshot 1](https://github.com/SohamGupta21/FormShootingApp/issues/1#issue-2087141985)
+![Icon-Spotlight-40@2x-1](https://github.com/SohamGupta21/FormShootingApp/assets/62520353/28d00563-d90d-4f30-8420-a7da7f6d9f76)
 
 ## Overview
 
