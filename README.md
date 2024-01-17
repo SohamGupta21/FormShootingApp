@@ -2,6 +2,8 @@
 
 https://youtu.be/zg3E0OIwIhc?si=NYvP3GoGMtbRlJ4c&t=14
 
+![Screenshot 1](https://github.com/SohamGupta21/FormShootingApp/issues/1#issue-2087141985)
+
 ## Overview
 
 FORM leverages computer vision and machine learning to help basketball players improve their game. Players can take video recordings of their workouts and the app will identify shooting slices from the video, measure the angles and distances between joints and compare the shot to previous iterations of the player's shooting form. The app then provides live feedback to players advising them on how to improve their shooting mechanics and performance.
