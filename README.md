@@ -22,8 +22,11 @@ FORM leverages computer vision and machine learning to help basketball players i
 
 ## Screenshots
 
-![Screenshot 1](screenshots/screenshot1.png)
-![Screenshot 2](screenshots/screenshot2.png)
+![IMG_4634](https://github.com/SohamGupta21/FormShootingApp/assets/62520353/69d4a9c2-81c6-4a1e-83a7-ab4970441b89)
+![IMG_4635](https://github.com/SohamGupta21/FormShootingApp/assets/62520353/ef0e58f3-d13a-4a63-bacf-ebe3acc8eeb1)
+![IMG_4636](https://github.com/SohamGupta21/FormShootingApp/assets/62520353/f163e837-4b72-4143-9f35-81ca0ee7c3a2)
+![IMG_4637](https://github.com/SohamGupta21/FormShootingApp/assets/62520353/7e5e07fd-7032-4cb5-aab6-673bf0ace115)
+
 
 ## Feedback and Contributions
 
