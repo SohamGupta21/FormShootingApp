@@ -1,6 +1,6 @@
 # FORM: An AI-Powered Basketball Training App
 
-!(https://youtu.be/zg3E0OIwIhc?si=NYvP3GoGMtbRlJ4c&t=14)<!-- You can replace this with a link to a demo video or an image -->
+https://youtu.be/zg3E0OIwIhc?si=NYvP3GoGMtbRlJ4c&t=14
 
 ## Overview
 
@@ -16,28 +16,7 @@ FORM leverages computer vision and machine learning to help basketball players i
 
 - Swift
 - Core ML (Machine Learning)
-- UIKit
-- [Any other relevant libraries or frameworks]
-
-## Getting Started
-
-### Prerequisites
-
-- Xcode installed
-- iOS device or simulator
-
-### Installation
-
-1. Clone the repository: `git clone https://github.com/yourusername/basketball-training-app.git`
-2. Open the project in Xcode.
-3. Build and run the app on your device or simulator.
-
-## Usage
-
-1. Open the app on your iOS device.
-2. Create an account or log in.
-3. Follow the on-screen instructions to start a training session.
-4. Explore personalized workouts and shot analysis features.
+- Firebase
 
 ## Screenshots
 
@@ -47,15 +26,3 @@ FORM leverages computer vision and machine learning to help basketball players i
 ## Feedback and Contributions
 
 Feedback and contributions are welcome! If you encounter issues or have ideas for improvement, please [open an issue](https://github.com/yourusername/basketball-training-app/issues).
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
-## Acknowledgments
-
-- [Any third-party libraries, resources, or inspirations]
-
----
-
-Feel free to customize this template based on your app's specific features and requirements. Include relevant images, links, and details to make the README informative and engaging for potential users and contributors.
