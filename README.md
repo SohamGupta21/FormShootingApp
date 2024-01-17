@@ -1,10 +1,10 @@
 # FORM: An AI-Powered Basketball Training App
 
-![App Demo](demo.gif) <!-- You can replace this with a link to a demo video or an image -->
+!(https://youtu.be/zg3E0OIwIhc?si=NYvP3GoGMtbRlJ4c&t=14)<!-- You can replace this with a link to a demo video or an image -->
 
 ## Overview
 
-This iOS app leverages AI technology to enhance basketball training. Whether you're a beginner looking to improve your shooting skills or an advanced player working on specific moves, this app is designed to provide personalized training sessions.
+FORM leverages computer vision and machine learning to help basketball players improve their game. Players can take video recordings of their workouts and the app will identify shooting slices from the video, measure the angles and distances between joints and compare the shot to previous iterations of the player's shooting form. The app then provides live feedback to players advising them on how to improve their shooting mechanics and performance.
 
 ## Features
 
