@@ -11,7 +11,7 @@ FORM leverages computer vision and machine learning to help basketball players i
 ## Features
 
 - **Shot Analysis**: Receive real-time analysis of your shooting technique.
-- **Personalized Workouts**: AI generates custom workouts based on your skill level and goals.
+- **Personalized Workouts**: Generate and save your own dribbling and shooting workouts.
 - **Progress Tracking**: Monitor your progress over time with detailed performance statistics.
 
 ## Technologies Used
